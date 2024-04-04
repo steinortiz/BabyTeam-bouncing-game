@@ -10,12 +10,8 @@ public class SuperStrike : MonoBehaviour
     public bool canDo;
     [Range(0f, 1f)] public float influence;
     public float fallSpeed;
-    public float bounceSpeed;
-    public float minimalBounceSpeed;
     public float moveSpeed;
-    [Range(0f,1f)] public float roce;
-    [Range(0f,1f)] public float roceVertical;
-    [Range(0f, 1f)] public float roceHorizontal;
+    [Range(0f,1f)] public float airRoce;
 
 
     // Start is called before the first frame update
@@ -40,7 +36,7 @@ public class SuperStrike : MonoBehaviour
             BoostSpeed(fallSpeed, Vector3.down + influence * movement);
         }
         
-        Vector3 dragMagnitude = roce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
+        Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
     }
 
@@ -60,47 +56,32 @@ public class SuperStrike : MonoBehaviour
         BoostSpeed(boost,rb.velocity.normalized);
     }
 
+    void Sound()
+    {
+        
+    }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.collider.tag == "ground")
+        Sound();
+        if (collision.collider.tag == "BounzableObject")
         {
-            //Colision Velocidad en Y
-            if (collision.relativeVelocity.magnitude > minimalBounceSpeed)
+            BounzableObject other = collision.transform.GetComponent<BounzableObject>();
+            rb.velocity = rb.velocity.normalized*(other.data.bounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.bounceSpeed));
+            /*if (collision.relativeVelocity.magnitude > other.data.maxBounceSpeed)
             {
-                if (collision.relativeVelocity.magnitude > bounceSpeed)
-                {
-                    // Si es mayor que salga a la bounceSpeed (efecto cartoon)
-                    rb.velocity = rb.velocity.normalized*bounceSpeed;
-                }
-                else
-                {
-                    // si es igual o menor a la bounceSpeed  que decaiga con taza roce Vertical)
-                    rb.velocity = rb.velocity.normalized*((rb.velocity.magnitude - minimalBounceSpeed*roceVertical)); 
-                }
-            
+                // Si es mayor que salga a la bounceSpeed (efecto cartoon)
+                rb.velocity = rb.velocity.normalized*other.data.maxBounceSpeed;
             }
             else
             {
-                rb.velocity = influence*Vector3.up + rb.velocity.normalized*((rb.velocity.magnitude + minimalBounceSpeed*roceVertical)); 
-            }
-            
-            // Velocidad en Z
-            if (rb.velocity.z != 0f)
-            {
-                rb.velocity -= Vector3.forward * (roceHorizontal * rb.velocity.z);
+               rb.velocity = rb.velocity.normalized*(other.data.minBounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.minBounceSpeed));  
+            }*/
 
-            }
-            // Velocidad en X
-            if (rb.velocity.x != 0f)
-            {
-                rb.velocity -= Vector3.right * (roceHorizontal * rb.velocity.x);
-            }
-            // Velocidad Angular
-            if (rb.angularVelocity.magnitude > 0f)
-            {
-                rb.angularVelocity =Vector3.zero;
-            }
         }
-        
+        // Velocidad Angular
+        if (rb.angularVelocity.magnitude > 0f)
+        {
+            rb.angularVelocity =Vector3.zero;
+        }
     }
 }
