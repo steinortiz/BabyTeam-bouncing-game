@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: PisoEspuma
   m_EditorClassIdentifier: 
   type: 0
-  maxBounceSpeed: 0
-  minBounceSpeed: 0
-  rapidezDeCambio: 0
+  bounceSpeed: 0
+  rapidezDeCambio: 0.502
   sound: {fileID: 0}

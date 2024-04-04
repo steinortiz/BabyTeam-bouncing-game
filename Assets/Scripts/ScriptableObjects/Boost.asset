@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Boost
   m_EditorClassIdentifier: 
   type: 0
-  bounceSpeed: 0
-  minimalBounceSpeed: 0
-  roceVertical: 0
-  roceHorizontal: 0
+  bounceSpeed: 15
+  rapidezDeCambio: 0.93
   sound: {fileID: 0}

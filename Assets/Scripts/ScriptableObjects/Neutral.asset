@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Neutral
   m_EditorClassIdentifier: 
   type: 0
-  maxBounceSpeed: 0
-  minBounceSpeed: 0
-  rapidezDeCambio: 0
+  bounceSpeed: 3
+  rapidezDeCambio: 1
   sound: {fileID: 0}

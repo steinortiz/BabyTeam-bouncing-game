@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Ground
   m_EditorClassIdentifier: 
   type: 0
-  bounceSpeed: 7
-  minimalBounceSpeed: 3
-  roceVertical: 0.08
-  roceHorizontal: 0.2
+  bounceSpeed: 5
+  rapidezDeCambio: 0.682
   sound: {fileID: 0}
