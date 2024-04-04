@@ -60,7 +60,7 @@ public class SuperStrike : MonoBehaviour
         BoostSpeed(boost,rb.velocity.normalized);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.tag == "ground")
         {
@@ -81,7 +81,7 @@ public class SuperStrike : MonoBehaviour
             }
             else
             {
-                rb.velocity = rb.velocity.normalized*((rb.velocity.magnitude + minimalBounceSpeed*roceVertical)); 
+                rb.velocity = influence*Vector3.up + rb.velocity.normalized*((rb.velocity.magnitude + minimalBounceSpeed*roceVertical)); 
             }
             
             // Velocidad en Z
