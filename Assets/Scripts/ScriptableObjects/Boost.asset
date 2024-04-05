@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   bounceSpeed: 15
-  rapidezDeCambio: 0.93
+  rapidezDeCambio: 1
   sound: {fileID: 0}

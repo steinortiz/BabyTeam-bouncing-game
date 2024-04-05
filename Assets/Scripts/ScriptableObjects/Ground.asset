@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Ground
   m_EditorClassIdentifier: 
   type: 0
-  bounceSpeed: 5
-  rapidezDeCambio: 0.682
+  bounceSpeed: 8
+  rapidezDeCambio: 1
   sound: {fileID: 0}
