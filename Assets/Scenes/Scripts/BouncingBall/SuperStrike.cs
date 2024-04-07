@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.ParticleSystemJobs;
+using UnityEngine.Timeline;
 
 public class SuperStrike : MonoBehaviour
 {
@@ -58,30 +60,45 @@ public class SuperStrike : MonoBehaviour
 
     void Sound()
     {
-        
+    }
+    
+    // aqui toda la wea sobre matar la bola, ojala la feña no se vuelva loca con esto pls.
+    void KillBall()
+    {
+        // avisarle al manager para que pasen cosas
+        //Spawn de particulas
+        //Morir
+        Destroy(this.gameObject);
     }
     private void OnCollisionExit(Collision collision)
     {
-        Sound();
-        if (collision.collider.tag == "BounzableObject")
-        {
-            BounzableObject other = collision.transform.GetComponent<BounzableObject>();
-            rb.velocity = rb.velocity.normalized*(other.data.bounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.bounceSpeed));
-            /*if (collision.relativeVelocity.magnitude > other.data.maxBounceSpeed)
-            {
-                // Si es mayor que salga a la bounceSpeed (efecto cartoon)
-                rb.velocity = rb.velocity.normalized*other.data.maxBounceSpeed;
-            }
-            else
-            {
-               rb.velocity = rb.velocity.normalized*(other.data.minBounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.minBounceSpeed));  
-            }*/
-
-        }
         // Velocidad Angular
         if (rb.angularVelocity.magnitude > 0f)
         {
             rb.angularVelocity =Vector3.zero;
         }
+        Sound();
+        
+        if (collision.collider.transform.TryGetComponent(out BounzableObject bounzable))
+        {
+            rb.velocity = rb.velocity.normalized*(bounzable.data.bounceSpeed+(1f-bounzable.data.rapidezDeCambio)*(rb.velocity.magnitude - bounzable.data.bounceSpeed));
+            bool doKill = bounzable.Interact();
+            if (doKill)
+            {
+                Invoke("KillBall", Time.deltaTime);
+            }
+        }
+
     }
 }
+
+/* Deprecated OnCollisionExit
+ if (collision.relativeVelocity.magnitude > other.data.maxBounceSpeed)
+{
+    // Si es mayor que salga a la bounceSpeed (efecto cartoon)
+    rb.velocity = rb.velocity.normalized*other.data.maxBounceSpeed;
+}
+else
+{
+   rb.velocity = rb.velocity.normalized*(other.data.minBounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.minBounceSpeed));  
+}*/
