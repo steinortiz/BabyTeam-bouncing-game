@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canDo: 1
-  influence: 0.17
-  fallSpeed: 10
+  influence: 0.579
+  fallSpeed: 15
   moveSpeed: 4
   airRoce: 0.1
