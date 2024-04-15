@@ -14,6 +14,7 @@ public class SuperStrike : MonoBehaviour
     public float fallSpeed;
     public float moveSpeed;
     [Range(0f,1f)] public float airRoce;
+    private bool onSuperStrike=false;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class SuperStrike : MonoBehaviour
         if (Input.GetButtonDown("Jump") && (canDo || rb.velocity.normalized.y <0))
         {
             BoostSpeed(fallSpeed, Vector3.down + influence * movement);
+            
         }
         
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
@@ -52,6 +54,7 @@ public class SuperStrike : MonoBehaviour
     void BoostSpeed(float boost,Vector3 dir)
     {
         rb.velocity += dir*boost;
+        onSuperStrike = true;
     }
     void BoostSpeed(float boost)
     {
@@ -78,16 +81,16 @@ public class SuperStrike : MonoBehaviour
             rb.angularVelocity =Vector3.zero;
         }
         Sound();
-        
         if (collision.collider.transform.TryGetComponent(out BounzableObject bounzable))
         {
             rb.velocity = rb.velocity.normalized*(bounzable.data.bounceSpeed+(1f-bounzable.data.rapidezDeCambio)*(rb.velocity.magnitude - bounzable.data.bounceSpeed));
-            bool doKill = bounzable.Interact();
+            bool doKill = bounzable.Interact(onSuperStrike);
             if (doKill)
             {
                 Invoke("KillBall", Time.deltaTime);
             }
         }
+        onSuperStrike = false;
 
     }
 }

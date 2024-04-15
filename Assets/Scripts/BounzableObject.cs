@@ -17,11 +17,15 @@ public class BounzableObject : MonoBehaviour
     public BounceObjectType type;
     public int life;
     public bool doesDamage;
+    public bool doesNeedSuperStrike;
     public ParticleSystem particles;
     
-    public bool Interact()
+    public bool Interact(bool onSuperStrike)
     {
-        Hurt();
+        if (!doesNeedSuperStrike || onSuperStrike)
+        {
+            Hurt();
+        }
         return doesDamage;
     }
 
