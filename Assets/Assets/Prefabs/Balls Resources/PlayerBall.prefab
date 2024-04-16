@@ -148,6 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canDo: 1
   influence: 0.4
-  fallSpeed: 12
+  fallSpeed: 14
   moveSpeed: 14
-  airRoce: 0.08
+  airRoce: 0.064
