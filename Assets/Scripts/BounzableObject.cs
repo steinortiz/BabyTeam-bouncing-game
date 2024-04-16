@@ -42,6 +42,7 @@ public class BounzableObject : MonoBehaviour
     }
     void Killself()
     {
+        LevelController.Instance.CheckDestroy(this);
         if (particles != null)
         {
             ParticleSystem particlesSys = Instantiate<ParticleSystem>(particles, transform.localPosition,transform.rotation);

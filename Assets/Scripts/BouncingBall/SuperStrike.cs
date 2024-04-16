@@ -71,6 +71,7 @@ public class SuperStrike : MonoBehaviour
         // avisarle al manager para que pasen cosas
         //Spawn de particulas
         //Morir
+        LevelController.Instance.OnDestroyPlayer();
         Destroy(this.gameObject);
     }
     private void OnCollisionExit(Collision collision)
