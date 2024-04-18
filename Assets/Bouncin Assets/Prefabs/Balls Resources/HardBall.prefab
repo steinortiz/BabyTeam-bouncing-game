@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -105,11 +105,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 2
-  doesDamage: 0
+  isObjetive: 0
+  objectType: 0
   doesNeedSuperStrike: 0
+  life: 2
   particles: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!135 &7540247514481229227
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
