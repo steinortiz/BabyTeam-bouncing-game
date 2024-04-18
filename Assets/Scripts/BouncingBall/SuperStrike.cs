@@ -65,7 +65,7 @@ public class SuperStrike : MonoBehaviour
     {
     }
     
-    // aqui toda la wea sobre matar la bola, ojala la feña no se vuelva loca con esto pls.
+    
     void KillBall()
     {
         // avisarle al manager para que pasen cosas

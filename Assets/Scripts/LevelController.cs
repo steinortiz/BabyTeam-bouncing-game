@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -26,10 +27,12 @@ public class LevelController : MonoBehaviour
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
     [SerializeField] private GameObject spawnPoint;
-    public List<BounzableObject> objetivos = new List<BounzableObject>();
-
-   
-
+    private List<GameObject> objetiveList = new List<GameObject>();
+    
+    void Start()
+    {
+        SpawnPlayer();
+    }
     private void Update()
     {
         if (!isPlayerOnGame && adminMode && Input.GetButtonDown("Jump"))
@@ -43,19 +46,24 @@ public class LevelController : MonoBehaviour
         playerInstance = Instantiate(playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
         isPlayerOnGame = true;
     }
+
+    public void SetObjetive(GameObject objetive)
+    {
+        objetiveList.Add(objetive);
+    }
     public void OnDestroyPlayer()
     {
         isPlayerOnGame = false;
     }
 
-    public void CheckDestroy(BounzableObject obj)
+    public void CompleteObjetive(GameObject obj)
     {
-        if (objetivos.Contains(obj))
+        if (objetiveList.Contains(obj))
         {
-            objetivos.Remove(obj);
+            objetiveList.Remove(obj);
         }
 
-        if (objetivos.Count == 0)
+        if (objetiveList.Count == 0)
         {
            WintheGame(); 
         }

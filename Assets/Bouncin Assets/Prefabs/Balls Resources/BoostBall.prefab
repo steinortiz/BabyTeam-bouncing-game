@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.76
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23371294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -105,11 +105,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  isObjetive: 0
+  objectType: 0
   doesNeedSuperStrike: 0
+  life: 0
   particles: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!135 &5454744124504125570
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
