@@ -117,12 +117,13 @@ public class TopoController : AbstractPuzzle
     void MoveSon(TopoHole topoHole)
     {
         BounzableObject topoInstance = topoHole.GetOBJInstance();
-        LeanTween.move(topoInstance.gameObject, topoInstance.transform.position + Vector3.up * altura,
+        Vector3 pos = topoInstance.transform.position;
+        LeanTween.move(topoInstance.gameObject, pos + Vector3.up * altura,
                 animationTime / 2)
             .setEase(animationCurve).setOnComplete(
                 () =>
                 {
-                    LeanTween.move(topoInstance.gameObject, Vector2.zero, animationTime / 2).setDelay(waitTime).setEase(animationCurve).setOnComplete(
+                    LeanTween.move(topoInstance.gameObject, pos, animationTime / 2).setDelay(waitTime).setEase(animationCurve).setOnComplete(
                             () =>
                             {
                                 DispawnTopo(topoHole);
