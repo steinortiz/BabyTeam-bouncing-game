@@ -1114,6 +1114,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: waitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: animationTime
       value: 0.5
       objectReference: {fileID: 0}
@@ -1123,15 +1127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: isPuzzlePlaying
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
-      propertyPath: delayDeAparicion
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: delayDeAparicion
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: topoList.Array.size
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: spawnPlaces.Array.size
@@ -1188,7 +1192,19 @@ PrefabInstance:
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: topoList.Array.data[12].obj
       value: 
-      objectReference: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
+      objectReference: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[13].obj
+      value: 
+      objectReference: {fileID: 7355474256669103145, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[14].obj
+      value: 
+      objectReference: {fileID: 7355474256669103145, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[15].obj
+      value: 
+      objectReference: {fileID: 7355474256669103145, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: topoList.Array.data[0].isObjetive
       value: 0
@@ -1240,6 +1256,18 @@ PrefabInstance:
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: topoList.Array.data[12].isObjetive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[13].isObjetive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[14].isObjetive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[15].isObjetive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: spawnPlaces.Array.data[0].spawnPlaceObject
