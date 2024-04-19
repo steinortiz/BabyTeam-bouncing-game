@@ -618,6 +618,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: waitTime
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: delayDeAparicion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205424923850842011, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: topoList.Array.data[0].obj
+      value: 
+      objectReference: {fileID: 7355474256669103145, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
     - target: {fileID: 4437770408382105303, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: m_IsTrigger
       value: 0

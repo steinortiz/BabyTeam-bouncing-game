@@ -55,6 +55,7 @@ public class TopoController : AbstractPuzzle
     [SerializeField] private float altura;
     [SerializeField] private float animationTime;
     [SerializeField] private LeanTweenType animationCurve;
+    [SerializeField] private float waitTime;
     public AbstractPuzzle trigger =null;
     [SerializeField] private bool isPuzzlePlaying;
     private float timer;
@@ -116,14 +117,20 @@ public class TopoController : AbstractPuzzle
     void MoveSon(TopoHole topoHole)
     {
         BounzableObject topoInstance = topoHole.GetOBJInstance();
-        LeanTween.move(topoInstance.gameObject, topoInstance.transform.position + Vector3.up * altura, animationTime)
-            .setEase(animationCurve).setLoopPingPong(1).setOnComplete(() =>
-            {
-                DiSpawnTopo(topoHole);
-            });
+        LeanTween.move(topoInstance.gameObject, topoInstance.transform.position + Vector3.up * altura,
+                animationTime / 2)
+            .setEase(animationCurve).setOnComplete(
+                () =>
+                {
+                    LeanTween.move(topoInstance.gameObject, Vector2.zero, animationTime / 2).setDelay(waitTime).setEase(animationCurve).setOnComplete(
+                            () =>
+                            {
+                                DispawnTopo(topoHole);
+                            });
+                });
     }
 
-    void DiSpawnTopo(TopoHole topoHole)
+    void DispawnTopo(TopoHole topoHole)
     {
         spawnPlaces.Add(topoHole);
         spawnPlacesInUse.Remove(topoHole);
@@ -147,6 +154,7 @@ public class TopoController : AbstractPuzzle
         }
         Debug.Log("topo activado");
         isPuzzlePlaying = true;
+        SpawnTopo();
     }
 
     public override void Pause()
