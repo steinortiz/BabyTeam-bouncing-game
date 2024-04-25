@@ -16,5 +16,5 @@ public abstract class AbstractPuzzle : MonoBehaviour
     public abstract void Pause();
     public abstract void OnCompletePuzzle();
 
-    public abstract void ObjetivesChecker(BounzableObject obj);
+    public abstract void ObjetivesChecker(bool isObjectObjetive);
 }

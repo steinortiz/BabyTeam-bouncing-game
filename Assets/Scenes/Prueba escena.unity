@@ -399,6 +399,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: nexSceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028894430267056676, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028894430267056676, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028894430267056676, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.41
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

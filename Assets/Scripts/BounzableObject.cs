@@ -7,30 +7,45 @@ using UnityEngine;
 public enum BounceObjectType
 {
     Default,
-    Coin,
     Enemy,
+    Puzzle,
+    Objetive,
 
 }
+
 public class BounzableObject : MonoBehaviour
 {
     public BounzableScriptableObject data;
-    public bool isObjetive;
     public BounceObjectType objectType;
+    [SerializeField] private AbstractPuzzle trigger = null;
     public bool doesNeedSuperStrike;
-    public int life;
-    public ParticleSystem particles;
-    [SerializeField] private AbstractPuzzle trigger =null;
-
-    public delegate void BallDestroyed();
-    public event BallDestroyed ballDestroyedEvent;
-
-    public bool Interact(bool onSuperStrike)
+    private AbstractPuzzle _puzzleFather;
+    private bool isObjetiveInFather;
+    
+    private void Start()
     {
-        
-        CheckPuzzle();
-        CheckObjetive();
-        CheckDestroy(onSuperStrike);
-        
+        SetObjetive();
+    }
+    
+    public bool Interact(bool isSuperStrike)
+    {
+        CheckPuzzle(isSuperStrike);
+        return CheckEnemy();
+
+    }
+    void CheckPuzzle(bool isSuperStrike)
+    {
+        if (trigger != null)
+        {
+            if (!doesNeedSuperStrike || isSuperStrike)
+            {
+                trigger.Activate();
+            }
+        }
+    }
+
+    bool CheckEnemy()
+    {
         if (objectType == BounceObjectType.Enemy)
         {
             return true;
@@ -41,63 +56,45 @@ public class BounzableObject : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void SetObjetive()
     {
-        if (isObjetive)
+        if (objectType == BounceObjectType.Objetive)
         {
-            SetObjetive();
+            LevelController.Instance.SetObjetive(this.gameObject); 
         }
     }
-
-    void CheckPuzzle()
+    public void CheckCompleteObjetive()
     {
-        if (trigger!= null)
-        {
-            trigger.Activate();
-        }
-    }
-    void SetObjetive()
-    {
-        LevelController.Instance.SetObjetive(this.gameObject);
-    }
-    void CheckObjetive()
-    {
-        if (isObjetive)
+        if (objectType == BounceObjectType.Objetive)
         {
             LevelController.Instance.CompleteObjetive(this.gameObject);
         }
+        CheckObjetiveInFather();
     }
-    void CheckDestroy(bool onSuperStrike)
+
+    public bool GetIsObjetive()
     {
-        if (!doesNeedSuperStrike || onSuperStrike)
+        if (objectType == BounceObjectType.Objetive)
         {
-            if (life>0)
-            {
-                life -= 1;
-                if (life == 0)
-                {
-                    Invoke("DestroyBO",Time.deltaTime); 
-                }
-            }  
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void SetPuzzleFather(AbstractPuzzle puzzle, bool isObjetiveIN)
+    {
+        _puzzleFather = puzzle;
+        isObjetiveInFather = isObjetiveIN;
+    }
+
+    public void CheckObjetiveInFather()
+    {
+        if (_puzzleFather != null)
+        {
+            _puzzleFather.ObjetivesChecker(isObjetiveInFather);
         }
         
     }
-    void DestroyBO()
-    {
-        
-        if (particles != null)
-        {
-            ParticleSystem particlesSys = Instantiate<ParticleSystem>(particles, transform.localPosition,transform.rotation);
-            particlesSys.Play();
-        }
-        Destroy(this.gameObject);
-    }
-
-    void SetParentToReport()
-    {
-        
-    }
-
-    
-    
 }

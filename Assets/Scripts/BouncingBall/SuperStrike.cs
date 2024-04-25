@@ -9,11 +9,12 @@ using UnityEngine.Timeline;
 public class SuperStrike : MonoBehaviour
 {
     private Rigidbody rb;
-    public bool canDo;
+    public bool canStruperStrikeOnUp;
     [Range(0f, 1f)] public float influence;
     public float fallSpeed;
     public float moveSpeed;
     [Range(0f,1f)] public float airRoce;
+    [SerializeField] private bool dontSpin;
     private bool onSuperStrike=false;
 
 
@@ -34,7 +35,7 @@ public class SuperStrike : MonoBehaviour
         //transform.Translate(movement * moveSpeed * Time.deltaTime); NO DEBE SER PORQUE GENERA RESISTENCIA CUANDO LA VELOCIDAD VA A HACIA UN LADO Y lo mueves al otro
         rb.velocity += movement * (moveSpeed * Time.deltaTime);
         
-        if (Input.GetButtonDown("Jump") && (canDo || rb.velocity.normalized.y <0))
+        if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0))
         {
             BoostSpeed(fallSpeed, Vector3.down + influence * movement);
             
@@ -43,13 +44,6 @@ public class SuperStrike : MonoBehaviour
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
     }
-
-    void Rose()
-    {
-        var c = 0.1f;
-        var dragMagnitude = c *rb.velocity.sqrMagnitude * rb.velocity.normalized;
-    }
-
     
     void BoostSpeed(float boost,Vector3 dir)
     {
@@ -63,9 +57,9 @@ public class SuperStrike : MonoBehaviour
 
     void Sound()
     {
+        
     }
-    
-    
+
     void KillBall()
     {
         // avisarle al manager para que pasen cosas
@@ -77,7 +71,7 @@ public class SuperStrike : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         // Velocidad Angular
-        if (rb.angularVelocity.magnitude > 0f)
+        if (rb.angularVelocity.magnitude > 0f && dontSpin)
         {
             rb.angularVelocity =Vector3.zero;
         }
@@ -91,18 +85,11 @@ public class SuperStrike : MonoBehaviour
                 Invoke("KillBall", Time.deltaTime);
             }
         }
+        if (collision.collider.transform.TryGetComponent(out LifeController _lifeController))
+        {
+            _lifeController.Interact(onSuperStrike);
+        }
         onSuperStrike = false;
 
     }
 }
-
-/* Deprecated OnCollisionExit
- if (collision.relativeVelocity.magnitude > other.data.maxBounceSpeed)
-{
-    // Si es mayor que salga a la bounceSpeed (efecto cartoon)
-    rb.velocity = rb.velocity.normalized*other.data.maxBounceSpeed;
-}
-else
-{
-   rb.velocity = rb.velocity.normalized*(other.data.minBounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.minBounceSpeed));  
-}*/

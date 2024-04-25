@@ -10,40 +10,39 @@ using Random = UnityEngine.Random;
 public class Topo
 {
     public BounzableObject obj;
-    public bool isObjetive;
-    
+    public bool isTopoObjetive;
+    public int lifeSaved=0;
+
 }
 
 [Serializable]
 public class TopoHole
 {
     public GameObject spawnPlaceObject;
-    private Topo topoPrefab;
+    private Topo topoData;
     private BounzableObject topoInstance;
 
     public void CleanData()
     {
         topoInstance = null;
     }
-    public Topo GetOBJPrefab()
+    public Topo GetOBJData()
     {
-        return topoPrefab;
+        return topoData;
     }
     public BounzableObject GetOBJInstance()
     {
         return topoInstance;
     }
     
-    public void setOBJs(Topo topoPrefabin, BounzableObject topoInstancein)
+    public void setOBJs(Topo topoPrefabIn, BounzableObject topoInstanceIn)
     {
-        topoPrefab = topoPrefabin;
-        topoInstance = topoInstancein;
+        topoData = topoPrefabIn;
+        topoInstance = topoInstanceIn;
     }
 }
 public class TopoController : AbstractPuzzle
 {
-
-    
     [SerializeField] private List<TopoHole> spawnPlaces = new List<TopoHole>();
     private List<TopoHole> spawnPlacesInUse = new List<TopoHole>();
     [SerializeField] private List<Topo> topoList = new List<Topo>();
@@ -60,7 +59,26 @@ public class TopoController : AbstractPuzzle
     [SerializeField] private bool isPuzzlePlaying;
     private float timer;
 
-    
+    private void Start()
+    {
+        foreach (Topo topoData in topoList)
+        {
+            if( topoData.obj.TryGetComponent(out LifeController _lifeController))
+            {
+                topoData.lifeSaved = _lifeController.life;
+            }
+            
+            if (topoData.isTopoObjetive)
+            {
+                countObjetives += 1;
+            }
+        }
+        if (countObjetives > 0)
+        {
+            SetAsObjetive(true);
+        }
+    }
+
     private void Update()
     {
         if (isPuzzlePlaying)
@@ -88,18 +106,31 @@ public class TopoController : AbstractPuzzle
             if (topoList.Count > 0)
             {
                 int rngOBJ = Random.Range(0, topoList.Count);
-                Topo topoPrefab = topoList[rngOBJ];
-                if (topoPrefab != null)
+                Topo thisTopoData = topoList[rngOBJ];
+                if (thisTopoData != null)
                 {
                     //instanciarlo
-                    BounzableObject topoInstance = Instantiate(topoPrefab.obj, spawnPlaces[rng].spawnPlaceObject.transform);
+                    BounzableObject topoInstance = Instantiate(thisTopoData.obj, spawnPlaces[rng].spawnPlaceObject.transform);
+                    
+                    topoInstance.SetPuzzleFather(this,thisTopoData.isTopoObjetive);
+                    if (topoInstance.TryGetComponent(out LifeController _lifeController))
+                    {
+                        _lifeController.Start();
+                        _lifeController.UpdateLife(thisTopoData.lifeSaved);
+                    }
+                    
+                    
+
                     //pasarselo al topoHole
-                    topoHole.setOBJs(topoPrefab, topoInstance);
+                    topoHole.setOBJs(thisTopoData, topoInstance);
+                    
                     //decirle que esta ocupado
                     spawnPlaces.Remove(topoHole);
                     spawnPlacesInUse.Add(topoHole);
+                    
                     //quitarlo de la lista
-                    topoList.Remove(topoPrefab);
+                    topoList.Remove(thisTopoData);
+                    
                     //Move objeto
                     MoveSon(topoHole);
                     return true;
@@ -136,23 +167,17 @@ public class TopoController : AbstractPuzzle
         spawnPlaces.Add(topoHole);
         spawnPlacesInUse.Remove(topoHole);
         BounzableObject topoInstance = topoHole.GetOBJInstance();
+        Topo topoData = topoHole.GetOBJData();
+        if( topoInstance.TryGetComponent(out LifeController _lifeController))
+        {
+            topoData.lifeSaved = _lifeController.life;
+        }
         Destroy(topoInstance.gameObject);
-        Topo topoPrefab = topoHole.GetOBJPrefab();
-        topoList.Add(topoPrefab);
+        topoList.Add(topoData);
     }
     public override void Activate()
     {
-        foreach (Topo topoObj in topoList)
-        {
-            if (topoObj.isObjetive)
-            {
-                countObjetives += 1;
-            }
-        }
-        if (countObjetives > 0)
-        {
-            SetAsObjetive(true);
-        }
+        
         Debug.Log("topo activado");
         isPuzzlePlaying = true;
         SpawnTopo();
@@ -162,35 +187,25 @@ public class TopoController : AbstractPuzzle
     {
         isPuzzlePlaying = false;
     }
-
+    
+    public override void ObjetivesChecker(bool isObjectObjetive)
+    {
+        if (isObjectObjetive)
+        {
+            countObjetives -= 1;
+            if (countObjetives <= 0)
+            {
+                OnCompletePuzzle();
+            }
+        }
+    }
     public override void OnCompletePuzzle()
     {
         Pause();
+        LevelController.Instance.CompleteObjetive(this.transform.gameObject);
         if (trigger != null)
         {
             trigger.Activate();
-        }
-    }
-
-    public override void ObjetivesChecker(BounzableObject objCheck)
-    {
-        foreach (TopoHole topoHole in spawnPlaces)
-        {
-            BounzableObject topoInstance = topoHole.GetOBJInstance();
-            if (topoInstance == objCheck)
-            {
-                spawnPlaces.Add(topoHole);
-                spawnPlacesInUse.Remove(topoHole);
-                if (topoInstance.isObjetive)
-                {
-                    countObjetives -= 1;
-                    if (countObjetives == 0)
-                    {
-                        LevelController.Instance.CompleteObjetive(this.transform.gameObject);
-                        OnCompletePuzzle();
-                    }
-                }
-            }
         }
     }
 

@@ -27,8 +27,9 @@ public class ObjectSpawner : AbstractPuzzle
         throw new System.NotImplementedException();
     }
 
-    public override void ObjetivesChecker(BounzableObject obj)
+    public override void ObjetivesChecker(bool isObjectObjetive)
     {
         throw new System.NotImplementedException();
     }
+
 }

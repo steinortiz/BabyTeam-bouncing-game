@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -210,6 +210,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (21)
@@ -445,11 +449,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 9
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &150146403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -490,6 +492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1499474242}
     m_Modifications:
+    - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7032208026078598430, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: m_Name
       value: HardBall
@@ -552,6 +558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (6)
@@ -619,11 +629,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &155189988
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -667,6 +675,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6800236230023669417, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
   m_PrefabInstance: {fileID: 849754222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &174191889
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.719
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485891143042437664, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711701197437066858, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: m_Name
+      value: ExitPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+--- !u!114 &174191890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2509014519158638129, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+  m_PrefabInstance: {fileID: 174191889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54c11f01eeb84443a05358062c828cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &184614497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
@@ -685,11 +761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &184614499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -725,6 +799,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (20)
@@ -792,11 +870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &235835152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -872,11 +948,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &240041873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -957,6 +1031,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (7)
@@ -1024,11 +1102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &268645483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1163,6 +1239,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (12)
@@ -1220,6 +1300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (22)
@@ -1308,11 +1392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &424926247
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1440,6 +1522,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (28)
@@ -1518,11 +1604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &460196075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1558,6 +1642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (36)
@@ -1612,6 +1700,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6800236230023669417, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
   m_PrefabInstance: {fileID: 1770386814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &495516975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016359628300379743, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+--- !u!1 &495516976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8016359628300379743, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+  m_PrefabInstance: {fileID: 495516975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &507053858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1620,6 +1770,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (35)
@@ -1677,6 +1831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (5)
@@ -1858,11 +2016,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &549088403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2066,6 +2222,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (8)
@@ -2283,11 +2443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &682699586
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2323,6 +2481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (33)
@@ -2568,11 +2730,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &768813825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2608,6 +2768,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (11)
@@ -2697,6 +2861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (27)
@@ -2754,6 +2922,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (24)
@@ -2976,6 +3148,18 @@ PrefabInstance:
     - target: {fileID: 2166311040719973906, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: m_Name
       value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: ExitPoint
+      value: 
+      objectReference: {fileID: 174191890}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 495516976}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: nexSceneName
+      value: Lvl 4
       objectReference: {fileID: 0}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: objetivos.Array.size
@@ -3403,6 +3587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (26)
@@ -3460,6 +3648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (13)
@@ -3517,6 +3709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (25)
@@ -3574,6 +3770,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (9)
@@ -3631,6 +3831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (19)
@@ -3709,6 +3913,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (16)
@@ -3882,6 +4090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (17)
@@ -3939,6 +4151,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (10)
@@ -4053,6 +4269,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (31)
@@ -4132,6 +4352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (2)
@@ -4194,6 +4418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (32)
@@ -4521,6 +4749,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (3)
@@ -4588,11 +4820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1596785328
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4649,11 +4879,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1643205220
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4699,11 +4927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1657383464
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4848,11 +5074,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1710727810
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4987,6 +5211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (05)
@@ -5049,6 +5277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (34)
@@ -5218,6 +5450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (14)
@@ -5285,11 +5521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1815286064
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5336,6 +5570,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (23)
@@ -5430,11 +5668,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1913764816
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5470,6 +5706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (4)
@@ -5537,11 +5777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1943748650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5667,6 +5905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (18)
@@ -5724,6 +5966,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (29)
@@ -5846,6 +6092,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (30)
@@ -5903,6 +6153,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 679275441}
     m_Modifications:
+    - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: objectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
       value: SoftBall (15)
@@ -5961,3 +6215,5 @@ SceneRoots:
   - {fileID: 1499474242}
   - {fileID: 929168377}
   - {fileID: 1473746781}
+  - {fileID: 174191889}
+  - {fileID: 495516975}

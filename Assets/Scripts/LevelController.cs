@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class LevelController : MonoBehaviour
 {
@@ -27,7 +29,10 @@ public class LevelController : MonoBehaviour
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private ExitController ExitPoint;
     private List<GameObject> objetiveList = new List<GameObject>();
+    private bool isObjetiveCOmplete=false;
+    [SerializeField] private string nexSceneName;
     
     void Start()
     {
@@ -72,6 +77,24 @@ public class LevelController : MonoBehaviour
     private void WintheGame()
     {
         Debug.Log("Ganaste el level");
+        ActivateExit();
     }
 
+    private void ActivateExit()
+    {
+        isObjetiveCOmplete = true;
+        ExitPoint.gameObject.SetActive(true);
+
+    }
+
+    public void LoadNextLevelScene()
+    {
+        Debug.Log("Exit");
+        if (nexSceneName != "")
+        {
+            SceneManager.LoadScene(nexSceneName);
+        } 
+    }
+
+    
 }

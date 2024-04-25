@@ -146,8 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb4f4193aadfd4c89ec0e9a1067a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canDo: 1
+  canStruperStrikeOnUp: 1
   influence: 0.4
   fallSpeed: 14
   moveSpeed: 14
   airRoce: 0.064
+  dontSpin: 1
