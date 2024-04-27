@@ -16,6 +16,12 @@ public class SuperStrike : MonoBehaviour
     [Range(0f,1f)] public float airRoce;
     [SerializeField] private bool dontSpin;
     private bool onSuperStrike=false;
+    [SerializeField] private ParticleSystem speedFx;
+    [SerializeField] private GameObject speedFxPivot;
+    [SerializeField] private AudioSource speedSFX;
+    [SerializeField] private ParticleSystem strikeFx;
+    [SerializeField] private AudioSource strikeSFX;
+    
 
 
     // Start is called before the first frame update
@@ -44,20 +50,37 @@ public class SuperStrike : MonoBehaviour
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
     }
-    
+
     void BoostSpeed(float boost,Vector3 dir)
     {
         rb.velocity += dir*boost;
+        speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
+        speedFx.Play();
+        //speedSFX.loop = true;
+        //speedSFX.Play();
         onSuperStrike = true;
-    }
-    void BoostSpeed(float boost)
-    {
-        BoostSpeed(boost,rb.velocity.normalized);
+        
     }
 
-    void Sound()
+    void SuperStrikeDone(string tag ="ground")
     {
-        
+        if (onSuperStrike && tag == "ground")
+        {
+            speedFx.Stop();
+            //speedSFX.Stop();
+            onSuperStrike = false;
+            ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
+            strike.Play();
+            //strikeSFX.Play();
+            Destroy(strike.gameObject,strike.totalTime+1f);
+            
+        }
+    }
+    
+
+    void Sound(AudioSource audioClip)
+    {
+        audioClip.Play();
     }
 
     void KillBall()
@@ -68,14 +91,13 @@ public class SuperStrike : MonoBehaviour
         LevelController.Instance.OnDestroyPlayer();
         Destroy(this.gameObject);
     }
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         // Velocidad Angular
         if (rb.angularVelocity.magnitude > 0f && dontSpin)
         {
             rb.angularVelocity =Vector3.zero;
         }
-        Sound();
         if (collision.collider.transform.TryGetComponent(out BounzableObject bounzable))
         {
             rb.velocity = rb.velocity.normalized*(bounzable.data.bounceSpeed+(1f-bounzable.data.rapidezDeCambio)*(rb.velocity.magnitude - bounzable.data.bounceSpeed));
@@ -89,7 +111,7 @@ public class SuperStrike : MonoBehaviour
         {
             _lifeController.Interact(onSuperStrike);
         }
-        onSuperStrike = false;
+        SuperStrikeDone();
 
     }
 }

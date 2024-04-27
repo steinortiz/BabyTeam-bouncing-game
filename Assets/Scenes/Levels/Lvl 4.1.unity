@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -171,11 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &240041873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -836,11 +834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
+  objectType: 0
+  trigger: {fileID: 0}
   doesNeedSuperStrike: 0
-  particles: {fileID: 0}
 --- !u!64 &1151113551
 MeshCollider:
   m_ObjectHideFlags: 0
