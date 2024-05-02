@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 13
   rapidezDeCambio: 0.074
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 449d7d239a1752340b1696aeb0e10d27, type: 3}

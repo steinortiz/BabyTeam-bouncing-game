@@ -221,7 +221,8 @@ MonoBehaviour:
   speedFxPivot: {fileID: 2092734882142182449}
   speedSFX: {fileID: 0}
   strikeFx: {fileID: 176793401932813024, guid: f439929bf2ea0c241a836a3ab5776900, type: 3}
-  strikeSFX: {fileID: 0}
+  strikeSFX: {fileID: 8300000, guid: a8b0f07504a84e743b7e2cd1e9eca10d, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1001 &1858100866727901076
 PrefabInstance:
   m_ObjectHideFlags: 0

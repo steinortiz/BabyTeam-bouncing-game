@@ -25,13 +25,14 @@ public class LevelController : MonoBehaviour
     }
     
     [SerializeField] private bool adminMode;
+    [SerializeField] private List<AudioSource> _audioSources=new List<AudioSource>();
     [SerializeField] private SuperStrike playerPrefab;
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
-    [SerializeField] private GameObject spawnPoint;
-    [SerializeField] private ExitController ExitPoint;
     private List<GameObject> objetiveList = new List<GameObject>();
     private bool isObjetiveCOmplete=false;
+    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private ExitController ExitPoint;
     [SerializeField] private string nexSceneName;
     
     void Start()
@@ -95,6 +96,35 @@ public class LevelController : MonoBehaviour
             SceneManager.LoadScene(nexSceneName);
         } 
     }
+
+    public bool PlayerAudio(AudioClip clip, bool inLoop =false)
+    {
+        foreach (AudioSource source in _audioSources)
+        {
+            if (!source.isPlaying)
+            {
+                source.clip = clip;
+                source.loop = inLoop;
+                source.Play();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool StopAudio(AudioClip clip)
+    {
+        foreach (AudioSource source in _audioSources)
+        {
+            if (source.isPlaying && source.clip == clip)
+            {
+                source.Stop();
+                return true;
+            }
+        }
+        return false;
+    }
+    
 
     
 }

@@ -30,6 +30,7 @@ public class BounzableObject : MonoBehaviour
     public bool Interact(bool isSuperStrike)
     {
         CheckPuzzle(isSuperStrike);
+        LevelController.Instance.PlayerAudio(data.sound);
         return CheckEnemy();
 
     }

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0
@@ -185,8 +185,6 @@ GameObject:
   - component: {fileID: 7168401010061868852}
   - component: {fileID: 5489971069585445902}
   - component: {fileID: 8950953342685924424}
-  - component: {fileID: 6467487574881853756}
-  - component: {fileID: 6914622839471319788}
   m_Layer: 0
   m_Name: Box
   m_TagString: BounzableObject
@@ -210,10 +208,10 @@ Transform:
   - {fileID: 4166294203313181085}
   - {fileID: 1758476643081440502}
   - {fileID: 8823009667657427967}
-  - {fileID: 2415471244304702025}
-  - {fileID: 7109568317372136826}
-  - {fileID: 3966885296073924687}
   - {fileID: 251297775016958096}
+  - {fileID: 3966885296073924687}
+  - {fileID: 7109568317372136826}
+  - {fileID: 2415471244304702025}
   - {fileID: 5744279752156514213}
   - {fileID: 3363548631489852205}
   m_Father: {fileID: 0}
@@ -268,44 +266,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6467487574881853756
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2366932998960805985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2212009239438826721, guid: d205de23adc7ae14ab04f7ff1048ec65, type: 3}
---- !u!114 &6914622839471319788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2366932998960805985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
 --- !u!1 &2991076256458287547
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0
@@ -399,7 +359,7 @@ GameObject:
   - component: {fileID: 3048480210134370331}
   - component: {fileID: 2469273987372792337}
   m_Layer: 0
-  m_Name: Ventana (3)
+  m_Name: Pared Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0
@@ -542,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0
@@ -559,7 +519,7 @@ GameObject:
   - component: {fileID: 2953688302208154635}
   - component: {fileID: 7097143062538258820}
   m_Layer: 0
-  m_Name: Ventana (2)
+  m_Name: Pared Der
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0
@@ -639,7 +599,7 @@ GameObject:
   - component: {fileID: 2307103137576958266}
   - component: {fileID: 5447108732506235551}
   m_Layer: 0
-  m_Name: Ventana
+  m_Name: Frontal Ventana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  data: {fileID: 11400000, guid: e3da696153483bd48a0245a849609104, type: 2}
   objectType: 0
   trigger: {fileID: 0}
   doesNeedSuperStrike: 0

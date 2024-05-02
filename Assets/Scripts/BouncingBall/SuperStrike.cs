@@ -18,9 +18,10 @@ public class SuperStrike : MonoBehaviour
     private bool onSuperStrike=false;
     [SerializeField] private ParticleSystem speedFx;
     [SerializeField] private GameObject speedFxPivot;
-    [SerializeField] private AudioSource speedSFX;
+    [SerializeField] private AudioClip speedSFX;
     [SerializeField] private ParticleSystem strikeFx;
-    [SerializeField] private AudioSource strikeSFX;
+    [SerializeField] private AudioClip strikeSFX;
+    [SerializeField] private AudioSource audioSource;
     
 
 
@@ -56,8 +57,7 @@ public class SuperStrike : MonoBehaviour
         rb.velocity += dir*boost;
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
-        //speedSFX.loop = true;
-        //speedSFX.Play();
+        LevelController.Instance.PlayerAudio(speedSFX, true);
         onSuperStrike = true;
         
     }
@@ -67,22 +67,16 @@ public class SuperStrike : MonoBehaviour
         if (onSuperStrike && tag == "ground")
         {
             speedFx.Stop();
-            //speedSFX.Stop();
+            LevelController.Instance.StopAudio(speedSFX);
             onSuperStrike = false;
             ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
             strike.Play();
-            //strikeSFX.Play();
+            LevelController.Instance.PlayerAudio(strikeSFX);
             Destroy(strike.gameObject,strike.totalTime+1f);
             
         }
     }
     
-
-    void Sound(AudioSource audioClip)
-    {
-        audioClip.Play();
-    }
-
     void KillBall()
     {
         // avisarle al manager para que pasen cosas
