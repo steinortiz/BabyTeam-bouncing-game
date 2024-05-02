@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.y
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.81
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalRotation.w
@@ -789,6 +789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109926013}
   - component: {fileID: 1109926012}
+  - component: {fileID: 1109926014}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -873,6 +874,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 59.987, y: 30.332, z: 8.741}
+--- !u!114 &1109926014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109926011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1324276299
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324276301}
   - component: {fileID: 1324276300}
+  - component: {fileID: 1324276302}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -967,6 +992,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1324276302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324276299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1327726126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,7 +1117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1077,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1136,7 +1184,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1144,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.89
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 5921358193334919326, guid: 7a4d08d7a2e2c7142a896d9dd35f4951, type: 3}
       propertyPath: m_LocalRotation.w
