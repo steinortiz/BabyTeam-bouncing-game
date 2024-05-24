@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/InterfazPlantilla/OptionsMenuCredits.uss?fileID=7433441132597879392&amp;guid=6719f894f2d67cd41a4e9875162bd668&amp;type=3#OptionsMenuCredits" />
+    <ui:VisualElement name="Credits" style="flex-grow: 1;">
+        <ui:VisualElement name="ImageBackground" style="flex-grow: 1;">
+            <ui:VisualElement name="Titulo" style="flex-grow: 0; justify-content: center;">
+                <ui:Label tabindex="-1" text="OPTIONS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" style="justify-content: space-between; color: rgb(255, 255, 255); -unity-font: resource(&apos;InterfazPlantilla/Fonts/Montserrat-VariableFont_wght&apos;); -unity-font-style: bold; font-size: 61px; -unity-text-align: upper-center; padding-top: 0; padding-bottom: 0; margin-top: 72px; margin-bottom: 48px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ContainerLanguaje" style="flex-grow: 0;">
+                <ui:VisualElement name="Languaje" style="flex-grow: 0; margin-top: 12px; margin-bottom: 12px;">
+                    <ui:VisualElement name="Container" style="flex-grow: 0;">
+                        <ui:Label tabindex="-1" text="LANGUAJE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NameBT" style="-unity-font: resource(&apos;InterfazPlantilla/Fonts/Montserrat-VariableFont_wght&apos;); -unity-font-style: bold; color: rgb(255, 255, 255); font-size: 42px; -unity-text-align: upper-center; padding-bottom: 0; padding-top: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="IconsBT" style="flex-grow: 0; flex-direction: row; justify-content: center;">
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Discord" text="English" class="button-menu" style="-unity-background-scale-mode: stretch-to-fill; margin-right: 8px; font-size: 24px;" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Patreon" text="Spanish" class="button-menu" style="-unity-background-scale-mode: stretch-to-fill; margin-right: 8px; font-size: 24px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ContainerVolume" style="flex-grow: 0;">
+                <ui:VisualElement name="Volume" style="flex-grow: 0; margin-top: 12px; margin-bottom: 12px;">
+                    <ui:VisualElement name="Container" style="flex-grow: 0;">
+                        <ui:Label tabindex="-1" text="VOLUME" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NameBT" style="-unity-font: resource(&apos;InterfazPlantilla/Fonts/Montserrat-VariableFont_wght&apos;); -unity-font-style: bold; color: rgb(255, 255, 255); font-size: 42px; -unity-text-align: upper-center; padding-bottom: 0; padding-top: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Slider" style="flex-grow: 0; flex-direction: row; justify-content: center;">
+                        <ui:VisualElement style="flex-grow: 0; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_mute&apos;); height: 38px; width: 42px;" />
+                        <ui:Slider high-value="100" name="Slider" style="width: 234px;" />
+                        <ui:VisualElement style="flex-grow: 0; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Volume&apos;); width: 42px; height: 38px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
