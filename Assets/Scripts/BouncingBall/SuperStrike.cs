@@ -57,7 +57,7 @@ public class SuperStrike : MonoBehaviour
         rb.velocity += dir*boost;
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
-        LevelController.Instance.PlayerAudio(speedSFX, true);
+        GameController.Instance.PlayerAudio(speedSFX, true);
         onSuperStrike = true;
         
     }
@@ -67,11 +67,11 @@ public class SuperStrike : MonoBehaviour
         if (onSuperStrike && tag == "ground")
         {
             speedFx.Stop();
-            LevelController.Instance.StopAudio(speedSFX);
+            GameController.Instance.StopAudio(speedSFX);
             onSuperStrike = false;
             ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
             strike.Play();
-            LevelController.Instance.PlayerAudio(strikeSFX);
+            GameController.Instance.PlayerAudio(strikeSFX);
             Destroy(strike.gameObject,strike.totalTime+1f);
             
         }
