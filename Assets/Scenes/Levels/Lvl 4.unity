@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1036,6 +1036,22 @@ PrefabInstance:
     - target: {fileID: 1165560267622564335, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
       propertyPath: m_Name
       value: GameManager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195838598190041141, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195838598190041141, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99746513
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195838598190041141, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.071158014
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195838598190041141, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 8.161
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
