@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="MainMenu" src="project://database/Assets/Resources/InterfazPlantilla/MainMenu.uxml?fileID=9197481963319205126&amp;guid=c2d214ce0fb2f4243a5aa02581ca09f6&amp;type=3#MainMenu" />
+    <ui:Template name="Options" src="project://database/Assets/Resources/InterfazPlantilla/Options.uxml?fileID=9197481963319205126&amp;guid=7daae6b4761d7764b81f8529d23be42e&amp;type=3#Options" />
+    <ui:Template name="Credits" src="project://database/Assets/Resources/InterfazPlantilla/Credits.uxml?fileID=9197481963319205126&amp;guid=6ab1f9f151da7bf4ab2e0a747ea00632&amp;type=3#Credits" />
+    <Style src="project://database/Assets/Resources/InterfazPlantilla/OptionsMenuCredits.uss?fileID=7433441132597879392&amp;guid=6719f894f2d67cd41a4e9875162bd668&amp;type=3#OptionsMenuCredits" />
+    <ui:Instance template="MainMenu" name="MainMenu" style="height: auto; width: auto; flex-grow: 1; display: flex;" />
+    <ui:Instance template="Options" name="Options" style="flex-grow: 1; display: none;" />
+    <ui:Instance template="Credits" name="Credits" style="flex-grow: 1; display: none;" />
+</ui:UXML>
