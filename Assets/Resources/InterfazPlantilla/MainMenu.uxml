@@ -4,20 +4,20 @@
         <ui:VisualElement name="BackgroundImage" style="flex-grow: 1; flex-direction: row;">
             <ui:VisualElement name="Left-Side" style="flex-grow: 1;">
                 <ui:VisualElement name="Game-Logo" style="flex-grow: 0; height: 45%; align-items: stretch; justify-content: flex-end;">
-                    <ui:VisualElement name="ImageLogo" style="flex-grow: 0; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Frame 6&apos;); -unity-background-scale-mode: scale-to-fit; align-items: flex-start; flex-shrink: 0; height: 334px; width: 446px;" />
+                    <ui:VisualElement name="ImageLogo" style="flex-grow: 0; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Frame 6&apos;); -unity-background-scale-mode: scale-to-fit; align-items: flex-start; flex-shrink: 0; height: 421px; width: 579px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="Menu-StartScreen" style="flex-grow: 0; flex-shrink: 0; height: 226px; width: 197px; display: flex; align-items: flex-start; align-self: flex-start; justify-content: center; flex-direction: row;">
-                    <ui:VisualElement name="Padding" style="flex-grow: 1; height: auto; width: 33px;" />
-                    <ui:VisualElement name="OptionsMenu" style="flex-grow: 1;">
+                <ui:VisualElement name="Menu-StartScreen" style="flex-grow: 0; flex-shrink: 0; height: auto; width: auto; display: flex; align-items: flex-start; align-self: flex-start; justify-content: center; flex-direction: row;">
+                    <ui:VisualElement name="Padding" style="flex-grow: 1; height: auto; width: 102px;" />
+                    <ui:VisualElement name="OptionsMenu" style="flex-grow: 1; height: 216px; width: 158px;">
                         <ui:Button text="Load Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadGame" class="button-menu" style="padding-right: 8px; flex-shrink: 0; flex-grow: 0; align-items: stretch;" />
                         <ui:Button text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewGame" class="button-menu" />
                         <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="button-menu" />
                         <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" class="button-menu" />
                         <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Exit" class="button-menu" />
                         <ui:VisualElement name="Social-Media" style="flex-grow: 1; flex-direction: row;">
-                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Discord" class="button-menu" style="background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Discord&apos;); -unity-background-scale-mode: stretch-to-fill; height: 35px; width: 38px;" />
-                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Itch" class="button-menu" style="margin-left: 4px; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Itch&apos;); -unity-background-scale-mode: stretch-to-fill; height: 35px; width: 38px; padding-right: 5px;" />
-                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Patreon" class="button-menu" style="margin-left: 4px; width: 38px; height: 35px; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Patreon&apos;); -unity-background-scale-mode: stretch-to-fill; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-scale: 0;" />
+                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Discord" class="button-menu" style="background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Discord&apos;); -unity-background-scale-mode: stretch-to-fill; height: 50px; width: 56px;" />
+                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Itch" class="button-menu" style="margin-left: 4px; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Itch&apos;); -unity-background-scale-mode: stretch-to-fill; height: 50px; width: 56px; padding-right: 5px;" />
+                            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Patreon" class="button-menu" style="margin-left: 4px; width: 56px; height: 50px; background-image: resource(&apos;InterfazPlantilla/Iconos_UI/Icon_Patreon&apos;); -unity-background-scale-mode: stretch-to-fill; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-scale: 0;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                 </ui:VisualElement>

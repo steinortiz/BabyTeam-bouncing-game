@@ -1,8 +1,8 @@
 .button-menu {
     margin-top: 6px;
     margin-bottom: 6px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin-left: 0;
     align-self: flex-start;
     border-top-left-radius: 2px;
@@ -17,4 +17,5 @@
     border-left-width: 0;
     background-color: rgb(138, 138, 138);
     color: rgb(255, 255, 255);
+    font-size: 24px;
 }

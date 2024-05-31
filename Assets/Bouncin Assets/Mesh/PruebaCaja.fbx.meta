@@ -3,7 +3,32 @@ guid: 7446b564bc24211468cb1a93405991cb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube
+    second: {fileID: 2100000, guid: fdc09b64bf381634880ac6f62a744c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DetalleCaja
+    second: {fileID: 2100000, guid: 4cd95b3c5ed4b684e863581fe06162da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MoradoCaja
+    second: {fileID: 2100000, guid: b3e22cf1938d5bf43b052483e20f8928, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RosadoCaja
+    second: {fileID: 2100000, guid: 800fcbf6898f5d74d9e5a08a971d6743, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 4253223e61fefad44b5d7ebbaa33914c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

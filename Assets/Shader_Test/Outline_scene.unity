@@ -442,10 +442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &800414628
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -501,10 +500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &805018680
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -681,10 +679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &891665654
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -900,10 +897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &1036746539
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -994,10 +990,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &1180302474
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1245,10 +1240,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &1344482762
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1583,10 +1577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &1767326237
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1843,10 +1836,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &1944168164
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1887,10 +1879,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  type: 0
-  life: 0
-  doesDamage: 0
-  particles: {fileID: 0}
+  objectType: 0
+  trigger: {fileID: 0}
+  doesNeedSuperStrike: 0
 --- !u!64 &2082575319
 MeshCollider:
   m_ObjectHideFlags: 0
