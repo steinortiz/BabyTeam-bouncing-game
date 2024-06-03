@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531222e2ef8624f499757afb05980248, type: 3}
   m_Name: Ground
   m_EditorClassIdentifier: 
-  type: 0
-  bounceSpeed: 8
-  rapidezDeCambio: 1
-  sound: {fileID: 0}
+  bounceSpeed: 13
+  rapidezDeCambio: 0.497
+  sound: {fileID: 8300000, guid: a8b0f07504a84e743b7e2cd1e9eca10d, type: 3}

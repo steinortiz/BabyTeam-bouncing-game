@@ -2,16 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.ParticleSystemJobs;
+using UnityEngine.Timeline;
 
 public class SuperStrike : MonoBehaviour
 {
     private Rigidbody rb;
-    public bool canDo;
+    public bool canStruperStrikeOnUp;
     [Range(0f, 1f)] public float influence;
     public float fallSpeed;
     public float moveSpeed;
     [Range(0f,1f)] public float airRoce;
+    [SerializeField] private bool dontSpin;
+    private bool onSuperStrike=false;
+    [SerializeField] private ParticleSystem speedFx;
+    [SerializeField] private GameObject speedFxPivot;
+    [SerializeField] private AudioClip speedSFX;
+    [SerializeField] private ParticleSystem strikeFx;
+    [SerializeField] private AudioClip strikeSFX;
+    [SerializeField] private AudioSource audioSource;
+    
 
 
     // Start is called before the first frame update
@@ -31,57 +42,70 @@ public class SuperStrike : MonoBehaviour
         //transform.Translate(movement * moveSpeed * Time.deltaTime); NO DEBE SER PORQUE GENERA RESISTENCIA CUANDO LA VELOCIDAD VA A HACIA UN LADO Y lo mueves al otro
         rb.velocity += movement * (moveSpeed * Time.deltaTime);
         
-        if (Input.GetButtonDown("Jump") && (canDo || rb.velocity.normalized.y <0))
+        if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0))
         {
             BoostSpeed(fallSpeed, Vector3.down + influence * movement);
+            
         }
         
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
     }
 
-    void Rose()
-    {
-        var c = 0.1f;
-        var dragMagnitude = c *rb.velocity.sqrMagnitude * rb.velocity.normalized;
-    }
-
-    
     void BoostSpeed(float boost,Vector3 dir)
     {
         rb.velocity += dir*boost;
-    }
-    void BoostSpeed(float boost)
-    {
-        BoostSpeed(boost,rb.velocity.normalized);
-    }
-
-    void Sound()
-    {
+        speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
+        speedFx.Play();
+        GameController.Instance.PlayerAudio(speedSFX, true);
+        onSuperStrike = true;
         
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        Sound();
-        if (collision.collider.tag == "BounzableObject")
-        {
-            BounzableObject other = collision.transform.GetComponent<BounzableObject>();
-            rb.velocity = rb.velocity.normalized*(other.data.bounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.bounceSpeed));
-            /*if (collision.relativeVelocity.magnitude > other.data.maxBounceSpeed)
-            {
-                // Si es mayor que salga a la bounceSpeed (efecto cartoon)
-                rb.velocity = rb.velocity.normalized*other.data.maxBounceSpeed;
-            }
-            else
-            {
-               rb.velocity = rb.velocity.normalized*(other.data.minBounceSpeed+(1f-other.data.rapidezDeCambio)*(rb.velocity.magnitude - other.data.minBounceSpeed));  
-            }*/
 
+    void SuperStrikeDone(string tag ="ground")
+    {
+        if (onSuperStrike && tag == "ground")
+        {
+            speedFx.Stop();
+            GameController.Instance.StopAudio(speedSFX);
+            onSuperStrike = false;
+            ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
+            strike.Play();
+            GameController.Instance.PlayerAudio(strikeSFX);
+            Destroy(strike.gameObject,strike.totalTime+1f);
+            
         }
+    }
+    
+    void KillBall()
+    {
+        // avisarle al manager para que pasen cosas
+        //Spawn de particulas
+        //Morir
+        LevelController.Instance.OnDestroyPlayer();
+        Destroy(this.gameObject);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
         // Velocidad Angular
-        if (rb.angularVelocity.magnitude > 0f)
+        if (rb.angularVelocity.magnitude > 0f && dontSpin)
         {
             rb.angularVelocity =Vector3.zero;
         }
+        if (collision.collider.transform.TryGetComponent(out BounzableObject bounzable))
+        {
+            rb.velocity = rb.velocity.normalized*(bounzable.data.bounceSpeed+(1f-bounzable.data.rapidezDeCambio)*(rb.velocity.magnitude - bounzable.data.bounceSpeed));
+            bool doKill = bounzable.Interact(onSuperStrike);
+            if (doKill)
+            {
+                Invoke("KillBall", Time.deltaTime);
+            }
+        }
+        if (collision.collider.transform.TryGetComponent(out LifeController _lifeController))
+        {
+            _lifeController.Interact(onSuperStrike);
+        }
+        SuperStrikeDone();
+
     }
 }
