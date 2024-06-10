@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.12527005, g: 0.1311908, b: 0.11696049, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 40e8066471a7bbb48b8a85d2afd1d8ee, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 9229f4743eea4a64ba2a3b4f3d71c7c0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -651,6 +651,30 @@ PrefabInstance:
     - target: {fileID: 2366932998960805985, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.002181689
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166294203313181085, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7168401010061868852, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
       propertyPath: m_LocalPosition.x
