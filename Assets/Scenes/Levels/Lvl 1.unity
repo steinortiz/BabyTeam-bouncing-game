@@ -1517,6 +1517,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 689848558349115865, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 689848558349115865, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.39989316
+      objectReference: {fileID: 0}
+    - target: {fileID: 689848558349115865, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.8581405
+      objectReference: {fileID: 0}
+    - target: {fileID: 689848558349115865, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.90188676
+      objectReference: {fileID: 0}
     - target: {fileID: 954798761404448958, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1636,6 +1652,26 @@ PrefabInstance:
     - target: {fileID: 7292832094449091661, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844226638658023197, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844226638658023197, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844226638658023197, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.15922391
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844226638658023197, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.6810805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844226638658023197, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.78867924
       objectReference: {fileID: 0}
     - target: {fileID: 7932639815075716398, guid: f924a86e910c2ae47aa48ac5cb2f0def, type: 3}
       propertyPath: m_StaticEditorFlags
