@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7168401010061868852}
   m_Layer: 0
-  m_Name: Box
+  m_Name: Box Colliders
   m_TagString: BounzableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

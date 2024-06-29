@@ -26,7 +26,7 @@ public class LevelController : MonoBehaviour
     
     [SerializeField] private bool adminMode;
     
-    [SerializeField] private SuperStrike playerPrefab;
+    
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
     private List<GameObject> objetiveList = new List<GameObject>();
@@ -49,7 +49,7 @@ public class LevelController : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        playerInstance = Instantiate(playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
+        playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
         isPlayerOnGame = true;
     }
 
@@ -93,7 +93,8 @@ public class LevelController : MonoBehaviour
         Debug.Log("Exit");
         if (nexSceneName != "")
         {
-            SceneManager.LoadScene(nexSceneName);
+            Destroy(playerInstance.gameObject);
+            SceneLoader.Instance.LoadAdditiveLevel(nexSceneName); 
         } 
     }
 

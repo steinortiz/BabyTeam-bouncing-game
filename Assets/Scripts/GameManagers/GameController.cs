@@ -1,17 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance { get; private set; }
+    
     
     [SerializeField] private List<AudioSource> _audioSources=new List<AudioSource>();
     [Range(0f,1f)]public float generalVolumen;
     public Languages generalLanguage;
     public int totalCoins;
     public CoinsController coinPrefab;
+    
+    [SerializeField] public SuperStrike playerPrefab;
 
+
+    public bool isPlaying = false;
+
+    
+    public static GameController Instance { get; private set; }
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
@@ -27,6 +35,30 @@ public class GameController : MonoBehaviour
         } 
     }
     
+    public void Update()
+    {
+        if (isPlaying && Input.GetKeyUp(KeyCode.Escape) && !UiController.Instance.pauseCanvas.enabled)
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        UiController.Instance.PauseUI();
+    }
+    public void UnPause()
+    {
+        UiController.Instance.UnPauseUI();
+    }
+
+    public void PlayLevel()
+    {
+        //SaveLoadManager
+    }
+    
+    
+    // AUDIO MANAGEMENT
     public bool PlayerAudio(AudioClip clip, bool inLoop =false)
     {
         foreach (AudioSource source in _audioSources)
@@ -53,16 +85,7 @@ public class GameController : MonoBehaviour
                 return true;
             }
         }
-        return false;
-    }
 
-    public void SetLanguage(Languages lang)
-    {
-        generalLanguage = lang;
-        if (LanguageController.Instance != null)
-        {
-            LanguageController.Instance.UpdateLanguage(lang);
-        }
-        
+        return false;
     }
 }

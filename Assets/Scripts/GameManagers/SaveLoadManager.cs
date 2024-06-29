@@ -3,9 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class PlayerData
+{
+    public string currentLevel;
+    PlayerData()
+    {
+        currentLevel = "Level 1";
+    }
+}
+
+
 public class SaveLoadManager : MonoBehaviour
 {
-    [SerializeField] private PlayerManager playerOBJ =new PlayerManager();
+    //[SerializeField] private PlayerData playerOBJ =new PlayerManager();
     [SerializeField] private List<string> playerKeys =new List<string>();
     
     
@@ -27,7 +38,7 @@ public class SaveLoadManager : MonoBehaviour
         if (PlayerPrefs.HasKey("keys"))
         {
             string jsonData = PlayerPrefs.GetString("keys");
-            playerOBJ = JsonUtility.FromJson<PlayerManager>(jsonData);
+            //playerOBJ = JsonUtility.FromJson<PlayerData>(jsonData);
             return true;
         }
         else
@@ -40,7 +51,7 @@ public class SaveLoadManager : MonoBehaviour
     
     void SavePlayerData(string key)
     {
-        string jsonData = JsonUtility.ToJson(playerOBJ);
+        string jsonData = ""; //JsonUtility.ToJson(playerOBJ);
         PlayerPrefs.SetString(key, jsonData);
         PlayerPrefs.Save();
     }
@@ -50,12 +61,12 @@ public class SaveLoadManager : MonoBehaviour
         if (PlayerPrefs.HasKey(key))
         {
             string jsonData = PlayerPrefs.GetString(key);
-            playerOBJ = JsonUtility.FromJson<PlayerManager>(jsonData);
+            //playerOBJ = JsonUtility.FromJson<PlayerData>(jsonData);
             return true;
         }
         else
         {
-            playerOBJ = new PlayerManager();
+            //playerOBJ = new PlayerData();
             return false;
         }
     }

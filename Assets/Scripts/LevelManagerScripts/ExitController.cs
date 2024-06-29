@@ -9,5 +9,6 @@ public class ExitController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         LevelController.Instance.LoadNextLevelScene();
+        this.gameObject.SetActive(false);
     }
 }

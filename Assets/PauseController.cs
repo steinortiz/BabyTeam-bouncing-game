@@ -1,12 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class PlayerManager : MonoBehaviour
+public class PauseController : MonoBehaviour
 {
-
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -17,7 +15,4 @@ public class PlayerManager : MonoBehaviour
     {
         
     }
-    
-    
-    
 }
