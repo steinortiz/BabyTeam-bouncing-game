@@ -49,8 +49,11 @@ public class LevelController : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
-        isPlayerOnGame = true;
+        if (GameController.Instance != null && spawnPoint!=null)
+        {
+            playerInstance = Instantiate(GameController.Instance?.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
+            isPlayerOnGame = true;
+        }
     }
 
     public void SetObjetive(GameObject objetive)
@@ -84,7 +87,7 @@ public class LevelController : MonoBehaviour
     private void ActivateExit()
     {
         isObjetiveCOmplete = true;
-        ExitPoint.gameObject.SetActive(true);
+        ExitPoint.gameObject?.SetActive(true);
 
     }
 

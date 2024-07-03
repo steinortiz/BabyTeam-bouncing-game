@@ -476,6 +476,171 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 38f4cb7b9d9c0b247added30ef3623d6, type: 2}
+--- !u!1 &800958244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+  m_PrefabInstance: {fileID: 6743401092487244196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &800958249
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800958244}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 13e4d83454c4b0248be54f41a64e5bc5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1251380777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251380780}
+  - component: {fileID: 1251380779}
+  - component: {fileID: 1251380778}
+  m_Layer: 0
+  m_Name: sun (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1251380778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251380777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 0
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 3
+--- !u!108 &1251380779
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251380777}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+  m_Intensity: 0.5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 65
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 6.2e-44, y: 6.739089e+16, z: 5.98e-43, w: 2.3198e-41}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1251380780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251380777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1663763522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,7 +1517,7 @@ GameObject:
   - component: {fileID: 6884347910557072545}
   - component: {fileID: 2949428733750192680}
   - component: {fileID: 7859174921357173083}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BarraMonedas.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1370,7 +1535,7 @@ GameObject:
   - component: {fileID: 4680615998142640926}
   - component: {fileID: 6243060330710518342}
   - component: {fileID: 1981466311689816603}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Luz2detail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1638,7 @@ GameObject:
   - component: {fileID: 7805392342152778080}
   - component: {fileID: 6482356348681792394}
   - component: {fileID: 4174671264475653272}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Giramonedadetalle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1532,7 +1697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2569101503004056474}
   - component: {fileID: 1325329438250985866}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1723,7 @@ GameObject:
   - component: {fileID: 5670751421631119840}
   - component: {fileID: 7471621707852473489}
   - component: {fileID: 2114848517494238016}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: GiraMoneda0.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1741,7 @@ GameObject:
   - component: {fileID: 7469746649538497950}
   - component: {fileID: 6869301907338405067}
   - component: {fileID: 1099657559614921783}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1609,7 +1774,7 @@ GameObject:
   - component: {fileID: 2754769298797831320}
   - component: {fileID: 299544485745546482}
   - component: {fileID: 8034008687970724328}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: MachinBevel.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1851,7 +2016,7 @@ GameObject:
   - component: {fileID: 9070025183519170715}
   - component: {fileID: 5972705138073044030}
   - component: {fileID: 764192616748764806}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Luz1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1942,7 +2107,7 @@ GameObject:
   - component: {fileID: 9061538395063367570}
   - component: {fileID: 708143602895133045}
   - component: {fileID: 1810576423093252590}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Rotador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,7 +2133,7 @@ GameObject:
   - component: {fileID: 1844160047938849262}
   - component: {fileID: 1694412232331740140}
   - component: {fileID: 6322593394700781753}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Luz1detail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,6 +2221,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 251529531479377334, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251529531479377334, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430898176405443761, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474832505066096835, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1203284638532110930, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Name
       value: Caja
@@ -2100,10 +2285,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2464405652664062703, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995718295074261339, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155127797182275826, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155127797182275826, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092568687094348630, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7738774320393205111, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809074118887933241, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019339417003479117, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069315451005749118, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518325824233456114, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: activateInstruction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 800958249}
   m_SourcePrefab: {fileID: 100100000, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
 --- !u!1 &6844415850623248300
 GameObject:
@@ -2166,7 +2402,7 @@ GameObject:
   - component: {fileID: 2263551062134065374}
   - component: {fileID: 4884078012385352892}
   - component: {fileID: 85693279970670188}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Luz2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2268,7 +2504,7 @@ GameObject:
   - component: {fileID: 886850490324585276}
   - component: {fileID: 6909380278877465998}
   - component: {fileID: 8306041466401057822}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: MachinBevel.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2309,7 +2545,7 @@ GameObject:
   - component: {fileID: 2432968534376118990}
   - component: {fileID: 6065813809738649621}
   - component: {fileID: 6099993148797179372}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: DetalleGiraMoneda2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,7 +2571,7 @@ GameObject:
   - component: {fileID: 2912295504440320534}
   - component: {fileID: 7559657416456964315}
   - component: {fileID: 2943619605286910507}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Luces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2368,7 +2604,7 @@ GameObject:
   - component: {fileID: 1262809038763361719}
   - component: {fileID: 1519148145969614551}
   - component: {fileID: 4212322837182071825}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: botondetail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2544,7 +2780,7 @@ GameObject:
   - component: {fileID: 3747494121963228927}
   - component: {fileID: 1392728688842263568}
   - component: {fileID: 1740350914681072465}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: MarcoLuces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2622,7 +2858,7 @@ GameObject:
   - component: {fileID: 7168519919171630121}
   - component: {fileID: 1096968261575440201}
   - component: {fileID: 2150857246017664448}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: marco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2906,7 @@ GameObject:
   - component: {fileID: 4175018207701410600}
   - component: {fileID: 8179724550726917870}
   - component: {fileID: 8147568000442924141}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Boton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,4 +2944,5 @@ SceneRoots:
   - {fileID: 1732061113}
   - {fileID: 375326118}
   - {fileID: 71288278}
+  - {fileID: 1251380780}
   - {fileID: 1769336580}

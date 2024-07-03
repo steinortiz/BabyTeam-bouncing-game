@@ -6,12 +6,10 @@ using UnityEngine;
 public class LifeController : MonoBehaviour
 {
     public int life;
-    public bool doesNeedSuperStrike;
     public ParticleSystem particles;
     [SerializeField]private bool changeMaterial;
     [SerializeField] private List<Material> materials =new List<Material>();
     [SerializeField]private MeshRenderer _meshRenderer;
-    private BounzableObject _bounzableObject;
     
     
     public delegate void ObjectDestroyed();
@@ -19,39 +17,34 @@ public class LifeController : MonoBehaviour
 
     public void Start()
     {
-        _meshRenderer = this.GetComponent<MeshRenderer>();
-        _bounzableObject = this.GetComponent<BounzableObject>();
+        _meshRenderer = GetComponent<MeshRenderer>();
         if (life <= 0)
         {
             UpdateLife(1);
         }
     }
-    public void Interact(bool isSuperStrike)
+    public bool Interact()
     {
-        if (!doesNeedSuperStrike || isSuperStrike)
+        life -= 1;
+        UpdateMaterial();
+        if (life == 0)
         {
-            life -= 1;
-            UpdateMaterial();
-            if (life == 0)
+            if (particles != null)
             {
-                _bounzableObject.CheckCompleteObjetive();
-                if (particles != null)
-                { 
-                    
-                    ParticleSystem particlesSys = Instantiate<ParticleSystem>(particles, transform.localPosition, transform.rotation);
-                    particlesSys.Play();
-                    Destroy(particlesSys, particlesSys.totalTime);
-                }
-                Destroy(this.gameObject);
+                ParticleSystem particlesSys = Instantiate<ParticleSystem>(particles, transform.localPosition, transform.rotation);
+                particlesSys.Play();
+                Destroy(particlesSys, particlesSys.totalTime);
             }
+            return true;
         }
+
+        return false;
     }
 
     public void UpdateLife(int lifevalue)
     {
         life = lifevalue;
         UpdateMaterial();
-        
     }
 
     private void UpdateMaterial()

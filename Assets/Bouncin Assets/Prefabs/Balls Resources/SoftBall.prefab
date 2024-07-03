@@ -87,10 +87,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  objectType: 0
-  trigger: {fileID: 0}
+  activateInstruction: 1
   doesNeedSuperStrike: 0
+  destroyOnComplete: 1
+  objectType: 0
+  onPlayerCollitionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzlePauseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!135 &3739374179345923487
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -125,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  doesNeedSuperStrike: 0
   particles: {fileID: 7901949916669360944, guid: dadcfdc5b7c4c5044821c1ae39841fb2, type: 3}
   changeMaterial: 0
   materials: []

@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       propertyPath: m_Name
-      value: HardBall
+      value: DobleHardBall
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       propertyPath: m_Layer
@@ -107,10 +107,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  activateInstruction: 1
+  doesNeedSuperStrike: 1
+  destroyOnComplete: 1
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPlayerCollitionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzlePauseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!135 &7540247514481229227
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -145,9 +158,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 2
-  doesNeedSuperStrike: 1
   particles: {fileID: 7901949916669360944, guid: dadcfdc5b7c4c5044821c1ae39841fb2, type: 3}
   changeMaterial: 1
   materials:
   - {fileID: 2100000, guid: c3384104115cd814982ab9fcd61bef27, type: 2}
   - {fileID: 2100000, guid: e52908d38c8d37b45a8e4d53373141da, type: 2}
+  _meshRenderer: {fileID: 8833695775285277899}
+--- !u!23 &8833695775285277899 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
+  m_PrefabInstance: {fileID: 7878486938370304079}
+  m_PrefabAsset: {fileID: 0}

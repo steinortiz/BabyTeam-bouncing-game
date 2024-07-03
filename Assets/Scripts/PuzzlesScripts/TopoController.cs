@@ -11,7 +11,7 @@ public class Topo
 {
     public BounzableObject obj;
     public bool isTopoObjetive;
-    public int lifeSaved=0;
+    [HideInInspector]public int lifeSaved=0;
 
 }
 
@@ -41,6 +41,7 @@ public class TopoHole
         topoInstance = topoInstanceIn;
     }
 }
+
 public class TopoController : AbstractPuzzle
 {
     [SerializeField] private List<TopoHole> spawnPlaces = new List<TopoHole>();
@@ -55,46 +56,24 @@ public class TopoController : AbstractPuzzle
     [SerializeField] private float animationTime;
     [SerializeField] private LeanTweenType animationCurve;
     [SerializeField] private float waitTime;
-    public AbstractPuzzle trigger =null;
-    [SerializeField] private bool isPuzzlePlaying;
     private float timer;
 
-    private void Start()
-    {
-        foreach (Topo topoData in topoList)
-        {
-            if( topoData.obj.TryGetComponent(out LifeController _lifeController))
-            {
-                topoData.lifeSaved = _lifeController.life;
-            }
-            
-            if (topoData.isTopoObjetive)
-            {
-                countObjetives += 1;
-            }
-        }
-        if (countObjetives > 0)
-        {
-            SetAsObjetive(true);
-        }
-    }
-
+    
     private void Update()
     {
-        if (isPuzzlePlaying)
+        if (isPuzzleActive)
         {
-            timer += Time.deltaTime;
-            if (timer > delayDeAparicion)
+            timer -= Time.deltaTime;
+            if (timer <=0f )
             {
-                timer = 0f;
+                timer = delayDeAparicion;
                 SpawnTopo();
             }
         }
     }
 
-    bool SpawnTopo()
+    private bool SpawnTopo()
     {
-        Debug.Log("Intentado Spawing");
         if (spawnPlaces.Count > 0)
         {
             int rng = 0;
@@ -112,15 +91,13 @@ public class TopoController : AbstractPuzzle
                     //instanciarlo
                     BounzableObject topoInstance = Instantiate(thisTopoData.obj, spawnPlaces[rng].spawnPlaceObject.transform);
                     
-                    topoInstance.SetPuzzleFather(this,thisTopoData.isTopoObjetive);
+                    topoInstance.onPuzzleCompletedEvent.AddListener(ObjetivesChecker);
                     if (topoInstance.TryGetComponent(out LifeController _lifeController))
                     {
                         _lifeController.Start();
                         _lifeController.UpdateLife(thisTopoData.lifeSaved);
                     }
                     
-                    
-
                     //pasarselo al topoHole
                     topoHole.setOBJs(thisTopoData, topoInstance);
                     
@@ -168,45 +145,41 @@ public class TopoController : AbstractPuzzle
         spawnPlacesInUse.Remove(topoHole);
         BounzableObject topoInstance = topoHole.GetOBJInstance();
         Topo topoData = topoHole.GetOBJData();
+        topoInstance.onPuzzleCompletedEvent.RemoveAllListeners();
         if( topoInstance.TryGetComponent(out LifeController _lifeController))
         {
             topoData.lifeSaved = _lifeController.life;
         }
+        
         Destroy(topoInstance.gameObject);
         topoList.Add(topoData);
     }
     public override void Activate()
     {
-        
-        Debug.Log("topo activado");
-        isPuzzlePlaying = true;
-        SpawnTopo();
-    }
-
-    public override void Pause()
-    {
-        isPuzzlePlaying = false;
-    }
-    
-    public override void ObjetivesChecker(bool isObjectObjetive)
-    {
-        if (isObjectObjetive)
+        foreach (Topo topoData in topoList)
         {
-            countObjetives -= 1;
-            if (countObjetives <= 0)
+            if( topoData.obj.TryGetComponent(out LifeController _lifeController))
             {
-                OnCompletePuzzle();
+                topoData.lifeSaved = _lifeController.life;
+            }
+            
+            if (topoData.isTopoObjetive)
+            {
+                countObjetives += 1;
             }
         }
+        SpawnTopo();
+        base.Activate();
     }
-    public override void OnCompletePuzzle()
+
+    public void ObjetivesChecker()
     {
-        Pause();
-        LevelController.Instance.CompleteObjetive(this.transform.gameObject);
-        if (trigger != null)
+        countObjetives -= 1;
+        if (countObjetives <= 0)
         {
-            trigger.Activate();
+            CompletePuzzle();
         }
     }
+    
 
 }

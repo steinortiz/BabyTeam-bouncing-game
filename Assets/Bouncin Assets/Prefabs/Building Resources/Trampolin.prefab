@@ -122,7 +122,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
-  objectType: 0
-  trigger: {fileID: 0}
+  activateInstruction: 1
   doesNeedSuperStrike: 0
+  objectType: 0
+  onPlayerCollitionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzlePauseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}

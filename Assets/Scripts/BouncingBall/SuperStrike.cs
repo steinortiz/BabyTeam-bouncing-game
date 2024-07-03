@@ -15,7 +15,7 @@ public class SuperStrike : MonoBehaviour
     public float moveSpeed;
     [Range(0f,1f)] public float airRoce;
     [SerializeField] private bool dontSpin;
-    private bool onSuperStrike=false;
+    public bool isSuperStrikeActive { get; private set;}
     [SerializeField] private ParticleSystem speedFx;
     [SerializeField] private GameObject speedFxPivot;
     [SerializeField] private AudioClip speedSFX;
@@ -58,17 +58,17 @@ public class SuperStrike : MonoBehaviour
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
         GameController.Instance.PlayerAudio(speedSFX, true);
-        onSuperStrike = true;
+        isSuperStrikeActive = true;
         
     }
 
-    void SuperStrikeDone(string tag ="ground")
+    void SuperStrikeDone()
     {
-        if (onSuperStrike && tag == "ground")
+        if (isSuperStrikeActive)
         {
             speedFx.Stop();
             GameController.Instance.StopAudio(speedSFX);
-            onSuperStrike = false;
+            isSuperStrikeActive = false;
             ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
             strike.Play();
             GameController.Instance.PlayerAudio(strikeSFX);
@@ -77,7 +77,7 @@ public class SuperStrike : MonoBehaviour
         }
     }
     
-    void KillBall()
+    public void KillBall()
     {
         // avisarle al manager para que pasen cosas
         //Spawn de particulas
@@ -85,27 +85,20 @@ public class SuperStrike : MonoBehaviour
         LevelController.Instance.OnDestroyPlayer();
         Destroy(this.gameObject);
     }
-    private void OnCollisionEnter(Collision collision)
+
+    public void SetBounce(BounzableObject obj)
     {
         // Velocidad Angular
         if (rb.angularVelocity.magnitude > 0f && dontSpin)
         {
             rb.angularVelocity =Vector3.zero;
         }
-        if (collision.collider.transform.TryGetComponent(out BounzableObject bounzable))
-        {
-            rb.velocity = rb.velocity.normalized*(bounzable.data.bounceSpeed+(1f-bounzable.data.rapidezDeCambio)*(rb.velocity.magnitude - bounzable.data.bounceSpeed));
-            bool doKill = bounzable.Interact(onSuperStrike);
-            if (doKill)
-            {
-                Invoke("KillBall", Time.deltaTime);
-            }
-        }
-        if (collision.collider.transform.TryGetComponent(out LifeController _lifeController))
-        {
-            _lifeController.Interact(onSuperStrike);
-        }
+        rb.velocity = rb.velocity.normalized*(obj.data.bounceSpeed+(1f-obj.data.rapidezDeCambio)*(rb.velocity.magnitude - obj.data.bounceSpeed));
         SuperStrikeDone();
+    }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        SuperStrikeDone();
     }
 }

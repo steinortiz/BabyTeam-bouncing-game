@@ -104,10 +104,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  objectType: 1
-  trigger: {fileID: 0}
+  activateInstruction: 1
   doesNeedSuperStrike: 0
+  objectType: 1
+  onPlayerCollition:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzlePause:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!135 &8432009878703973913
 SphereCollider:
   m_ObjectHideFlags: 0

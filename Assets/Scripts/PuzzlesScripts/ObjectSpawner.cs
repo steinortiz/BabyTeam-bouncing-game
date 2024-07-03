@@ -5,31 +5,14 @@ using UnityEngine;
 public class ObjectSpawner : AbstractPuzzle
 {
     [SerializeField] private GameObject objectToSpawn;
-    public override void Activate()
+    public  void Activate()
     {
+        base.Activate();
         if (objectToSpawn != null)
         {
             GameObject obj = Instantiate(objectToSpawn, this.transform.position, this.transform.rotation);
-            if (obj.transform.TryGetComponent(out AbstractPuzzle puzzle))
-            {
-                puzzle.Activate();
-            }
         }
     }
-
-    public override void Pause()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnCompletePuzzle()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void ObjetivesChecker(bool isObjectObjetive)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 
 }
