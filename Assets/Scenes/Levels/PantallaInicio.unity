@@ -1672,6 +1672,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 4053210862875631791, guid: 908f8bc4b7810094ca6ad6d5fec616f6, type: 3}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: _audioSources.Array.data[7]
+      value: 
+      objectReference: {fileID: 8608325599207931615}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: _audioSources.Array.data[8]
+      value: 
+      objectReference: {fileID: 8608325599207931614}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: _audioSources.Array.data[9]
+      value: 
+      objectReference: {fileID: 8608325599207931613}
     - target: {fileID: 5920546799863078041, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1721,6 +1737,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+--- !u!82 &8608325599207931613 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6903762837157594948, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+  m_PrefabInstance: {fileID: 8608325599207931612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8608325599207931614 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8014951656223840625, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+  m_PrefabInstance: {fileID: 8608325599207931612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8608325599207931615 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8772531017150941021, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+  m_PrefabInstance: {fileID: 8608325599207931612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

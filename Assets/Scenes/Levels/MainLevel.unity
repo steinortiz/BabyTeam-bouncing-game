@@ -2231,7 +2231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430898176405443761, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Layer
@@ -2239,7 +2239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 474832505066096835, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1203284638532110930, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Name
@@ -2303,7 +2303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5092568687094348630, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Layer
@@ -2323,15 +2323,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8019339417003479117, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8069315451005749118, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8518325824233456114, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
+    - target: {fileID: 8518325824233456114, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

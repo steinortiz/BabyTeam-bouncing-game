@@ -10,10 +10,6 @@ public class LifeController : MonoBehaviour
     [SerializeField]private bool changeMaterial;
     [SerializeField] private List<Material> materials =new List<Material>();
     [SerializeField]private MeshRenderer _meshRenderer;
-    
-    
-    public delegate void ObjectDestroyed();
-    public event ObjectDestroyed OnObjectDestroyedEvent;
 
     public void Start()
     {

@@ -24,6 +24,7 @@ public enum ActivateInstruction
 
 public abstract class AbstractPuzzle : MonoBehaviour
 {
+    public BounzableScriptableObject data;
     [SerializeField] private ActivateInstruction activateInstruction;
     [HideInInspector] protected bool isPuzzleActive;
     public bool destroyOnComplete;
@@ -60,11 +61,18 @@ public abstract class AbstractPuzzle : MonoBehaviour
     }
     public virtual void Activate()
     {
+        if(transform.TryGetComponent(out LifeController _lifeController))
+        {
+            bool isCompleted = _lifeController.Interact();
+            if (isCompleted)CompletePuzzle();
+        }
         isPuzzleActive = true;
         onPuzzleActivateEvent?.Invoke();
     }
     public virtual void Activate(SuperStrike player)
     {
+        player?.SetBounce(data);
+        GameController.Instance.PlayerAudio(data.sound);
         Activate();
     }
     public bool CheckEnemy()

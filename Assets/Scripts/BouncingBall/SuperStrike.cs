@@ -13,6 +13,7 @@ public class SuperStrike : MonoBehaviour
     [Range(0f, 1f)] public float influence;
     public float fallSpeed;
     public float moveSpeed;
+    public float spinSpeed;
     [Range(0f,1f)] public float airRoce;
     [SerializeField] private bool dontSpin;
     public bool isSuperStrikeActive { get; private set;}
@@ -39,17 +40,19 @@ public class SuperStrike : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(x, 0, z);
+        Vector3 spin = new Vector3(z, 0, -x);
         //transform.Translate(movement * moveSpeed * Time.deltaTime); NO DEBE SER PORQUE GENERA RESISTENCIA CUANDO LA VELOCIDAD VA A HACIA UN LADO Y lo mueves al otro
         rb.velocity += movement * (moveSpeed * Time.deltaTime);
+        rb.angularVelocity += spin * (spinSpeed);
         
         if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0))
         {
             BoostSpeed(fallSpeed, Vector3.down + influence * movement);
             
         }
-        
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
+        
     }
 
     void BoostSpeed(float boost,Vector3 dir)
@@ -86,14 +89,14 @@ public class SuperStrike : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void SetBounce(BounzableObject obj)
+    public void SetBounce(BounzableScriptableObject data)
     {
         // Velocidad Angular
         if (rb.angularVelocity.magnitude > 0f && dontSpin)
         {
             rb.angularVelocity =Vector3.zero;
         }
-        rb.velocity = rb.velocity.normalized*(obj.data.bounceSpeed+(1f-obj.data.rapidezDeCambio)*(rb.velocity.magnitude - obj.data.bounceSpeed));
+        rb.velocity = rb.velocity.normalized*(data.bounceSpeed+(1f-data.rapidezDeCambio)*(rb.velocity.magnitude - data.bounceSpeed));
         SuperStrikeDone();
     }
 

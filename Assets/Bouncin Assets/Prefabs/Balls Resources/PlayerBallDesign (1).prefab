@@ -374,8 +374,9 @@ MonoBehaviour:
   influence: 0.43
   fallSpeed: 20
   moveSpeed: 14
+  spinSpeed: 1000
   airRoce: 0.122
-  dontSpin: 1
+  dontSpin: 0
   speedFx: {fileID: 3663470584871234761}
   speedFxPivot: {fileID: 1881089867559964752}
   speedSFX: {fileID: 0}
