@@ -45,6 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f1af05bf9f0c044b8c4c2e471db587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activateInstruction: 1
+  doesNeedSuperStrike: 0
+  destroyOnComplete: 0
+  objectType: 0
+  onPlayerCollitionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   spawnPlaces:
   - spawnPlaceObject: {fileID: 8882865081323230090}
   topoList: []
@@ -53,8 +69,7 @@ MonoBehaviour:
   altura: 1
   animationTime: 1
   animationCurve: 7
-  trigger: {fileID: 0}
-  isPuzzlePlaying: 0
+  waitTime: 0
 --- !u!1 &8882865081323230090
 GameObject:
   m_ObjectHideFlags: 0

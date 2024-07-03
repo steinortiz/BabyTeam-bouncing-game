@@ -156,12 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateInstruction: 0
-  doesNeedSuperStrike: 0
   destroyOnComplete: 0
   objectType: 0
-  onPlayerCollitionEvent:
-    m_PersistentCalls:
-      m_Calls: []
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -504,6 +500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soft1touch
       objectReference: {fileID: 0}
+    - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -787,6 +787,74 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1731340469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731340472}
+  - component: {fileID: 1731340471}
+  - component: {fileID: 1731340470}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1731340470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731340469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1731340471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731340469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1731340472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731340469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909125419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 495745450359398461, guid: 30d27243e6ea61a4a84f1d6c1d67d974, type: 3}
@@ -913,6 +981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopoPuzzleController
       objectReference: {fileID: 0}
+    - target: {fileID: 4561183318743183191, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5851544987332519438, guid: 56b5655ee07c38e48a24a78f094f7833, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -969,6 +1041,10 @@ PrefabInstance:
     - target: {fileID: 8369815326622794762, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
       propertyPath: m_Name
       value: EnemyBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369815326622794762, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9181817220429815472, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall
       objectReference: {fileID: 0}
+    - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6800236230023669417, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.55
@@ -1072,6 +1152,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
+--- !u!1001 &6013568125379136702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.312148
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7686372
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.9272044
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 648275480698994304, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399197349109898995, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_Name
+      value: TimerPuzzle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
 --- !u!1001 &6087819142784778356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,6 +1224,10 @@ PrefabInstance:
     - target: {fileID: 1496442739564694281, guid: f60c578e3c2c624498dc9260bc298c38, type: 3}
       propertyPath: m_Name
       value: BoostBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496442739564694281, guid: f60c578e3c2c624498dc9260bc298c38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2274245324128588211, guid: f60c578e3c2c624498dc9260bc298c38, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HardBall
       objectReference: {fileID: 0}
+    - target: {fileID: 7032208026078598430, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7700235473681158052, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.83
@@ -1235,9 +1380,11 @@ SceneRoots:
   - {fileID: 6087819142784778356}
   - {fileID: 4602576064225652371}
   - {fileID: 6897760171608225814}
+  - {fileID: 716704565}
   - {fileID: 1491365716}
   - {fileID: 747916174}
   - {fileID: 2131850540}
   - {fileID: 4364006614796307948}
-  - {fileID: 716704565}
   - {fileID: 215264942}
+  - {fileID: 6013568125379136702}
+  - {fileID: 1731340472}

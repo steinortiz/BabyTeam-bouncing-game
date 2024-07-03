@@ -12,7 +12,6 @@ public class Topo
     public BounzableObject obj;
     public bool isTopoObjetive;
     [HideInInspector]public int lifeSaved=0;
-
 }
 
 [Serializable]
@@ -113,11 +112,6 @@ public class TopoController : AbstractPuzzle
                     return true;
                 }
             }
-        }
-        else
-        {
-            Debug.Log("Spawing Failed");
-            
         }
         return false; 
     }

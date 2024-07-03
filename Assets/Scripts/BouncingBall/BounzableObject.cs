@@ -13,7 +13,6 @@ public class BounzableObject : AbstractPuzzle
         GameController.Instance.PlayerAudio(data.sound);
         if(transform.TryGetComponent(out LifeController _lifeController))
             {
-                Debug.Log("UpdateLife");
                 bool isCompleted = _lifeController.Interact();
                 if (isCompleted)CompletePuzzle();
             }

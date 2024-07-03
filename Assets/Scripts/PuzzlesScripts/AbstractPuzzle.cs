@@ -16,23 +16,22 @@ public enum PuzzleType
 
 public enum ActivateInstruction
 {
+    None,
     OnEnable,
-    OnCollision
+    OnNormalCollision,
+    OnSuperStrike,
 }
 
 public abstract class AbstractPuzzle : MonoBehaviour
 {
     [SerializeField] private ActivateInstruction activateInstruction;
-    public bool doesNeedSuperStrike;
+    [HideInInspector] protected bool isPuzzleActive;
     public bool destroyOnComplete;
     public PuzzleType objectType;
-    public UnityEvent onPlayerCollitionEvent;
+    //public UnityEvent onPlayerCollitionEvent;
     public UnityEvent onPuzzleActivateEvent;
     public UnityEvent onPuzzleDisactiveEvent;
     public UnityEvent onPuzzleCompletedEvent;
-    [HideInInspector] protected bool isPuzzleActive;
-    private AbstractPuzzle _puzzleFather;
-    private bool isObjetiveInFather;
 
     public void Start()
     {
@@ -46,7 +45,15 @@ public abstract class AbstractPuzzle : MonoBehaviour
             Activate();
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        //onPlayerCollitionEvent.RemoveAllListeners();
+        onPuzzleActivateEvent.RemoveAllListeners();
+        onPuzzleDisactiveEvent.RemoveAllListeners();
+        onPuzzleCompletedEvent.RemoveAllListeners();
+    }
+
     public void SetAsObjetive()
     {
         LevelController.Instance.SetObjetive(this.transform.gameObject);
@@ -66,25 +73,28 @@ public abstract class AbstractPuzzle : MonoBehaviour
         return false;
         
     }
-    public void Disactive()
+    public virtual void Disactivate()
     {
         isPuzzleActive = false;
         onPuzzleDisactiveEvent?.Invoke();
     }
+    
     public void CompletePuzzle()
     {
-        Debug.Log("Puzzle Completed");
-        Disactive();
+        Disactivate();
         LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
         onPuzzleCompletedEvent?.Invoke();
-        if(destroyOnComplete) Destroy(this.gameObject,Time.deltaTime);
+        if (destroyOnComplete)
+        {
+            Destroy(this.gameObject,Time.deltaTime);
+        }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.transform.TryGetComponent(out SuperStrike player))
         {
-            
+            //onPlayerCollitionEvent?.Invoke();
             OnPlayerCollisionHandler(player);
             if(CheckEnemy())player.KillBall();
         }
@@ -92,18 +102,15 @@ public abstract class AbstractPuzzle : MonoBehaviour
 
     public virtual void OnPlayerCollisionHandler(SuperStrike player)
     {
-        if (activateInstruction == ActivateInstruction.OnCollision)
+        
+        if (activateInstruction == ActivateInstruction.OnNormalCollision)
         {
-            if (!doesNeedSuperStrike || player.isSuperStrikeActive)
-            {
-                Activate(player);
-            }
+            Activate(player);
         }
-        onPlayerCollitionEvent?.Invoke();
-    }
-    public void SetPuzzleFather(AbstractPuzzle puzzle, bool isObjetiveIN)
-    {
-        _puzzleFather = puzzle;
-        isObjetiveInFather = isObjetiveIN;
+        if(activateInstruction == ActivateInstruction.OnSuperStrike && player.isSuperStrikeActive)
+        {
+            Activate(player);
+        }
+        
     }
 }

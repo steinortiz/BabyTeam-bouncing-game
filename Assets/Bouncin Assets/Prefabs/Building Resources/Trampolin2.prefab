@@ -110,8 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateInstruction: 1
+  activateInstruction: 2
   doesNeedSuperStrike: 0
+  destroyOnComplete: 0
   objectType: 0
   onPlayerCollitionEvent:
     m_PersistentCalls:
@@ -119,7 +120,7 @@ MonoBehaviour:
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
-  onPuzzlePauseEvent:
+  onPuzzleDisactiveEvent:
     m_PersistentCalls:
       m_Calls: []
   onPuzzleCompletedEvent:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -195,7 +199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -382,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -443,6 +451,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -506,6 +518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -567,6 +583,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -753,10 +773,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!64 &150146403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -797,7 +826,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 10
-  doesNeedSuperStrike: 0
   particles: {fileID: 0}
   changeMaterial: 0
   materials: []
@@ -812,7 +840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7032208026078598430, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: m_Name
@@ -885,10 +913,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &155189988
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -937,7 +974,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -1078,10 +1115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &184614499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1126,10 +1172,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
 --- !u!64 &235835152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1167,7 +1222,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -1223,129 +1278,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6800236230023669417, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
   m_PrefabInstance: {fileID: 239858644}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &240041870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 240041871}
-  - component: {fileID: 240041875}
-  - component: {fileID: 240041874}
-  - component: {fileID: 240041873}
-  - component: {fileID: 240041872}
-  m_Layer: 0
-  m_Name: Piso
-  m_TagString: BounzableObject
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &240041871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240041870}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.21, z: 0}
-  m_LocalScale: {x: 0.74, y: 0.73999995, z: 0.73999995}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1499474242}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &240041872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240041870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: f294c5652277a284096fc241d8b32e8a, type: 2}
-  objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
---- !u!64 &240041873
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240041870}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &240041874
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240041870}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &240041875
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240041870}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &249465141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1398,6 +1330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1425,10 +1361,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &268645483
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1592,10 +1537,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &424926247
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1727,10 +1681,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &460196075
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1809,6 +1772,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2017,10 +1984,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &549088403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2219,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2239,7 +2219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -2347,6 +2327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2408,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2589,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2650,6 +2642,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2797,10 +2793,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &682699586
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2838,7 +2843,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -3028,6 +3033,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3358,10 +3367,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
 --- !u!64 &768813825
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3441,6 +3459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3451,112 +3473,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2557345477527128062, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
   m_PrefabInstance: {fileID: 860687066}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &895830461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 895830462}
-  - component: {fileID: 895830465}
-  - component: {fileID: 895830464}
-  - component: {fileID: 895830463}
-  m_Layer: 0
-  m_Name: Ventana
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &895830462
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895830461}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.01, y: 3.75, z: -3.89}
-  m_LocalScale: {x: 0.74, y: 0.73999995, z: 0.73999995}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1499474242}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &895830463
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895830461}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &895830464
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895830461}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &895830465
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895830461}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &929168377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3911,7 +3827,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4011,7 +3927,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4118,6 +4034,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4301,7 +4221,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4367,7 +4287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4468,7 +4388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4534,7 +4454,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4600,7 +4520,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6130694862841658387, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: m_Name
@@ -4726,7 +4646,6 @@ Transform:
   - {fileID: 284665533}
   - {fileID: 1836266044}
   - {fileID: 151524904}
-  - {fileID: 895830462}
   - {fileID: 520421534}
   - {fileID: 955916420}
   - {fileID: 1385541882}
@@ -4735,7 +4654,6 @@ Transform:
   - {fileID: 150146406}
   - {fileID: 268645486}
   - {fileID: 1710727813}
-  - {fileID: 240041871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564423284
@@ -4789,6 +4707,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4896,10 +4818,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &1596785328
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4944,10 +4875,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &1643205220
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4992,10 +4932,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
 --- !u!64 &1657383464
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5162,6 +5111,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5435,10 +5388,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
 --- !u!64 &1815286064
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5523,10 +5485,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &1913764816
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5571,10 +5542,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &1943748650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5733,6 +5713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5794,6 +5778,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5941,6 +5929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6002,6 +5994,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6065,6 +6061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6127,6 +6127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoftBall (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6188,6 +6192,10 @@ PrefabInstance:
     - target: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: m_Name
       value: SoftBall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: objectType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

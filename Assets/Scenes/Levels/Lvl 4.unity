@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -518,7 +518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: doesNeedSuperStrike
@@ -735,10 +735,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
+  activateInstruction: 0
+  destroyOnComplete: 0
   objectType: 0
-  trigger: {fileID: 0}
-  doesNeedSuperStrike: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  data: {fileID: 11400000, guid: bb296e2de90ef0f4b96fc8ee08bb30a1, type: 2}
 --- !u!64 &1151113551
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -815,7 +824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464390304274945559, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1047,7 +1056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: doesNeedSuperStrike
@@ -1353,7 +1362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4013305652979168120, guid: 6ddc2d97fe503d24bad574f7f433ad92, type: 3}
       propertyPath: doesNeedSuperStrike
@@ -1501,7 +1510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: objectType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4036278426327283846, guid: 81d6dc32575e14b4db14a7d4f88d2784, type: 3}
       propertyPath: doesNeedSuperStrike
