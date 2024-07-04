@@ -3,7 +3,47 @@ guid: 7aa39b478f47d0d4f856d528677d980d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base2
+    second: {fileID: 2100000, guid: d8dd0e6087f36a94c84b2e453b7c3b8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Border
+    second: {fileID: 2100000, guid: ada847743a18c134ca40a37072a91d05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Border2
+    second: {fileID: 2100000, guid: 5c6b91bc534b79d45b45c647b74c2fca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Machine
+    second: {fileID: 2100000, guid: 582fc08357738ce4486c97ba933c04b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plast2
+    second: {fileID: 2100000, guid: 6d39404bb7502ca4db3cf7fe85d2e581, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base
+    second: {fileID: 2100000, guid: b10bf0d852070944ca3c1c2447294564, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 7e275d5b40a462e459be11f387f69ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parlante
+    second: {fileID: 2100000, guid: 356a431ddcaa4044387e1abe0c484899, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
