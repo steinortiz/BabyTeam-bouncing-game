@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1599810615444777912}
   - component: {fileID: 4059821046641988866}
   - component: {fileID: 7179550133916476649}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5524399238612843206}
   - component: {fileID: 68918629758367019}
   - component: {fileID: 8487938886898078151}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648275480698994304}
   - component: {fileID: 7252948348330164985}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TimerPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 8399197349109898995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.312148, y: -3.7686372, z: 2.9272044}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

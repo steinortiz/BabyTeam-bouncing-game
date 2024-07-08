@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Levels/PantallaInicio.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/PantallaInicio.unity
     guid: f6a369d1db5fe2c499f50782d3ef912f
   - enabled: 1
-    path: Assets/Scenes/Levels/MainLevel.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/MainLevel.unity
     guid: 19aa52f42a3284c46ae0f66ceef865d0
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 1.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 1.unity
     guid: 270b15538427a364881839956a0f292e
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 2.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 2.unity
     guid: 5f27496e5745e31469251efaa28eeaa8
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 3.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 3.unity
     guid: 3199c47b19d5d504ea7320ee3595bf2b
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 4.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 4.unity
     guid: 1e0a345d87d9cf94bb718f60b46c98c6
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 4.1.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 4.1.unity
     guid: 2e413704b626df54086758d564051b77
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 5.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 5.unity
     guid: c97049a7d90eb23429dd2926c529a136
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 7.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 7.unity
     guid: ffee2cf469efe134e8725b906865ad2d
   - enabled: 1
-    path: Assets/Scenes/Levels/Lvl 6.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 6.unity
     guid: 6110bbd856175ed48978ed5707ffad9d
   m_configObjects: {}

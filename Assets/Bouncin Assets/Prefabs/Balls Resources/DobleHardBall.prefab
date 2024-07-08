@@ -82,45 +82,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4013305652979168120}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7540247514481229227}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6222337410261774233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6083233321548583939}
   m_SourcePrefab: {fileID: 100100000, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
 --- !u!1 &7032208026078598430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}
   m_PrefabInstance: {fileID: 7878486938370304079}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4013305652979168120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7032208026078598430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateInstruction: 3
-  doesNeedSuperStrike: 1
-  destroyOnComplete: 1
-  objectType: 0
-  onPuzzleActivateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleDisactiveEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleCompletedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!135 &7540247514481229227
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -161,6 +135,31 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c3384104115cd814982ab9fcd61bef27, type: 2}
   - {fileID: 2100000, guid: e52908d38c8d37b45a8e4d53373141da, type: 2}
   _meshRenderer: {fileID: 8833695775285277899}
+--- !u!114 &6083233321548583939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032208026078598430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  activateInstruction: 3
+  destroyOnComplete: 1
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &8833695775285277899 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c2c6a4947adab944f886adf506ddffbd, type: 3}

@@ -58,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69,7 +73,7 @@ PrefabInstance:
       addedObject: {fileID: 4429287433690463637}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2610453717934960010}
+      addedObject: {fileID: -807045705501267001}
   m_SourcePrefab: {fileID: 100100000, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
 --- !u!1 &7981444455523893297 stripped
 GameObject:
@@ -98,7 +102,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5308210633308118684, guid: 1fe5553cddfbec74e8e1ec35ccfaed85, type: 3}
---- !u!114 &2610453717934960010
+--- !u!114 &-807045705501267001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,16 +111,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7981444455523893297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
   activateInstruction: 2
-  doesNeedSuperStrike: 1
   destroyOnComplete: 0
   objectType: 0
-  onPlayerCollitionEvent:
-    m_PersistentCalls:
-      m_Calls: []
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -126,4 +127,3 @@ MonoBehaviour:
   onPuzzleCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}

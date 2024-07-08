@@ -82,41 +82,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 107127151694564869}
+      addedObject: {fileID: 5454744124504125570}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5454744124504125570}
+      addedObject: {fileID: -7189925463778865610}
   m_SourcePrefab: {fileID: 100100000, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
 --- !u!1 &1496442739564694281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b614fa48544ef344eb1ba1eccf143544, type: 3}
   m_PrefabInstance: {fileID: 1730797808782046808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &107127151694564869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496442739564694281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
-  activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
-  onPuzzleActivateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleDisactiveEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleCompletedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!135 &5454744124504125570
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -138,3 +113,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.30479136
   m_Center: {x: 0, y: 0.048, z: 0}
+--- !u!114 &-7189925463778865610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496442739564694281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4210a7984349ac343bc3efeacc745bda, type: 2}
+  activateInstruction: 2
+  destroyOnComplete: 0
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []

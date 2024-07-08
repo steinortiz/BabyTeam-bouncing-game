@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5851544987332519438}
   - component: {fileID: 2205424923850842011}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TopoPuzzleController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787945836599892741}
   - component: {fileID: 4437770408382105303}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DefaultTopoHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}

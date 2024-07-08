@@ -62,48 +62,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4464390304274945559}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3739374179345923487}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
       insertIndex: -1
       addedObject: {fileID: -886596618462226934}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6134507165903906945}
   m_SourcePrefab: {fileID: 100100000, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
 --- !u!1 &2897596340622368068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a08f28ab341c8449b6f8fea3af2073, type: 3}
   m_PrefabInstance: {fileID: 2663665139580510229}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4464390304274945559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2897596340622368068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270c1d90f476c264f922a0e9204b74b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateInstruction: 2
-  doesNeedSuperStrike: 0
-  destroyOnComplete: 1
-  objectType: 0
-  onPlayerCollitionEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleActivateEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleDisactiveEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onPuzzleCompletedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
 --- !u!135 &3739374179345923487
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -142,3 +113,28 @@ MonoBehaviour:
   changeMaterial: 0
   materials: []
   _meshRenderer: {fileID: 0}
+--- !u!114 &6134507165903906945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2897596340622368068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  activateInstruction: 2
+  destroyOnComplete: 1
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
