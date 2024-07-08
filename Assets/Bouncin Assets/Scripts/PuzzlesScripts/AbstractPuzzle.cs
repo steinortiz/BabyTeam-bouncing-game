@@ -90,7 +90,7 @@ public abstract class AbstractPuzzle : BounzableObject
         }
     }
     
-    public void CompletePuzzle()
+    public virtual void CompletePuzzle()
     {
         Disactivate();
         LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
