@@ -607,7 +607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 13e4d83454c4b0248be54f41a64e5bc5, type: 2}
+  - {fileID: 2100000, guid: 800fcbf6898f5d74d9e5a08a971d6743, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2805,6 +2805,10 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 291440107150690995, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 430898176405443761, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
       value: 2
@@ -2812,6 +2816,14 @@ PrefabInstance:
     - target: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Layer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 474832505066096835, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: activateInstruction
@@ -2864,6 +2876,10 @@ PrefabInstance:
     - target: {fileID: 1511697034890545283, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757248012562006203, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2257891589162899857, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       propertyPath: m_Layer
@@ -2941,10 +2957,55 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6743401092487244198}
     - targetCorrespondingSourceObject: {fileID: 7448262078421364112, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
       insertIndex: -1
       addedObject: {fileID: 800958249}
   m_SourcePrefab: {fileID: 100100000, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+--- !u!1 &6743401092487244197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 454962730070657270, guid: f5fb4d9a938a58e4294a2f91b9e16f44, type: 3}
+  m_PrefabInstance: {fileID: 6743401092487244196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6743401092487244198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743401092487244197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  activateInstruction: 2
+  destroyOnComplete: 1
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6743401092487244197}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6844415850623248300
 GameObject:
   m_ObjectHideFlags: 0
