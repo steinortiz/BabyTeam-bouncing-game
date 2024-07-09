@@ -1674,7 +1674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: defaulLevelPath
-      value: Lvl 11
+      value: Lvl 10
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: playerPrefab
