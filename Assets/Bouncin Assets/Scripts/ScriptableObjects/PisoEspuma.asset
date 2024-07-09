@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531222e2ef8624f499757afb05980248, type: 3}
   m_Name: PisoEspuma
   m_EditorClassIdentifier: 
-  bounceSpeed: 7
-  rapidezDeCambio: 0.747
+  bounceSpeed: 8
+  rapidezDeCambio: 0.717
   sound: {fileID: 0}
