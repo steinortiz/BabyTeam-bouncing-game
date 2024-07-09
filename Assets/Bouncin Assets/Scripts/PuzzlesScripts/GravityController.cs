@@ -22,28 +22,39 @@ public class GravityController : AbstractPuzzle
     {
         float magnitude= Physics.gravity.magnitude;
         Vector3 newGrav = Vector3.down;
+        Vector3 newHor = Vector3.right;
+        Vector3 newVer = Vector3.forward;
         switch (direc)
         {
             case Direccion.Up:
-                newGrav = magnitude* Vector3.up;
+                newGrav =  Vector3.up;
                 break;
             case Direccion.Left:
-                newGrav = magnitude* Vector3.left;
+                newGrav =  Vector3.left;
+                newHor = Vector3.down;
+                newVer= Vector3.forward;
                 break;
             case Direccion.Right:
-                newGrav = magnitude* Vector3.right;
+                newGrav =  Vector3.right;
+                newHor = Vector3.up;
+                newVer= Vector3.forward;
                 break;
             case Direccion.Back:
-                newGrav = magnitude* Vector3.back;
+                newGrav =  Vector3.back;
+                newVer= Vector3.up;
                 break;
             case  Direccion.Front:
-                newGrav = magnitude* Vector3.forward;
+                newGrav =  Vector3.forward;
+                newVer= Vector3.down;
                 break;
             default:
-                newGrav = magnitude* Vector3.down;
+                newGrav =  Vector3.down;
                 break;
         }
-        Physics.gravity =newGrav;
+        LevelController.Instance.gravityDir = newGrav;
+        LevelController.Instance.horzDir = newHor;
+        LevelController.Instance.vertDir = newVer;
+        Physics.gravity =newGrav*magnitude;
     }
 
     public override void Activate()

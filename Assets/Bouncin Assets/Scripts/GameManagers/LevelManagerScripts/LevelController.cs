@@ -34,6 +34,9 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private ExitController ExitPoint;
     [SerializeField] private string nexSceneName;
+    public Vector3 gravityDir= Vector3.down;
+    public Vector3 horzDir= Vector3.right;
+    public Vector3 vertDir = Vector3.forward;
     
     void Start()
     {

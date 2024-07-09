@@ -39,15 +39,15 @@ public class SuperStrike : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(x, 0, z);
-        Vector3 spin = new Vector3(z, 0, -x);
+        Vector3 movement = LevelController.Instance.horzDir * x + LevelController.Instance.vertDir * z;
+        Vector3 spin =  LevelController.Instance.horzDir * z + LevelController.Instance.vertDir * -x;
         //transform.Translate(movement * moveSpeed * Time.deltaTime); NO DEBE SER PORQUE GENERA RESISTENCIA CUANDO LA VELOCIDAD VA A HACIA UN LADO Y lo mueves al otro
         rb.velocity += movement * (moveSpeed * Time.deltaTime);
         rb.angularVelocity += spin * (spinSpeed);
         
         if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0))
         {
-            BoostSpeed(fallSpeed, Vector3.down + influence * movement);
+            BoostSpeed(fallSpeed, LevelController.Instance.gravityDir + influence * movement);
             
         }
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
