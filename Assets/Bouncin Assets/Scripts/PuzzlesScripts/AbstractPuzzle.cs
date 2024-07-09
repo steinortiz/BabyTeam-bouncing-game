@@ -71,8 +71,6 @@ public abstract class AbstractPuzzle : BounzableObject
     }
     public virtual void Activate(SuperStrike player)
     {
-        player?.SetBounce(data);
-        GameController.Instance.PlayerAudio(data.sound);
         Activate();
     }
 
@@ -93,7 +91,7 @@ public abstract class AbstractPuzzle : BounzableObject
     public virtual void CompletePuzzle()
     {
         Disactivate();
-        LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
+        if(LevelController.Instance!= null)LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
         onPuzzleCompletedEvent?.Invoke();
         if (destroyOnComplete)
         {
@@ -114,6 +112,7 @@ public abstract class AbstractPuzzle : BounzableObject
     public virtual void OnPlayerCollisionHandler(SuperStrike player)
     {
         
+        if(GameController.Instance!= null)GameController.Instance.PlayerAudio(data.sound);
         if (activateInstruction == ActivateInstruction.OnNormalCollision)
         {
             Activate(player);
@@ -122,12 +121,13 @@ public abstract class AbstractPuzzle : BounzableObject
         {
             Activate(player);
         }
+        player?.SetBounce(data);
         
     }
     
     public void SetAsObjetive()
     {
-        LevelController.Instance.SetObjetive(this.transform.gameObject);
+        if(LevelController.Instance!= null)LevelController.Instance.SetObjetive(this.transform.gameObject);
     }
     
     public bool CheckEnemy()
