@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,10 +42,7 @@ public class MoverController : AbstractPuzzle
     {
         if (returnToInitialPosOnComplete)
         {
-            LeanTween.cancel(this.transform.gameObject);
-            Vector3 finalpos = this.transform.localPosition;
-            this.transform
-                .LeanMoveLocal(finalpos,timeToMove).setEase(animType).setOnComplete(LateComplete);
+            ReturnToOriginalPos(LateComplete);
         }
         else
         {
@@ -55,5 +53,19 @@ public class MoverController : AbstractPuzzle
     void LateComplete()
     {
         base.CompletePuzzle();
+    }
+
+    public void ReturnToOriginalPosition()
+    {
+        LeanTween.cancel(this.transform.gameObject);
+        Vector3 finalpos = this.transform.localPosition;
+        this.transform.LeanMoveLocal(finalpos, timeToMove).setEase(animType);
+
+    }
+    private void ReturnToOriginalPos(Action callback = null)
+    {
+        LeanTween.cancel(this.transform.gameObject);
+        Vector3 finalpos = this.transform.localPosition;
+        this.transform.LeanMoveLocal(finalpos,timeToMove).setEase(animType).setOnComplete(callback);
     }
 }

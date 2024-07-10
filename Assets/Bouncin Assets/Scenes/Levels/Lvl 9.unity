@@ -1120,18 +1120,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1458703747}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1477472993}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
@@ -1139,11 +1151,23 @@ PrefabInstance:
       value: Activate
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TimerQuiz, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
@@ -1207,6 +1231,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15b925425138ee42adc7eb8ca7a47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1477472993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9015880611474869369, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+  m_PrefabInstance: {fileID: 1477472990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1480118262
 GameObject:
   m_ObjectHideFlags: 0

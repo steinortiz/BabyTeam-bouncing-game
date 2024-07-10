@@ -16,4 +16,19 @@ public class BounzableObject : MonoBehaviour
         }
         return false;
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.transform.TryGetComponent(out SuperStrike player))
+        {
+            //onPlayerCollitionEvent?.Invoke();
+            OnPlayerCollisionHandler(player);
+            player?.SetBounce(data);
+        }
+    }
+
+    public virtual void OnPlayerCollisionHandler(SuperStrike player)
+    {
+        if (GameController.Instance != null) GameController.Instance.PlaySFX(data.sound);
+    }
 }

@@ -60,7 +60,7 @@ public class SuperStrike : MonoBehaviour
         rb.velocity += dir*boost;
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
-        if(GameController.Instance!=null)GameController.Instance.PlayerAudio(speedSFX, true);
+        if(GameController.Instance!=null)GameController.Instance.PlaySFX(speedSFX, true);
         isSuperStrikeActive = true;
         
     }
@@ -70,11 +70,11 @@ public class SuperStrike : MonoBehaviour
         if (isSuperStrikeActive)
         {
             speedFx.Stop();
-            if(GameController.Instance!=null)GameController.Instance.StopAudio(speedSFX);
+            if(GameController.Instance!=null)GameController.Instance.StopSFX(speedSFX);
             isSuperStrikeActive = false;
             ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
             strike.Play();
-            if(GameController.Instance!=null)GameController.Instance.PlayerAudio(strikeSFX);
+            if(GameController.Instance!=null)GameController.Instance.PlaySFX(strikeSFX);
             Destroy(strike.gameObject,strike.totalTime+1f);
             
         }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 
@@ -33,10 +34,11 @@ public class LevelController : MonoBehaviour
     private bool isObjetiveCOmplete=false;
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private ExitController ExitPoint;
-    [SerializeField] private string nexSceneName;
-    public Vector3 gravityDir= Vector3.down;
-    public Vector3 horzDir= Vector3.right;
-    public Vector3 vertDir = Vector3.forward;
+    [SerializeField] private string nextSceneName;
+    [HideInInspector] public Vector3 gravityDir= Vector3.down;
+    [HideInInspector] public Vector3 horzDir= Vector3.right;
+    [HideInInspector] public Vector3 vertDir = Vector3.forward;
+    public UnityEvent OnLevelComplete;
     
     void Start()
     {
@@ -54,7 +56,7 @@ public class LevelController : MonoBehaviour
     {
         if (GameController.Instance != null && spawnPoint!=null)
         {
-            playerInstance = Instantiate(GameController.Instance?.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
+            playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
             isPlayerOnGame = true;
         }
     }
@@ -83,7 +85,7 @@ public class LevelController : MonoBehaviour
 
     private void WintheGame()
     {
-        Debug.Log("Ganaste el level");
+        OnLevelComplete.Invoke();
         ActivateExit();
     }
 
@@ -97,10 +99,10 @@ public class LevelController : MonoBehaviour
     public void LoadNextLevelScene()
     {
         Debug.Log("Exit");
-        if (nexSceneName != "")
+        if (nextSceneName != "")
         {
             Destroy(playerInstance.gameObject);
-            SceneLoader.Instance.LoadAdditiveLevel(nexSceneName); 
+            SceneLoader.Instance.LoadAdditiveLevel(nextSceneName); 
         } 
     }
 

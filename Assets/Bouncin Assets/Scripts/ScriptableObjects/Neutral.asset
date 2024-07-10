@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531222e2ef8624f499757afb05980248, type: 3}
   m_Name: Neutral
   m_EditorClassIdentifier: 
-  bounceSpeed: 13
-  rapidezDeCambio: 0.074
+  bounceSpeed: 10
+  rapidezDeCambio: 0.472
   sound: {fileID: 8300000, guid: 449d7d239a1752340b1696aeb0e10d27, type: 3}

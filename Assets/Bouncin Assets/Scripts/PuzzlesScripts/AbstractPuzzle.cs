@@ -99,20 +99,12 @@ public abstract class AbstractPuzzle : BounzableObject
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.transform.TryGetComponent(out SuperStrike player))
-        {
-            //onPlayerCollitionEvent?.Invoke();
-            OnPlayerCollisionHandler(player);
-            if(CheckEnemy())player.KillBall();
-        }
-    }
     
-    public virtual void OnPlayerCollisionHandler(SuperStrike player)
+    
+    public override void OnPlayerCollisionHandler(SuperStrike player)
     {
-        
-        if(GameController.Instance!= null)GameController.Instance.PlayerAudio(data.sound);
+
+        base.OnPlayerCollisionHandler(player);
         if (activateInstruction == ActivateInstruction.OnNormalCollision)
         {
             Activate(player);
@@ -121,8 +113,7 @@ public abstract class AbstractPuzzle : BounzableObject
         {
             Activate(player);
         }
-        player?.SetBounce(data);
-        
+        if(CheckEnemy())player.KillBall();
     }
     
     public void SetAsObjetive()
