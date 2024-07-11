@@ -21,14 +21,24 @@ public class BounzableObject : MonoBehaviour
     {
         if (collision.collider.transform.TryGetComponent(out SuperStrike player))
         {
+            if (GameController.Instance != null && data != null) GameController.Instance.PlaySFX(data.sound);
+            //player?.SetBounce(data);
+        }
+        
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.transform.TryGetComponent(out SuperStrike player))
+        {
             //onPlayerCollitionEvent?.Invoke();
             OnPlayerCollisionHandler(player);
-            player?.SetBounce(data);
+            if(data !=null)player.SetBounce(data);
         }
     }
 
     public virtual void OnPlayerCollisionHandler(SuperStrike player)
     {
-        if (GameController.Instance != null) GameController.Instance.PlaySFX(data.sound);
+        
     }
 }

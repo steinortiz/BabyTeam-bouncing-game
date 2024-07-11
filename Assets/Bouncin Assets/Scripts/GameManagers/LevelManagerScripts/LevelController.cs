@@ -25,7 +25,7 @@ public class LevelController : MonoBehaviour
         } 
     }
     
-    [SerializeField] private bool adminMode;
+    
     
     
     private SuperStrike playerInstance=null;
@@ -42,9 +42,9 @@ public class LevelController : MonoBehaviour
     
     private void Update()
     {
-        if (!isPlayerOnGame && adminMode && Input.GetButtonDown("Jump"))
+        if (!isPlayerOnGame && Input.GetButtonDown("Jump"))
         {
-            SpawnPlayer();
+            if(GameController.Instance.adminMode) SpawnPlayer();
         }
     }
 

@@ -867,11 +867,61 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: activateInstruction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1828820299}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AbstractPuzzle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1828820299}
   m_SourcePrefab: {fileID: 100100000, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+--- !u!114 &765500336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
+  m_PrefabInstance: {fileID: 765500335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828820298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &779076363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9181817220429815472, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
@@ -1617,175 +1667,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
---- !u!1001 &1519751694
-PrefabInstance:
+--- !u!114 &1519751697
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 601038956494323611, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: aaea9ba0ec8a665488c4c9ec8186476d, type: 2}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: destroyOnComplete
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleDisactiveEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 640458797}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1828820298}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1170387188}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4308519123600547989, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.017999522
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198334158605557106, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 93e670a4d57248d448ed3aaf0b799ec5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601038957141454229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a64386dec435c409dab25d06cae95a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: aaea9ba0ec8a665488c4c9ec8186476d, type: 2}
+  activateInstruction: 3
+  destroyOnComplete: 0
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4308519124245787291}
+        m_TargetAssemblyTypeName: ButtonObjectController, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canSuperStrike: 0
 --- !u!1001 &1532102281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2069,6 +1988,44 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2897596340622368068, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
   m_PrefabInstance: {fileID: 765500335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1828820299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828820298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a64386dec435c409dab25d06cae95a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
+  activateInstruction: 2
+  destroyOnComplete: 0
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765500336}
+        m_TargetAssemblyTypeName: AbstractPuzzle, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canSuperStrike: 1
 --- !u!1001 &1835729789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2317,6 +2274,265 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9181817220429815472, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
   m_PrefabInstance: {fileID: 1787266795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &601038957141454229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8198334159840022396}
+  - component: {fileID: 1519751697}
+  - component: {fileID: 4308519124245787291}
+  - component: {fileID: 1098577309582879768}
+  m_Layer: 10
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &870970780434325726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015880610847071863}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8198334159840022396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1098577309582879768
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601038957141454229}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &3673398253262005708
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015880610847071863}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -6331914732987792001, guid: f69e2e70594a57649a796b7f56d08ac2, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &4086357959192170700
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015880610847071863}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4308519124245787291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601038957141454229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15b925425138ee42adc7eb8ca7a47c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  activateInstruction: 0
+  destroyOnComplete: 0
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 640458797}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1828820298}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1170387188}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 9015880610847071863}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9015880610847071863}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  scaleDisactive: {x: 1, y: 1, z: 1}
+  scaleActive: {x: 1, y: 0, z: 1}
+  animTime: 1
+  animType: 24
+  isEnabled: 1
+--- !u!4 &8198334159840022396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601038957141454229}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.02, y: 0.017999522, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 870970780434325726}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8920074086158895481
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015880610847071863}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 439
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!1 &9015880610847071863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870970780434325726}
+  - component: {fileID: 4086357959192170700}
+  - component: {fileID: 3673398253262005708}
+  - component: {fileID: 8920074086158895481}
+  m_Layer: 10
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2324,7 +2540,7 @@ SceneRoots:
   - {fileID: 1787816979}
   - {fileID: 1246870784}
   - {fileID: 517930651}
-  - {fileID: 1519751694}
+  - {fileID: 8198334159840022396}
   - {fileID: 1170387190}
   - {fileID: 993759721}
   - {fileID: 1218031936}

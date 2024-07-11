@@ -69,7 +69,7 @@ public abstract class AbstractPuzzle : BounzableObject
             } 
         }
     }
-    public virtual void Activate(SuperStrike player)
+    public virtual void ActivateSuper(SuperStrike player)
     {
         Activate();
     }
@@ -103,16 +103,15 @@ public abstract class AbstractPuzzle : BounzableObject
     
     public override void OnPlayerCollisionHandler(SuperStrike player)
     {
-
-        base.OnPlayerCollisionHandler(player);
         if (activateInstruction == ActivateInstruction.OnNormalCollision)
         {
-            Activate(player);
+            ActivateSuper(player);
         }
         if(activateInstruction == ActivateInstruction.OnSuperStrike && player.isSuperStrikeActive)
         {
-            Activate(player);
+            ActivateSuper(player);
         }
+        base.OnPlayerCollisionHandler(player);
         if(CheckEnemy())player.KillBall();
     }
     

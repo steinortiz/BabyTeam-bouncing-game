@@ -14,7 +14,6 @@ public class MachineInteractionsReciever : MonoBehaviour
 
     [Header("Machine Buttons")] 
     [SerializeField] private ExtendedButton machineButton;
-    [SerializeField] private ExtendedButton machineButton2;
 
     [Header("UI")] 
     [SerializeField] private List<Image> ballsRewardsImages;
