@@ -17,7 +17,8 @@ namespace Babyteam.SO.UI
     [Serializable]
     public class ExtendedButton : Selectable, ISubmitHandler, IPointerClickHandler
     {
-
+    
+        [SerializeField] private bool is3dObject;
         [SerializeField] public OnSelectedEvent onSelected;
         [SerializeField] public OnDeselectedEvent onDeselected;
         [SerializeField] public OnSubmitEvent onSubmit;
@@ -48,12 +49,31 @@ namespace Babyteam.SO.UI
         public void OnSubmit(BaseEventData eventData)
         {
             onSubmit?.Invoke();
+            base.Select();
         }
-
         
         public void OnPointerClick(PointerEventData eventData)
         {
             onSubmit?.Invoke();
+            base.OnPointerDown(eventData);
+        }
+        
+        void OnMouseDown()
+        {
+            if (is3dObject && interactable)
+            {
+                onSubmit?.Invoke();
+            }	
+        }
+
+        private void OnMouseOver()
+        {
+            if(is3dObject && interactable) Select();
+        }
+
+        private void OnMouseExit()
+        {
+            if(is3dObject&& interactable) onDeselected?.Invoke();
         }
     }
 

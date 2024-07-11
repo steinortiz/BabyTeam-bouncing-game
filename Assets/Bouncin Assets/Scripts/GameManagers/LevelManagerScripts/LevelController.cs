@@ -40,10 +40,6 @@ public class LevelController : MonoBehaviour
     [HideInInspector] public Vector3 vertDir = Vector3.forward;
     public UnityEvent OnLevelComplete;
     
-    void Start()
-    {
-        SpawnPlayer();
-    }
     private void Update()
     {
         if (!isPlayerOnGame && adminMode && Input.GetButtonDown("Jump"))
@@ -54,7 +50,7 @@ public class LevelController : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        if (GameController.Instance != null && spawnPoint!=null)
+        if (GameController.Instance != null && spawnPoint!=null && !isPlayerOnGame)
         {
             playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
             isPlayerOnGame = true;

@@ -17,7 +17,7 @@ public class BounzableObject : MonoBehaviour
         return false;
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionExit(Collision collision)
     {
         if (collision.collider.transform.TryGetComponent(out SuperStrike player))
         {

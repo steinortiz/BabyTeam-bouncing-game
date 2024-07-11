@@ -14,6 +14,7 @@ public class TimerQuiz : AbstractPuzzle
 
     void Start()
     {
+        base.Start();
         foreach (AbstractPuzzle obj in objectsToActivate)
         {
             obj.onPuzzleCompletedEvent.AddListener(() =>

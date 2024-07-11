@@ -76,7 +76,6 @@ public class SuperStrike : MonoBehaviour
             strike.Play();
             if(GameController.Instance!=null)GameController.Instance.PlaySFX(strikeSFX);
             Destroy(strike.gameObject,strike.totalTime+1f);
-            
         }
     }
     

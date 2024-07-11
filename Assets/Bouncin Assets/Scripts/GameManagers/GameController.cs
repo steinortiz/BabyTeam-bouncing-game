@@ -22,7 +22,7 @@ public class MusicSource
 public class GameController : MonoBehaviour
 {
 
-
+    [SerializeField] public bool adminMode;
     [SerializeField] private List<MusicSource> musicPlaylist;
     [SerializeField] private AudioSource musicPlayer;
     [SerializeField] private AudioSource sfxPlayer;
