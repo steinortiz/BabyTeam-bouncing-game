@@ -557,6 +557,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54c11f01eeb84443a05358062c828cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &556331741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556331743}
+  - component: {fileID: 556331742}
+  m_Layer: 0
+  m_Name: GravityController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556331742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556331741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baea0b0d2bd16c249ab45fb60faa0d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  activateInstruction: 0
+  destroyOnComplete: 0
+  objectType: 0
+  onPuzzleActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleDisactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPuzzleCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  directionGravity: 0
+--- !u!4 &556331743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556331741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.50662, y: 8.893284, z: -1.265164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &603093614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9181817220429815472, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
@@ -877,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -903,7 +961,8 @@ PrefabInstance:
       propertyPath: onPuzzleActivateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -911,17 +970,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1828820299}
   m_SourcePrefab: {fileID: 100100000, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
---- !u!114 &765500336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6134507165903906945, guid: 71c690a174352c74c969dbdd4fb5dd43, type: 3}
-  m_PrefabInstance: {fileID: 765500335}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828820298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c65e621e7737e24e8fa823289670e5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &779076363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9181817220429815472, guid: d20508af09e0f0947b0d0e75226cd9c4, type: 3}
@@ -2002,15 +2050,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
   activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
+  destroyOnComplete: 1
+  objectType: 2
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765500336}
-        m_TargetAssemblyTypeName: AbstractPuzzle, Assembly-CSharp
-        m_MethodName: Activate
+      - m_Target: {fileID: 556331742}
+        m_TargetAssemblyTypeName: GravityController, Assembly-CSharp
+        m_MethodName: ActivateToUP
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 640458797}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2546,3 +2606,4 @@ SceneRoots:
   - {fileID: 1218031936}
   - {fileID: 640458798}
   - {fileID: 765500335}
+  - {fileID: 556331743}

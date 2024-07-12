@@ -1,20 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public enum Direccion
+{
+    Default,
+    Up,
+    Left,
+    Right,
+    Front,
+    Back
+}
 
 
+[Serializable]
 public class GravityController : AbstractPuzzle
 {
-    public enum Direccion
-    {
-        Default,
-        Up,
-        Left,
-        Right,
-        Front,
-        Back
-    }
+    
 
     public Direccion directionGravity;
 
@@ -57,6 +61,32 @@ public class GravityController : AbstractPuzzle
         Physics.gravity =newGrav*magnitude;
     }
 
+    public void ActivateToUP()
+    {
+        directionGravity = Direccion.Up;
+        Activate();
+    }
+    public void ActivateToLeft()
+    {
+        directionGravity = Direccion.Left;
+        Activate();
+    }
+    public void ActivateToRight()
+    {
+        directionGravity = Direccion.Right;
+        Activate();
+    }
+    public void ActivateToFront()
+    {
+        directionGravity = Direccion.Front;
+        Activate();
+    }
+    public void ActivateToBack()
+    {
+        directionGravity = Direccion.Back;
+        Activate();
+    }
+   
     public override void Activate()
     {
         base.Activate();
