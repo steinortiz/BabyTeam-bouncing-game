@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1679,7 +1679,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: defaulLevelPath
-      value: Lvl 12
+      value: Lvl 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: sfxPlayer
@@ -1689,6 +1689,10 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 4053210862875631791, guid: 908f8bc4b7810094ca6ad6d5fec616f6, type: 3}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: generalVolumen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: _audioSources.Array.data[0]
       value: 

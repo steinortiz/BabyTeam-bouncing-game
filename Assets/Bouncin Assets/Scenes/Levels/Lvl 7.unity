@@ -533,15 +533,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_LocalRotation.w
@@ -570,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 5628560071493842708, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619396408368289356, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8016359628300379743, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_Name
@@ -888,6 +892,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 145230542437545046, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480724591020630303, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1861561376913908880, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -932,6 +944,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 2500426956328621533, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502807850522545483, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: ExitPoint
       value: 
@@ -942,6 +962,10 @@ PrefabInstance:
       objectReference: {fileID: 1246870785}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: nexSceneName
+      value: Lvl 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: nextSceneName
       value: Lvl 11
       objectReference: {fileID: 0}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}

@@ -582,6 +582,10 @@ PrefabInstance:
       value: Lvl 1
       objectReference: {fileID: 0}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: nextSceneName
+      value: Lvl 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

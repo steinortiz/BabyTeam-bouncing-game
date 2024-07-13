@@ -701,6 +701,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7694138595139436610, guid: f57129a432737a24894d2e28dfdc27ad, type: 3}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: nextSceneName
+      value: Lvl 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: objetivos.Array.size
       value: 4
       objectReference: {fileID: 0}
