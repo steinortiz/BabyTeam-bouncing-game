@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class CoinsController : MonoBehaviour
 {
-    public Vector3 mousePosition;
+    public Vector3 originalScreenPosition;
     public float dif;
-    public Vector3 stepDif;
-    public Rigidbody rb;
+    private Vector3 stepDif;
+    private Rigidbody rb;
     public float xMin = -5f;
     public float xMax = 5f;
     public float yMin = -5f;
@@ -21,58 +21,65 @@ public class CoinsController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void Update()
-    {
-        transform.position = new Vector3(transform.position.x,transform.position.y,Mathf.Clamp(transform.position.z, zMin, zMax));
-    }
-
-    public Vector3 GetMousePos()
-    {
-        return Camera.main.WorldToScreenPoint(transform.position);
-    }
+    private Vector3 mOffset;
+    private float mZCoord;
     
+
+    private Vector3 GetMouseWorldPos()
+    {
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = mZCoord;
+        return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
     
     public void OnMouseDown()
     {
-        if (Camera.main.orthographic)
-        {
-
-            Vector3 aux = Camera.main.transform.position;
-            Vector3 step =  Vector3.MoveTowards( transform.position,new Vector3(transform.position.x,aux.y,aux.z), dif);
-            stepDif = step - transform.position;
-            transform.position = step;
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Camera.main.transform.position, dif);
-        }
         
-        mousePosition = Input.mousePosition - GetMousePos();
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
-        rb.MovePosition(pos);
+        Vector3 aux = Camera.main.transform.position;
+        Vector3 step =  Vector3.back*dif + transform.position;//Vector3.MoveTowards( transform.position,new Vector3(transform.position.x,aux.y,aux.z), dif);
+        stepDif = step - transform.position;
+        transform.position = step;
+        
+        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        mOffset = gameObject.transform.position - GetMouseWorldPos();
+        
+        rb.useGravity = false;
+        
     }
 
     public void OnMouseUp()
     {
-        if (Camera.main.orthographic)
-        {
-            //transform.position -= stepDif;
-            rb.AddForce(-stepDif * dif*100f, ForceMode.Force);
-        }
-        else
-        {
-            transform.position += (Vector3.MoveTowards( Camera.main.transform.position, transform.position,dif)- Camera.main.transform.position) +transform.position;
-        }
-        
+        rb.useGravity = true;
+        //transform.position -= stepDif;
+        rb.AddForce(-stepDif * dif*100f, ForceMode.Force);
     }
 
     public void OnMouseDrag()
     {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+        transform.position = GetMouseWorldPos()+ mOffset;
         // Clamp the position to be within the defined boundaries
-        pos.x = Mathf.Clamp(pos.x, xMin, xMax);
-        pos.y = Mathf.Clamp(pos.y, yMin, yMax);
-        pos.z = Mathf.Clamp(transform.position.z, zMin, zMax);
-        rb.MovePosition(pos);
+        //pos.x = Mathf.Clamp(pos.x, xMin, xMax);
+        //pos.y = Mathf.Clamp(pos.y, yMin, yMax);
+        //pos.z = Mathf.Clamp(transform.localPosition.z, zMin, zMax);
+        //transform.position = Camera.main.ScreenToWorldPoint(pos);
+
+    }
+    
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "CoinReceptor")
+        {
+            if (!MachineInteractionsReciever.Instance.isLoaded)
+            {
+                MachineInteractionsReciever.Instance.LoadMachine();
+                Destroy(gameObject);
+            }
+        }
+
+        if (other.transform.tag == "CoinDespawner")
+        {
+            MachineInteractionsReciever.Instance.SpawnCoin();
+            Destroy(gameObject);
+        }
     }
 }

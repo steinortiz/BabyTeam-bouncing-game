@@ -25,9 +25,6 @@ public class LevelController : MonoBehaviour
         } 
     }
     
-    
-    
-    
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
     private List<GameObject> objetiveList = new List<GameObject>();
@@ -39,6 +36,8 @@ public class LevelController : MonoBehaviour
     [HideInInspector] public Vector3 horzDir= Vector3.right;
     [HideInInspector] public Vector3 vertDir = Vector3.forward;
     public UnityEvent OnLevelComplete;
+    [HideInInspector]public bool mustReload;
+    [HideInInspector]public bool canSpawn;
     
     private void Update()
     {
@@ -46,6 +45,11 @@ public class LevelController : MonoBehaviour
         {
             if(GameController.Instance.adminMode) SpawnPlayer();
         }
+    }
+
+    private void Start()
+    {
+        canSpawn = true;
     }
 
     public void SpawnPlayer()
@@ -101,6 +105,14 @@ public class LevelController : MonoBehaviour
             SceneLoader.Instance.LoadAdditiveLevel(nextSceneName); 
         } 
     }
+
+    public void ReLoadScene()
+    {
+        SceneLoader.Instance.LoadAdditiveLevel(SceneLoader.Instance.currentLevel);
+        canSpawn = false;
+    }
+    
+    
 
     
 

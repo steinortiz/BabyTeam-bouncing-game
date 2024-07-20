@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private string mainMenuPath;
     [SerializeField] private string mainLevelPath;
     [SerializeField] private string defaulLevelPath;
-    [SerializeField] private string currentLevel ="";
+    [SerializeField] public string currentLevel = "";
     private UnityAction callbackOnLoad;
     
     public static SceneLoader Instance { get; private set; }

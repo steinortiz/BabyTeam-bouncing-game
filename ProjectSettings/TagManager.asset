@@ -7,6 +7,8 @@ TagManager:
   - BounzableObject
   - Puzzle
   - Player
+  - CoinReceptor
+  - CoinDespawner
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - MachineColliders
   - Caja
   - Puzzle
-  - 
+  - Coins
   - 
   - 
   - 
