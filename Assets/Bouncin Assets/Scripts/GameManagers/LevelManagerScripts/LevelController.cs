@@ -24,12 +24,14 @@ public class LevelController : MonoBehaviour
             Instance = this; 
         } 
     }
-    
     private SuperStrike playerInstance=null;
     private bool isPlayerOnGame;
     private List<GameObject> objetiveList = new List<GameObject>();
     private bool isObjetiveCOmplete=false;
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private LeanTweenType spawnAnimType;
+    [SerializeField] private float spawnAnimTime;
+    [SerializeField] private float spawnAnimForce;
     [SerializeField] private ExitController ExitPoint;
     [SerializeField] private string nextSceneName;
     [HideInInspector] public Vector3 gravityDir= Vector3.down;
@@ -49,16 +51,46 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        canSpawn = true;
+        bool mustSpawn = false;
+        if (GameController.Instance != null)
+        {
+            mustSpawn= GameController.Instance.isPlayerOnGame;
+            Debug.Log(mustSpawn);
+        }
+        SpawnProcess(mustSpawn);
+    }
+
+    public void SpawnProcess(bool spawn = false)
+    {
+        LeanTween.moveLocal(spawnPoint, spawnPoint.transform.position + spawnPoint.transform.forward, spawnAnimTime)
+            .setEase(spawnAnimType).setOnComplete(() =>
+            {
+                canSpawn = true;
+                if (spawn)
+                {
+                    SpawnPlayer();
+                    Debug.Log("spawn");
+                }
+            });
     }
 
     public void SpawnPlayer()
     {
-        if (GameController.Instance != null && spawnPoint!=null && !isPlayerOnGame)
+        
+        if (GameController.Instance != null && spawnPoint!=null)
         {
+            MakeSpawnRigid(false);
             playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
-            isPlayerOnGame = true;
+            GameController.Instance.isPlayerOnGame = true;
+            playerInstance.BoostSpeed(spawnAnimForce,spawnPoint.transform.forward);
+            Invoke("MakeSpawnRigid",0.5f);
+            
         }
+    }
+
+    private void MakeSpawnRigid(bool rigid=true)
+    {
+        spawnPoint.GetComponentInChildren<MeshCollider>().isTrigger = !rigid;
     }
 
     public void SetObjetive(GameObject objetive)

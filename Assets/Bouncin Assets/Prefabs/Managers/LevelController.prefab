@@ -183,8 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f41e3f750c23834180dfbe87f3e665e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adminMode: 1
   spawnPoint: {fileID: 0}
+  spawnAnimType: 24
+  spawnAnimTime: 1
+  spawnAnimForce: 20
   ExitPoint: {fileID: 0}
   nextSceneName: 
   gravityDir: {x: 0, y: -1, z: 0}
@@ -193,6 +195,8 @@ MonoBehaviour:
   OnLevelComplete:
     m_PersistentCalls:
       m_Calls: []
+  mustReload: 0
+  canSpawn: 0
 --- !u!1 &3154289967193574064
 GameObject:
   m_ObjectHideFlags: 0

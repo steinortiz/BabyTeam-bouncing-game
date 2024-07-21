@@ -100,6 +100,7 @@ public class MachineInteractionsReciever : MonoBehaviour
     public void SpawnCoin()
     {
         Instantiate(coinPrefab, coinSpawnCollection);
+        GameController.Instance.totalCoins += 1;
     }
     
     public void LoadMachine()
@@ -144,6 +145,9 @@ public class MachineInteractionsReciever : MonoBehaviour
     {
         TurnLightsCoins(true);
         TurnOnMachineLights();
+        GameController.Instance.totalCoins += 1;
+        m_Button.interactable = true;
+        m_Button.GetComponent<MeshRenderer>().material = turnOnButtonMaterial;
         
         /// Cargar escena de nuevo.....
         /// depende si quiero que empice denuevo desde el primer nivel o desde este mismo...
@@ -151,10 +155,6 @@ public class MachineInteractionsReciever : MonoBehaviour
         {
             LevelController.Instance.ReLoadScene();
         }
-
-        m_Button.interactable = true;
-        m_Button.GetComponent<MeshRenderer>().material = turnOnButtonMaterial;
-
     }
     private void PlayerButtonInteraction()
     {
@@ -165,8 +165,6 @@ public class MachineInteractionsReciever : MonoBehaviour
             TurnLightsCoins();
             LevelController.Instance.SpawnPlayer();
         }
-        
-
     }
 
     public void SpawnReward()

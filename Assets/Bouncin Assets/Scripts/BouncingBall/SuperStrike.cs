@@ -8,7 +8,7 @@ using UnityEngine.Timeline;
 
 public class SuperStrike : MonoBehaviour
 {
-    private Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
     private bool canSuperStrike = true;
     public bool canStruperStrikeOnUp;
     [Range(0f, 1f)] public float influence;
@@ -48,16 +48,21 @@ public class SuperStrike : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0) && canSuperStrike)
         {
-            BoostSpeed(fallSpeed, LevelController.Instance.gravityDir + influence * movement);
+            OnSuperStrike(fallSpeed, LevelController.Instance.gravityDir + influence * movement);
         }
         Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
         
     }
 
-    void BoostSpeed(float boost,Vector3 dir)
+    public void BoostSpeed(float boost,Vector3 dir)
     {
         rb.velocity += dir*boost;
+    }
+
+    void OnSuperStrike(float boost,Vector3 dir)
+    {
+        BoostSpeed( boost, dir);
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
         if(GameController.Instance!=null)GameController.Instance.PlaySFX(speedSFX, true);

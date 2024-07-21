@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb4f4193aadfd4c89ec0e9a1067a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 3071156191368171488}
   canStruperStrikeOnUp: 1
   influence: 0.43
   fallSpeed: 20

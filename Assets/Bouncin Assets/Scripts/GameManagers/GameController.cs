@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
 {
 
     [SerializeField] public bool adminMode;
+    public bool isPlayerOnGame;
     [SerializeField] private List<MusicSource> musicPlaylist;
     [SerializeField] private AudioSource musicPlayer;
     [SerializeField] private AudioSource sfxPlayer;
@@ -33,8 +34,7 @@ public class GameController : MonoBehaviour
     public CoinsController coinPrefab;
     
     [SerializeField] public SuperStrike playerPrefab;
-
-
+    
     public bool isPlaying = false;
 
     
@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
             return;
         }
         sfxPlayer.PlayOneShot(clip);
-        /*foreach (AudioSource source in _audioSources)
+        /*foreach (AudioSource source in _audioSources) //////// Deprecated
         {
             if (!source.isPlaying)
             {
@@ -108,7 +108,7 @@ public class GameController : MonoBehaviour
             sfxPlayer.Stop();
             return ;
         }
-        /*foreach (AudioSource source in _audioSources)
+        /*foreach (AudioSource source in _audioSources) //////// Deprecated
         {
             if (source.isPlaying && source.clip == clip)
             {

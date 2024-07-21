@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Bouncin Assets/Scenes/Levels/PantallaInicio.unity
+    path: Assets/Bouncin Assets/Scenes/PantallaInicio.unity
     guid: f6a369d1db5fe2c499f50782d3ef912f
   - enabled: 1
-    path: Assets/Bouncin Assets/Scenes/Levels/MainLevel.unity
+    path: Assets/Bouncin Assets/Scenes/MainLevel.unity
     guid: 19aa52f42a3284c46ae0f66ceef865d0
   - enabled: 1
     path: Assets/Bouncin Assets/Scenes/Levels/Lvl 1.unity
@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Bouncin Assets/Scenes/Levels/Lvl 7.unity
     guid: ffee2cf469efe134e8725b906865ad2d
   - enabled: 1
-    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 9.unity
+    path: Assets/Bouncin Assets/Mesh/Lvl 9.unity
     guid: 9c5200079d1c9814a89ce51b33cb92af
   - enabled: 1
     path: Assets/Bouncin Assets/Scenes/Levels/Lvl 10.unity
