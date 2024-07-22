@@ -6,13 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public enum PuzzleType
-{
-    Default,
-    Enemy,
-    Objetive,
 
-}
 
 public enum ActivateInstruction
 {
@@ -28,8 +22,7 @@ public abstract class AbstractPuzzle : BounzableObject
     [SerializeField] private ActivateInstruction activateInstruction;
     protected bool isPuzzleActive;
     protected bool isPuzzleBlocked;
-    public bool destroyOnComplete;
-    public PuzzleType objectType;
+    public bool isObjetive;
     //public UnityEvent onPlayerCollitionEvent;
     public UnityEvent onPuzzleActivateEvent;
     public UnityEvent onPuzzleDisactiveEvent;
@@ -37,7 +30,7 @@ public abstract class AbstractPuzzle : BounzableObject
 
     public void Start()
     {
-        if (objectType == PuzzleType.Objetive) SetAsObjetive();
+        if (isObjetive) SetAsObjetive();
     }
 
     public void OnEnable()
@@ -93,10 +86,7 @@ public abstract class AbstractPuzzle : BounzableObject
         Disactivate();
         if(LevelController.Instance!= null)LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
         onPuzzleCompletedEvent?.Invoke();
-        if (destroyOnComplete)
-        {
-            Destroy(this.gameObject,Time.deltaTime);
-        }
+        
     }
 
     
@@ -112,7 +102,6 @@ public abstract class AbstractPuzzle : BounzableObject
             ActivateSuper(player);
         }
         base.OnPlayerCollisionHandler(player);
-        if(CheckEnemy())player.KillBall();
     }
     
     public void SetAsObjetive()
@@ -120,10 +109,5 @@ public abstract class AbstractPuzzle : BounzableObject
         if(LevelController.Instance!= null)LevelController.Instance.SetObjetive(this.transform.gameObject);
     }
     
-    public bool CheckEnemy()
-    {
-        if (objectType == PuzzleType.Enemy) return true;
-        return false;
-        
-    }
+    
 }

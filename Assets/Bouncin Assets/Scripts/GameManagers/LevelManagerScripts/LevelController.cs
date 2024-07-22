@@ -31,6 +31,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private LeanTweenType spawnAnimType;
     [SerializeField] private float spawnAnimTime;
+    [SerializeField] private float spawnAnimDelay;
     [SerializeField] private float spawnAnimForce;
     [SerializeField] private ExitController ExitPoint;
     [SerializeField] private string nextSceneName;
@@ -69,14 +70,13 @@ public class LevelController : MonoBehaviour
                 if (spawn)
                 {
                     SpawnPlayer();
-                    Debug.Log("spawn");
+                    LeanTween.moveLocal(spawnPoint, spawnPoint.transform.position - spawnPoint.transform.forward,spawnAnimTime).setEase(spawnAnimType).setDelay(0.5f);
                 }
             });
     }
 
     public void SpawnPlayer()
     {
-        
         if (GameController.Instance != null && spawnPoint!=null)
         {
             MakeSpawnRigid(false);
@@ -125,7 +125,7 @@ public class LevelController : MonoBehaviour
     {
         isObjetiveCOmplete = true;
         ExitPoint.gameObject?.SetActive(true);
-
+        LeanTween.moveLocal(ExitPoint.gameObject, ExitPoint.transform.position + ExitPoint.transform.forward, spawnAnimTime).setEase(spawnAnimType);
     }
 
     public void LoadNextLevelScene()

@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Bouncin Assets/Scenes/Levels/Lvl 7.unity
     guid: ffee2cf469efe134e8725b906865ad2d
   - enabled: 1
-    path: Assets/Bouncin Assets/Mesh/Lvl 9.unity
+    path: Assets/Bouncin Assets/Scenes/Levels/Lvl 9.unity
     guid: 9c5200079d1c9814a89ce51b33cb92af
   - enabled: 1
     path: Assets/Bouncin Assets/Scenes/Levels/Lvl 10.unity
