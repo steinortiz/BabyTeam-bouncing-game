@@ -72,14 +72,14 @@ public class CoinsController : MonoBehaviour
             if (!MachineInteractionsReciever.Instance.isLoaded)
             {
                 MachineInteractionsReciever.Instance.LoadMachine();
-                Destroy(gameObject);
+                Destroy(this.gameObject);
             }
         }
 
         if (other.transform.tag == "CoinDespawner")
         {
             MachineInteractionsReciever.Instance.SpawnCoin();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -11,11 +11,6 @@ public class SuperStrike : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     private bool canSuperStrike = true;
     public bool canStruperStrikeOnUp;
-    [Range(0f, 1f)] public float influence;
-    public float fallSpeed;
-    public float moveSpeed;
-    public float spinSpeed;
-    [Range(0f,1f)] public float airRoce;
     [SerializeField] private bool dontSpin;
     public bool isSuperStrikeActive { get; private set;}
     [SerializeField] private ParticleSystem speedFx;
@@ -24,6 +19,8 @@ public class SuperStrike : MonoBehaviour
     [SerializeField] private ParticleSystem strikeFx;
     [SerializeField] private AudioClip strikeSFX;
     [SerializeField] private AudioSource audioSource;
+
+    private RewardScriptableObject ballData;
     
 
 
@@ -43,14 +40,14 @@ public class SuperStrike : MonoBehaviour
         Vector3 movement = LevelController.Instance.horzDir * x + LevelController.Instance.vertDir * z;
         Vector3 spin =  LevelController.Instance.horzDir * z + LevelController.Instance.vertDir * -x;
         //transform.Translate(movement * moveSpeed * Time.deltaTime); NO DEBE SER PORQUE GENERA RESISTENCIA CUANDO LA VELOCIDAD VA A HACIA UN LADO Y lo mueves al otro
-        rb.velocity += movement * (moveSpeed * Time.deltaTime);
-        rb.angularVelocity += spin * (spinSpeed);
+        rb.velocity += movement * (ballData.moveSpeed * Time.deltaTime);
+        rb.angularVelocity += spin * (ballData.spinSpeed);
         
         if (Input.GetButtonDown("Jump") && (canStruperStrikeOnUp || rb.velocity.normalized.y <0) && canSuperStrike)
         {
-            OnSuperStrike(fallSpeed, LevelController.Instance.gravityDir + influence * movement);
+            OnSuperStrike(ballData.fallSpeed, LevelController.Instance.gravityDir + ballData.influence * movement);
         }
-        Vector3 dragMagnitude = airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
+        Vector3 dragMagnitude = ballData.airRoce *rb.velocity.sqrMagnitude * rb.velocity.normalized;
         rb.velocity -= dragMagnitude * Time.deltaTime;
         
     }
@@ -106,5 +103,11 @@ public class SuperStrike : MonoBehaviour
     public void ActivateSuperStrike(bool activate)
     {
         canSuperStrike = activate;
+    }
+
+    public void SetUP()
+    {
+        ballData = GameController.Instance.GetBallData();
+        GetComponent<MeshRenderer>().material = ballData.ballMaterial;
     }
 }

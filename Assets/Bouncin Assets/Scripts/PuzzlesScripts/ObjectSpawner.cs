@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class SpawnPointObj
 {
     public Transform spawnPoint;
-    //[HideInInspector]
+    [HideInInspector]
     public AbstractPuzzle objectSpawned;
 }
 public class ObjectSpawner : AbstractPuzzle
@@ -56,6 +56,8 @@ public class ObjectSpawner : AbstractPuzzle
             }
         }
         base.Disactivate();
+        
+        
     }
 
     private void GetCompletedObjects(AbstractPuzzle obj)

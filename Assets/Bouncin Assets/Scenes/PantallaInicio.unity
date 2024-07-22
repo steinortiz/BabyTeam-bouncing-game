@@ -1678,13 +1678,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: defaulLevel
+      value: 
+      objectReference: {fileID: 102900000, guid: 270b15538427a364881839956a0f292e, type: 3}
+    - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: defaulLevelPath
       value: Lvl 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: defaulFirstLevel
+      value: Lvl 12
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: sfxPlayer
       value: 
       objectReference: {fileID: 1774909020}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 6337233946726045256, guid: f0910b024f61dd04e8535e5a73eef636, type: 3}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: playerPrefab
       value: 
@@ -1697,6 +1709,38 @@ PrefabInstance:
       propertyPath: isPlayerOnGame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: generalLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2922c0d614d6384ea4246a0c41d8e74, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b15bdef1df329543b782c1edecb54ba, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05b561348adcf40499d69370940d5c25, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: d44bc0203397fcd48b14a3d3ae4cf1ad, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7902d8a6e375b89468823e2b64920df0, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: AllBallsData.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0950422e2163f7445b4652e40da9dc93, type: 2}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: _audioSources.Array.data[0]
       value: 
@@ -1785,6 +1829,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e5000d586b6751c4aa1c72459e0781df, type: 3}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: currentLevel
+      value: 
+      objectReference: {fileID: 102900000, guid: 270b15538427a364881839956a0f292e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

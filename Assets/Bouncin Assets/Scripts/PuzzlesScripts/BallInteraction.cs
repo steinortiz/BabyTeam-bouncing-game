@@ -30,7 +30,7 @@ public class BallInteraction : AbstractPuzzle
         base.CompletePuzzle();
         if (destroyOnComplete)
         {
-            Destroy(this.gameObject,Time.deltaTime);
+            DestroyPuzzle();
         }
     }
 }

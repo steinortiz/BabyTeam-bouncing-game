@@ -41,11 +41,6 @@ public class MachineInteractionsReciever : MonoBehaviour
     [SerializeField] private Transform rewardCollection;
     
 
-    [Header("UI")] 
-    [SerializeField] private List<Image> ballsRewardsImages;
-    [SerializeField] private List<Image> levelsImages;
-    [SerializeField] private List<Image> secretLevelsImages;
-
     public static MachineInteractionsReciever Instance { get; private set; }
     private void Awake() 
     { 
@@ -126,7 +121,6 @@ public class MachineInteractionsReciever : MonoBehaviour
             if (random == 0)
             {
                 SpawnCoin();
-                
             }
             else
             {
@@ -134,10 +128,7 @@ public class MachineInteractionsReciever : MonoBehaviour
             }
             isLoaded = false;
             LeanTween.rotateLocal(palanca.gameObject, end, animTimePalanca/2).setEase(animTypePalanca);
-            LeanTween.rotateLocal(receptor, end, animTimePalanca / 2).setEase(animTypePalanca).setOnComplete(()=>
-            {
-                
-            });
+            LeanTween.rotateLocal(receptor, end, animTimePalanca / 2).setEase(animTypePalanca);
         });
     }
 

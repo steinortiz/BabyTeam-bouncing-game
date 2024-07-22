@@ -26,7 +26,6 @@ public class TimerQuiz : AbstractPuzzle
     public override void Activate()
     {
         currentTime = time;
-       
         timerText.gameObject?.SetActive(true);
         base.Activate();
     }

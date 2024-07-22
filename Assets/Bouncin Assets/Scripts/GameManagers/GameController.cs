@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public enum MusicContext
@@ -21,8 +22,7 @@ public class MusicSource
 
 public class GameController : MonoBehaviour
 {
-
-    [SerializeField] public bool adminMode;
+    
     public bool isPlayerOnGame;
     [SerializeField] private List<MusicSource> musicPlaylist;
     [SerializeField] private AudioSource musicPlayer;
@@ -32,9 +32,10 @@ public class GameController : MonoBehaviour
     public Languages generalLanguage;
     public int totalCoins;
     public CoinsController coinPrefab;
-    
     [SerializeField] public SuperStrike playerPrefab;
-    
+    [SerializeField] private List<RewardScriptableObject> AllBallsData =new List<RewardScriptableObject>();
+    public RewardScriptableObject currentBallData;
+
     public bool isPlaying = false;
 
     
@@ -137,5 +138,12 @@ public class GameController : MonoBehaviour
             musicPlayer.Play();
         }
         
+    }
+
+    public RewardScriptableObject GetBallData()
+    {
+        int ballIndex = Random.Range(0, AllBallsData.Count);
+        currentBallData = AllBallsData[ballIndex];
+        return currentBallData;
     }
 }

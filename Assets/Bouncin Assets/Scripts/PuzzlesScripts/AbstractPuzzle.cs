@@ -108,6 +108,11 @@ public abstract class AbstractPuzzle : BounzableObject
     {
         if(LevelController.Instance!= null)LevelController.Instance.SetObjetive(this.transform.gameObject);
     }
+
+    public void DestroyPuzzle()
+    {
+        Destroy(this.gameObject,Time.deltaTime);
+    }
     
     
 }

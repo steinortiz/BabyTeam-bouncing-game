@@ -42,14 +42,6 @@ public class LevelController : MonoBehaviour
     [HideInInspector]public bool mustReload;
     [HideInInspector]public bool canSpawn;
     
-    private void Update()
-    {
-        if (!isPlayerOnGame && Input.GetButtonDown("Jump"))
-        {
-            if(GameController.Instance.adminMode) SpawnPlayer();
-        }
-    }
-
     private void Start()
     {
         bool mustSpawn = false;
@@ -82,6 +74,7 @@ public class LevelController : MonoBehaviour
             MakeSpawnRigid(false);
             playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
             GameController.Instance.isPlayerOnGame = true;
+            playerInstance.SetUP();
             playerInstance.BoostSpeed(spawnAnimForce,spawnPoint.transform.forward);
             Invoke("MakeSpawnRigid",0.5f);
             

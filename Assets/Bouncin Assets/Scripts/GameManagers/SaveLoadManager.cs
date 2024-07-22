@@ -1,24 +1,44 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+
 
 [Serializable]
 public class PlayerData
 {
-    public string currentLevel;
-    PlayerData()
-    {
-        currentLevel = "Level 1";
-    }
+    public SceneAsset currentLevel;
+    public SuperStrike currentBall;
+    public int completedLevels;
+    public int completedSecretLevels;
+    
 }
 
 
 public class SaveLoadManager : MonoBehaviour
 {
-    //[SerializeField] private PlayerData playerOBJ =new PlayerManager();
+    [SerializeField] private PlayerData playerSavedData =new PlayerData();
     [SerializeField] private List<string> playerKeys =new List<string>();
+    [SerializeField] private List<RewardScriptableObject> AllBallsData =new List<RewardScriptableObject>();
+    public RewardScriptableObject currentBallData;
+    public SceneAsset currentLevel;
     
+    public static SaveLoadManager Instance { get; private set; }
+    private void Awake() 
+    { 
+        // If there is an instance, and it's not me, delete myself.
+    
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this.gameObject); 
+        } 
+        else 
+        { 
+            
+            Instance = this; 
+        } 
+    }
     
     // Start is called before the first frame update
     void Start()
