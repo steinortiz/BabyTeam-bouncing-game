@@ -142,8 +142,8 @@ public class GameController : MonoBehaviour
 
     public RewardScriptableObject GetBallData()
     {
-        int ballIndex = Random.Range(0, AllBallsData.Count);
-        currentBallData = AllBallsData[ballIndex];
+        int ballRandomIndex = Random.Range(0, AllBallsData.Count);
+        if(!isPlayerOnGame) currentBallData = AllBallsData[ballRandomIndex];
         return currentBallData;
     }
 }

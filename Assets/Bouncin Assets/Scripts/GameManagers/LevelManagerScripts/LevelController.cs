@@ -25,16 +25,15 @@ public class LevelController : MonoBehaviour
         } 
     }
     private SuperStrike playerInstance=null;
-    private bool isPlayerOnGame;
     private List<GameObject> objetiveList = new List<GameObject>();
-    private bool isObjetiveCOmplete=false;
+    private bool isObjetiveComplete=false;
+    [SerializeField] private bool spawnReward;
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private LeanTweenType spawnAnimType;
     [SerializeField] private float spawnAnimTime;
     [SerializeField] private float spawnAnimDelay;
     [SerializeField] private float spawnAnimForce;
     [SerializeField] private ExitController ExitPoint;
-    [SerializeField] private string nextSceneName;
     [HideInInspector] public Vector3 gravityDir= Vector3.down;
     [HideInInspector] public Vector3 horzDir= Vector3.right;
     [HideInInspector] public Vector3 vertDir = Vector3.forward;
@@ -50,11 +49,13 @@ public class LevelController : MonoBehaviour
             mustSpawn= GameController.Instance.isPlayerOnGame;
             Debug.Log(mustSpawn);
         }
+        MachineUIController.Instance.UpdateLevelImages();
         SpawnProcess(mustSpawn);
     }
 
     public void SpawnProcess(bool spawn = false)
     {
+        spawnPoint.gameObject.SetActive(true);
         LeanTween.moveLocal(spawnPoint, spawnPoint.transform.position + spawnPoint.transform.forward, spawnAnimTime)
             .setEase(spawnAnimType).setOnComplete(() =>
             {
@@ -62,7 +63,11 @@ public class LevelController : MonoBehaviour
                 if (spawn)
                 {
                     SpawnPlayer();
-                    LeanTween.moveLocal(spawnPoint, spawnPoint.transform.position - spawnPoint.transform.forward,spawnAnimTime).setEase(spawnAnimType).setDelay(0.5f);
+                    LeanTween.moveLocal(spawnPoint, spawnPoint.transform.position - spawnPoint.transform.forward,spawnAnimTime).setEase(spawnAnimType).setDelay(0.5f).setOnComplete(
+                        () =>
+                        {
+                            spawnPoint.gameObject.SetActive(false);
+                        });
                 }
             });
     }
@@ -73,8 +78,8 @@ public class LevelController : MonoBehaviour
         {
             MakeSpawnRigid(false);
             playerInstance = Instantiate(GameController.Instance.playerPrefab, spawnPoint.transform.position,new Quaternion(0,0,0,0));
-            GameController.Instance.isPlayerOnGame = true;
             playerInstance.SetUP();
+            GameController.Instance.isPlayerOnGame = true;
             playerInstance.BoostSpeed(spawnAnimForce,spawnPoint.transform.forward);
             Invoke("MakeSpawnRigid",0.5f);
             
@@ -92,7 +97,8 @@ public class LevelController : MonoBehaviour
     }
     public void OnDestroyPlayer()
     {
-        isPlayerOnGame = false;
+        GameController.Instance.isPlayerOnGame = false;
+        mustReload = true;
     }
 
     public void CompleteObjetive(GameObject obj)
@@ -102,7 +108,7 @@ public class LevelController : MonoBehaviour
             objetiveList.Remove(obj);
         }
 
-        if (objetiveList.Count == 0)
+        if (objetiveList.Count == 0 && !isObjetiveComplete)
         {
            WintheGame(); 
         }
@@ -116,30 +122,38 @@ public class LevelController : MonoBehaviour
 
     private void ActivateExit()
     {
-        isObjetiveCOmplete = true;
+        isObjetiveComplete = true;
         ExitPoint.gameObject?.SetActive(true);
+        SaveLoadManager.Data.playerSavedData.completedLevels.Add(SceneLoader.Instance.currentLevel);
+        MachineUIController.Instance.UpdateLevelImages();
         LeanTween.moveLocal(ExitPoint.gameObject, ExitPoint.transform.position + ExitPoint.transform.forward, spawnAnimTime).setEase(spawnAnimType);
     }
 
-    public void LoadNextLevelScene()
+    public void LoadNextLevelScene(string nextSceneName)
     {
-        Debug.Log("Exit");
-        if (nextSceneName != "")
-        {
-            Destroy(playerInstance.gameObject);
-            SceneLoader.Instance.LoadAdditiveLevel(nextSceneName); 
-        } 
+        RewardScriptableObject rewardData =null;// = playerInstance.GetUP();
+        Destroy(playerInstance.gameObject);
+        LeanTween.moveLocal(ExitPoint.gameObject, ExitPoint.transform.position - ExitPoint.transform.forward, spawnAnimTime).setEase(spawnAnimType).setOnComplete(
+            () =>
+            {
+                if (spawnReward)
+                {
+                    MachineInteractionsReciever.Instance.SpawnReward(rewardData);
+                }
+                else
+                {
+                    if (nextSceneName != "")
+                    {
+                        SceneLoader.Instance.LoadAdditiveLevel(nextSceneName); 
+                    }
+                }
+                
+            });
+        
     }
-
     public void ReLoadScene()
     {
         SceneLoader.Instance.LoadAdditiveLevel(SceneLoader.Instance.currentLevel);
-        canSpawn = false;
     }
-    
-    
 
-    
-
-    
 }

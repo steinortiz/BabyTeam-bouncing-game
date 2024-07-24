@@ -186,6 +186,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   spawnAnimType: 24
   spawnAnimTime: 1
+  spawnAnimDelay: 0
   spawnAnimForce: 20
   ExitPoint: {fileID: 0}
   nextSceneName: 
@@ -1357,13 +1358,137 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1861561376913908880}
     m_Modifications:
+    - target: {fileID: 145963087229570266, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Range
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1783
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039500860209547900, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114667634668861001, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: destroyOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114667634668861001, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114667634668861001, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: onPuzzleCompletedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573502287706035740, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871097270736347904, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: destroyOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871097270736347904, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871097270736347904, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: onPuzzleCompletedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704869554383428125, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: destroyOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704869554383428125, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704869554383428125, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: onPuzzleCompletedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Range
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1783
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778364040845666267, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3234271713546550199, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1405,17 +1530,117 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4127481390875853451, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: destroyOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127481390875853451, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: activateInstruction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127481390875853451, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: onPuzzleCompletedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132317075410859105, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081566263882734695, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Range
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1783
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251898044685062164, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7464516516315829358, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_Name
       value: Lights
       objectReference: {fileID: 0}
     - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Range
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 1783
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797363990427693643, guid: 1433ff244748dcf40b6289abd6a95a5c, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

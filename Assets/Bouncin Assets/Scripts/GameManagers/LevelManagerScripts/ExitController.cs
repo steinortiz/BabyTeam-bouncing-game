@@ -5,10 +5,11 @@ using UnityEngine;
 public class ExitController : MonoBehaviour
 {
     public delegate void ExitLevel();
+    public string nextSceneName;
     public event ExitLevel BallExitLevelEvent;
     private void OnTriggerEnter(Collider other)
     {
-        LevelController.Instance.LoadNextLevelScene();
-        this.gameObject.SetActive(false);
+        LevelController.Instance.LoadNextLevelScene(nextSceneName);
+        
     }
 }

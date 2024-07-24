@@ -23,6 +23,7 @@ public abstract class AbstractPuzzle : BounzableObject
     protected bool isPuzzleActive;
     protected bool isPuzzleBlocked;
     public bool isObjetive;
+    public bool destroyOnComplete;
     //public UnityEvent onPlayerCollitionEvent;
     public UnityEvent onPuzzleActivateEvent;
     public UnityEvent onPuzzleDisactiveEvent;
@@ -86,11 +87,13 @@ public abstract class AbstractPuzzle : BounzableObject
         Disactivate();
         if(LevelController.Instance!= null)LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
         onPuzzleCompletedEvent?.Invoke();
+        if (destroyOnComplete)
+        {
+            DestroyPuzzle();
+        }
         
     }
 
-    
-    
     public override void OnPlayerCollisionHandler(SuperStrike player)
     {
         if (activateInstruction == ActivateInstruction.OnNormalCollision)

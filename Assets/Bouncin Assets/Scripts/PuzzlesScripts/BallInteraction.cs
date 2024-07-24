@@ -10,7 +10,7 @@ public enum BallType
 }
 public class BallInteraction : AbstractPuzzle
 {
-    public bool destroyOnComplete;
+    
     public BallType ballType;
     public override void ActivateSuper(SuperStrike player)
     {
@@ -23,15 +23,6 @@ public class BallInteraction : AbstractPuzzle
         if (ballType == BallType.Enemy) return true;
         return false;
         
-    }
-
-    public override void CompletePuzzle()
-    {
-        base.CompletePuzzle();
-        if (destroyOnComplete)
-        {
-            DestroyPuzzle();
-        }
     }
 }
 

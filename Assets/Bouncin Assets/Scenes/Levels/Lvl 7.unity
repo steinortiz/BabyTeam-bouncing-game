@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2509014519158638129, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
+      propertyPath: nextSceneName
+      value: Lvl 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3711701197437066858, guid: cc27c529ebe7dcc4ab9095f7e5d97195, type: 3}
       propertyPath: m_Name
       value: ExitPoint
@@ -584,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016359628300379743, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -905,11 +909,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145230542437545046, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: activateInstruction
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1480724591020630303, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: activateInstruction
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1861561376913908880, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -957,11 +961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2500426956328621533, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: activateInstruction
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4502807850522545483, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: activateInstruction
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
       propertyPath: ExitPoint

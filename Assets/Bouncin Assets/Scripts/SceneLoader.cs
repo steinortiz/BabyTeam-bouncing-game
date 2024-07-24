@@ -84,14 +84,14 @@ public class SceneLoader : MonoBehaviour
         {
             UiController.Instance.CloseSemiCortina( 1080*Vector3.left, () =>
             {
-                if(currentLevel !=level && SceneManager.loadedSceneCount>1) SceneManager.UnloadSceneAsync(currentLevel);
+                if(SceneManager.loadedSceneCount>1) SceneManager.UnloadSceneAsync(currentLevel);
                 currentLevel = level;
                 LoadScene(level,true, callback);
             });
         }
         else
         {
-            if(currentLevel !=level && SceneManager.loadedSceneCount>1) SceneManager.UnloadSceneAsync(currentLevel);
+            if(SceneManager.loadedSceneCount>1) SceneManager.UnloadSceneAsync(currentLevel);
             currentLevel = level;
             LoadScene(level,true, callback);
         }

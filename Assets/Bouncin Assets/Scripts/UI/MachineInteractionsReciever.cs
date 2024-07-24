@@ -158,7 +158,7 @@ public class MachineInteractionsReciever : MonoBehaviour
         }
     }
 
-    public void SpawnReward()
+    public void SpawnReward(RewardScriptableObject data)
     {
         Instantiate(rewardPrefab, rewardCollection);
     }

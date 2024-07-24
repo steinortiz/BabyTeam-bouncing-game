@@ -1367,7 +1367,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1687,7 +1687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577706353586399774, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: defaulFirstLevel
-      value: Lvl 12
+      value: Lvl 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: sfxPlayer
@@ -1710,12 +1710,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: currentBallData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b15bdef1df329543b782c1edecb54ba, type: 2}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: generalLanguage
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: AllBallsData.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: musicPlaylist.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: AllBallsData.Array.data[0]
@@ -1781,21 +1789,25 @@ PrefabInstance:
       propertyPath: _audioSources.Array.data[9]
       value: 
       objectReference: {fileID: 8608325599207931613}
+    - target: {fileID: 3035906063438937945, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: musicPlaylist.Array.data[1].context
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920546799863078041, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8145009483022656603, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24700002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145009483022656603, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145009483022656603, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.369998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8145009483022656603, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1826,6 +1838,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061446796955987462, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061446796955987462, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e5000d586b6751c4aa1c72459e0781df, type: 3}
@@ -1833,6 +1849,30 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 102900000, guid: 270b15538427a364881839956a0f292e, type: 3}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.rewards.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2922c0d614d6384ea4246a0c41d8e74, type: 2}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.rewards.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b15bdef1df329543b782c1edecb54ba, type: 2}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.rewards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05b561348adcf40499d69370940d5c25, type: 2}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.completedLevels.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072325253078223409, guid: 5329ceba1e55e3148852daede4ebde59, type: 3}
+      propertyPath: playerSavedData.completedSecretLevels.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

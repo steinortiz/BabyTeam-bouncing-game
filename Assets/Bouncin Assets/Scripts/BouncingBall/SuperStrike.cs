@@ -19,7 +19,6 @@ public class SuperStrike : MonoBehaviour
     [SerializeField] private ParticleSystem strikeFx;
     [SerializeField] private AudioClip strikeSFX;
     [SerializeField] private AudioSource audioSource;
-
     private RewardScriptableObject ballData;
     
 

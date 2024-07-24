@@ -8,35 +8,32 @@ using UnityEngine;
 [Serializable]
 public class PlayerData
 {
-    public SceneAsset currentLevel;
-    public SuperStrike currentBall;
-    public int completedLevels;
-    public int completedSecretLevels;
-    
+    public string currentLevel;
+    public RewardScriptableObject currentBall;
+    public List<string> completedLevels;
+    public List<string> completedSecretLevels;
+    public List<RewardScriptableObject> rewards =new List<RewardScriptableObject>();
 }
 
 
 public class SaveLoadManager : MonoBehaviour
 {
-    [SerializeField] private PlayerData playerSavedData =new PlayerData();
+    [SerializeField] public PlayerData playerSavedData =new PlayerData();
     [SerializeField] private List<string> playerKeys =new List<string>();
-    [SerializeField] private List<RewardScriptableObject> AllBallsData =new List<RewardScriptableObject>();
-    public RewardScriptableObject currentBallData;
     public SceneAsset currentLevel;
-    
-    public static SaveLoadManager Instance { get; private set; }
+    public static SaveLoadManager Data { get; private set; }
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
     
-        if (Instance != null && Instance != this) 
+        if (Data != null && Data != this) 
         { 
             Destroy(this.gameObject); 
         } 
         else 
         { 
             
-            Instance = this; 
+            Data = this; 
         } 
     }
     
