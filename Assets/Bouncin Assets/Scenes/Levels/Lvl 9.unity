@@ -861,6 +861,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5524399238612843206, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -421
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524399238612843206, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 414
+      objectReference: {fileID: 0}
     - target: {fileID: 5794687471319689863, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1032,6 +1040,42 @@ PrefabInstance:
     - target: {fileID: 8399197349109898995, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
       propertyPath: m_Name
       value: TimerPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontSize
+      value: 44.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487938886898078151, guid: bbf0a3b617509234db2e8cc1b0503b18, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -16,7 +16,7 @@ public class MainMenuUIController : MonoBehaviour
     
     public void ExitGameButtonAction()
     {
-        
+        Application.Quit();
     }
 
     public void CleanAllMemorie()

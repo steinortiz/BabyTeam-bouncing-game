@@ -13,9 +13,6 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] public string defaulFirstLevel;
     [SerializeField] public string currentLevel;
 
-    [SerializeField] public List<SceneAsset> flujoLevels=new List<SceneAsset>();
-    [SerializeField] public List<SceneAsset> flujoSecretsLevels=new List<SceneAsset>();
-
     private UnityAction callbackOnLoad;
     
     public static SceneLoader Instance { get; private set; }
@@ -61,7 +58,8 @@ public class SceneLoader : MonoBehaviour
     {
 
         string callbackSceneData = defaulFirstLevel;
-        if( SaveLoadManager.Data.GetCurrentPlayer().currentLevel!= "") { callbackSceneData = SaveLoadManager.Data.GetCurrentPlayer().currentLevel; }
+        if( SaveLoadManager.Data.GetCurrentPlayer().currentLevel != "") { callbackSceneData = SaveLoadManager.Data.GetCurrentPlayer().currentLevel; }
+        Debug.Log(callbackSceneData);
         UiController.Instance.CloseFullCortina( () =>
         {
             LoadScene(mainLevelPath,callback: () =>

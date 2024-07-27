@@ -16,7 +16,7 @@ public class MachineUIController : MonoBehaviour
         public GameObject categoryView;
     }
     [SerializeField] private List<CanvasViewCategorie> categories =new List<CanvasViewCategorie>();
-    [SerializeField] private List<Image> ballsRewardsImages;
+    [SerializeField] private List<Image> ballsRewardsImages =new List<Image>();
     [SerializeField] private List<Image> levelsImages;
     [SerializeField] private List<Image> secretLevelsImages;
     [SerializeField] private Sprite completedLevel;

@@ -13,16 +13,17 @@ public class PlayerData
     
     // THIS IS THE GAME DATA TO SAVE...
     public RewardScriptableObject currentBall;
-    public string currentLevel;
-    public int currentCoins;
-    public List<string> completedLevels;
-    public List<string> completedSecretLevels;
+    public string currentLevel ="";
+    public int currentCoins=1;
+    public List<string> completedLevels =new List<string>();
+    public List<string> completedSecretLevels =new List<string>();
     public List<RewardScriptableObject> rewards =new List<RewardScriptableObject>();
 
     /// CONSTRUCTOR:
     public PlayerData(int index) 
     {
         nameSlot = "Slot " + (index + 1).ToString();
+        currentLevel ="";
         currentCoins = 1;
     }
 
@@ -36,12 +37,12 @@ public class PlayerData
 [Serializable]
 public class PlayerSlots
 {
-    public List<PlayerData> allPlayersData=new List<PlayerData>();
+    public List<PlayerData> allPlayersData= new List<PlayerData>();
 
     public PlayerSlots()
     {
+        allPlayersData = new List<PlayerData>();
         PlayerData initialPlayer = new PlayerData(allPlayersData.Count);
-        initialPlayer.currentLevel = SceneLoader.Instance.defaulFirstLevel;
         allPlayersData.Add(initialPlayer);
     }
 }
@@ -90,7 +91,7 @@ public class SaveLoadManager : MonoBehaviour
         else
         {
             Debug.Log("Creating New Data");
-            CleanAllData();
+            CreateNewData();
             return false;
         }
     }
@@ -111,6 +112,15 @@ public class SaveLoadManager : MonoBehaviour
 
     public void CleanAllData()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        CreateNewData();
+        
+    }
+
+    public void CreateNewData()
+    {
+        currentPlayerIndex =0;
         playerSlotsData = new PlayerSlots();
         SaveAllPlayerData();
     }
