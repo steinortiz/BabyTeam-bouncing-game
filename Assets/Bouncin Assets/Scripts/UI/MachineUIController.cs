@@ -1,13 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class MachineUIController : MonoBehaviour
 {
-    [SerializeField] private Canvas machineUI;
-    
+    [Serializable]
+    internal class CanvasViewCategorie
+    {
+        public string categoryName;
+        public GameObject categoryView;
+    }
+    [SerializeField] private List<CanvasViewCategorie> categories =new List<CanvasViewCategorie>();
     [SerializeField] private List<Image> ballsRewardsImages;
     [SerializeField] private List<Image> levelsImages;
     [SerializeField] private List<Image> secretLevelsImages;
@@ -37,7 +45,7 @@ public class MachineUIController : MonoBehaviour
     public void UpdateRewardsImages()
     {
         int count = 0;
-        foreach (RewardScriptableObject reward in SaveLoadManager.Data.playerSavedData.rewards)
+        foreach (RewardScriptableObject reward in SaveLoadManager.Data.GetCurrentPlayer().rewards)
         {
             if(count< ballsRewardsImages.Count) ballsRewardsImages[count].sprite = reward.rewardImage;
             count += 1;
@@ -47,12 +55,23 @@ public class MachineUIController : MonoBehaviour
     public void UpdateLevelImages()
     {
         int count = 0;
-        foreach (string level in SaveLoadManager.Data.playerSavedData.completedLevels)
+        foreach (string level in SaveLoadManager.Data.GetCurrentPlayer().completedLevels)
         {
             if(count< levelsImages.Count) levelsImages[count].sprite = completedLevel;
             count += 1;
         } 
         //levelsImages[LevelController.Instance.levelIndex].sprite = activeLevel
+    }
+
+    public void SetView(string viewName)
+    {
+        foreach (CanvasViewCategorie category in categories)
+        {
+            category.categoryView.SetActive(false);
+        }
+
+        CanvasViewCategorie pointer = categories.First(x => x.categoryName == viewName);
+        pointer.categoryView.SetActive(true);
     }
     
 }

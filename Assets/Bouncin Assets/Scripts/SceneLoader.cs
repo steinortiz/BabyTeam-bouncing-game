@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private string mainMenuPath;
     [SerializeField] private string mainLevelPath;
-    [SerializeField] private string defaulFirstLevel;
+    [SerializeField] public string defaulFirstLevel;
     [SerializeField] public string currentLevel;
 
     [SerializeField] public List<SceneAsset> flujoLevels=new List<SceneAsset>();
@@ -61,7 +61,7 @@ public class SceneLoader : MonoBehaviour
     {
 
         string callbackSceneData = defaulFirstLevel;
-        //if( hay data guardada) { callbackSceneData = data.currentScene; }
+        if( SaveLoadManager.Data.GetCurrentPlayer().currentLevel!= "") { callbackSceneData = SaveLoadManager.Data.GetCurrentPlayer().currentLevel; }
         UiController.Instance.CloseFullCortina( () =>
         {
             LoadScene(mainLevelPath,callback: () =>
@@ -111,6 +111,7 @@ public class SceneLoader : MonoBehaviour
         if (mode == LoadSceneMode.Additive)
         {
             currentLevel = scene.name;
+            SaveLoadManager.Data.GetCurrentPlayer().currentLevel = currentLevel;
         }
     }
 }

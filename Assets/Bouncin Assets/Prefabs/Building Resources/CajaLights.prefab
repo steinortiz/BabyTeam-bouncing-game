@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
+  activateInstruction: 3
+  isObjetive: 0
+  destroyOnComplete: 1
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -111,19 +111,8 @@ MonoBehaviour:
       m_Calls: []
   onPuzzleCompletedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 869868923458169125}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  ballType: 0
 --- !u!114 &608206000690104508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,9 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
+  activateInstruction: 3
+  isObjetive: 0
+  destroyOnComplete: 1
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -274,19 +263,8 @@ MonoBehaviour:
       m_Calls: []
   onPuzzleCompletedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1008987690115645524}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  ballType: 0
 --- !u!114 &4616908423559639331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,9 +404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
+  activateInstruction: 3
+  isObjetive: 0
+  destroyOnComplete: 1
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -437,19 +415,8 @@ MonoBehaviour:
       m_Calls: []
   onPuzzleCompletedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1474168119200068530}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  ballType: 0
 --- !u!114 &716358380933545929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3234271713546550199}
   m_Layer: 0
-  m_Name: Lights
+  m_Name: CajaLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1096,9 +1063,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
-  activateInstruction: 2
-  destroyOnComplete: 0
-  objectType: 0
+  activateInstruction: 3
+  isObjetive: 0
+  destroyOnComplete: 1
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1107,19 +1074,8 @@ MonoBehaviour:
       m_Calls: []
   onPuzzleCompletedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7659612464249937131}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  ballType: 0
 --- !u!114 &8870319667352138997
 MonoBehaviour:
   m_ObjectHideFlags: 0

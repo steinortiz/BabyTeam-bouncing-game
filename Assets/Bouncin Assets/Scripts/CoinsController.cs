@@ -58,8 +58,8 @@ public class CoinsController : MonoBehaviour
     {
         transform.position = GetMouseWorldPos()+ mOffset;
         // Clamp the position to be within the defined boundaries
-        //pos.x = Mathf.Clamp(pos.x, xMin, xMax);
-        //pos.y = Mathf.Clamp(pos.y, yMin, yMax);
+        //transform.position.x = Mathf.Clamp(transform.position.x, xMin, xMax);
+        //transform.position.y = Mathf.Clamp(transform.position.y, yMin, yMax);
         //pos.z = Mathf.Clamp(transform.localPosition.z, zMin, zMax);
         //transform.position = Camera.main.ScreenToWorldPoint(pos);
 
@@ -69,7 +69,7 @@ public class CoinsController : MonoBehaviour
     {
         if (other.transform.tag == "CoinReceptor")
         {
-            if (!MachineInteractionsReciever.Instance.isLoaded)
+            if (!MachineInteractionsReciever.Instance.isLoaded || MachineInteractionsReciever.Instance.palanca.interactable)
             {
                 MachineInteractionsReciever.Instance.LoadMachine();
                 Destroy(this.gameObject);

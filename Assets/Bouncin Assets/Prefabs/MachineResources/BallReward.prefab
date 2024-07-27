@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2458300641169110150}
   - component: {fileID: 3815141937269002387}
   - component: {fileID: 3266421770435113891}
+  - component: {fileID: 481001386442308707}
   m_Layer: 6
   m_Name: BallReward
   m_TagString: Untagged
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &481001386442308707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7054934756884716526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96774971888b8884283614dfef550e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 2458300641169110150}
+  data: {fileID: 0}

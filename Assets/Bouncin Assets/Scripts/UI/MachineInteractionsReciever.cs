@@ -12,15 +12,18 @@ public class MachineInteractionsReciever : MonoBehaviour
     public bool isLoaded;
     
     [Header("Palanca")] 
-    [SerializeField] private ExtendedButton palanca;
+    [SerializeField] public ExtendedButton palanca;
     [SerializeField] private LeanTweenType animTypePalanca;
     [SerializeField] private float animTimePalanca;
+    [SerializeField] private AudioClip palancaCrackSound;
+    [SerializeField] private AudioClip palancaCrackSound2;
     
     [Header("Coin Receptor")]
     [SerializeField] private GameObject receptor;
     [SerializeField] private GameObject fakeCoin;
     [SerializeField] private CoinsController coinPrefab;
     [SerializeField] private Transform coinSpawnCollection;
+    [SerializeField] private AudioClip coinClapSound;
 
     [Header("Machine lights")]
     [SerializeField] private MeshRenderer m_Lights;
@@ -35,9 +38,10 @@ public class MachineInteractionsReciever : MonoBehaviour
     [SerializeField] private ExtendedButton m_Button;
     [SerializeField] private Material turnOnButtonMaterial;
     [SerializeField] private Material turnOffButtonMaterial;
+    [SerializeField] private AudioClip buttonClickSound;
 
     [Header("Ball Rewards")]
-    [SerializeField] private GameObject rewardPrefab;
+    [SerializeField] private RewardController rewardPrefab;
     [SerializeField] private Transform rewardCollection;
     
 
@@ -59,13 +63,19 @@ public class MachineInteractionsReciever : MonoBehaviour
     private void OnEnable()
     {
         palanca.onSubmit.AddListener(PalancaButtonInteraction);
-        m_Button.onSubmit.AddListener(PlayerButtonInteraction);
+       
     }
 
     private void OnDisable()
     {
-        palanca.onSubmit.RemoveListener(PalancaButtonInteraction);
-        m_Button.onSubmit.RemoveListener(PlayerButtonInteraction);
+        palanca.onSubmit.RemoveAllListeners();
+        m_Button.onSubmit.RemoveAllListeners();
+    }
+
+    private void Start()
+    {
+        //SpawnAllCoins();
+        SpawnCoin();
     }
 
     public void TurnOnMachineLights()
@@ -92,32 +102,43 @@ public class MachineInteractionsReciever : MonoBehaviour
         }
     }
 
+    public void SpawnAllCoins()
+    {
+        int coins = SaveLoadManager.Data.GetCurrentPlayer().currentCoins;
+        for (int i = 0; i < coins; i++)
+        {
+            SpawnCoin();
+        }
+    }
+
     public void SpawnCoin()
     {
         Instantiate(coinPrefab, coinSpawnCollection);
-        GameController.Instance.totalCoins += 1;
     }
     
     public void LoadMachine()
     {
+        AudioManager.Instance.PlaySFX(coinClapSound);
         fakeCoin.gameObject.SetActive(true);
         palanca.interactable = true;
-        isLoaded = true;
+        
     }
 
     private void PalancaButtonInteraction()
     {
         palanca.interactable = false;
+        isLoaded = true;
         // Animation
         Vector3 begin = new Vector3(0,179,0);
         Vector3 end = new Vector3(0,360,0);
+        AudioManager.Instance.PlaySFX(palancaCrackSound);
         LeanTween.rotateLocal(palanca.gameObject,begin, animTimePalanca/2).setEase(animTypePalanca);
         LeanTween.rotateLocal(receptor, begin, animTimePalanca/2).setEase(animTypePalanca).setOnComplete(() =>
         {
             palanca.transform.localRotation = Quaternion.Euler(0, 181, 0);
             receptor.transform.localRotation = Quaternion.Euler(0, 181, 0);
             fakeCoin.gameObject.SetActive(false);
-            int random = Random.Range(0, 2);
+            int random = Random.Range(0, 5);
             if (random == 0)
             {
                 SpawnCoin();
@@ -127,6 +148,7 @@ public class MachineInteractionsReciever : MonoBehaviour
                 PrepareForSpawn();
             }
             isLoaded = false;
+            AudioManager.Instance.PlaySFX(palancaCrackSound2);
             LeanTween.rotateLocal(palanca.gameObject, end, animTimePalanca/2).setEase(animTypePalanca);
             LeanTween.rotateLocal(receptor, end, animTimePalanca / 2).setEase(animTypePalanca);
         });
@@ -136,7 +158,7 @@ public class MachineInteractionsReciever : MonoBehaviour
     {
         TurnLightsCoins(true);
         TurnOnMachineLights();
-        GameController.Instance.totalCoins += 1;
+        m_Button.onSubmit.AddListener(SpawnButtonInteraction);
         m_Button.interactable = true;
         m_Button.GetComponent<MeshRenderer>().material = turnOnButtonMaterial;
         
@@ -147,20 +169,37 @@ public class MachineInteractionsReciever : MonoBehaviour
             LevelController.Instance.ReLoadScene();
         }
     }
-    private void PlayerButtonInteraction()
+    private void SpawnButtonInteraction()
     {
-        if (LevelController.Instance.canSpawn)
+        AudioManager.Instance.PlaySFX(buttonClickSound);
+        if (LevelController.Instance.spawnPoint.canSpawn)
         {
+            //SaveLoadManager.Data.GetCurrentPlayer().currentCoins -= 1;
             m_Button.GetComponent<MeshRenderer>().material = turnOffButtonMaterial;
             m_Button.interactable = false;
             TurnLightsCoins();
-            LevelController.Instance.SpawnPlayer();
+            LevelController.Instance.spawnPoint.CompletePuzzle();
         }
     }
 
     public void SpawnReward(RewardScriptableObject data)
     {
-        Instantiate(rewardPrefab, rewardCollection);
+        RewardController reward = Instantiate(rewardPrefab, rewardCollection);
+        reward.SetUP(data);
+    }
+
+    public void PrepareForEscape()
+    {
+        TurnOnMachineLights();
+        m_Button.onSubmit.AddListener(EscapeButtonInteraction);
+        m_Button.interactable = true;
+        m_Button.GetComponent<MeshRenderer>().material = turnOnButtonMaterial;
+    }
+
+    private void EscapeButtonInteraction()
+    {
+        AudioManager.Instance.PlaySFX(buttonClickSound);
+        SceneLoader.Instance.LoadMainMenu();
     }
 
 }

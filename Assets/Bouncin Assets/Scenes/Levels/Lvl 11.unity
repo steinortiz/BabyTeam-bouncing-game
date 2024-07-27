@@ -199,6 +199,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
   activateInstruction: 3
   isObjetive: 0
+  destroyOnComplete: 0
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls:
@@ -220,7 +221,6 @@ MonoBehaviour:
   onPuzzleCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
-  destroyOnComplete: 0
   ballType: 0
 --- !u!4 &297925279 stripped
 Transform:
@@ -612,6 +612,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
   activateInstruction: 0
   isObjetive: 0
+  destroyOnComplete: 0
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -818,11 +819,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
---- !u!1 &1246870785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8016359628300379743, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
+--- !u!114 &1246870785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2884102730175902584, guid: d82b5ac335a5b4447ab5ab8904993257, type: 3}
   m_PrefabInstance: {fileID: 1246870784}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5e9aa2deaadac40abf13f21b982a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1444602955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1137,6 +1144,34 @@ PrefabInstance:
       propertyPath: nextSceneName
       value: Lvl 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517930652}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ExitController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578490991352302793, guid: 977b02e5d03caa74e904bc4d1251a7dc, type: 3}
+      propertyPath: OnLevelComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1291,6 +1326,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
   activateInstruction: 3
   isObjetive: 0
+  destroyOnComplete: 0
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1312,7 +1348,6 @@ MonoBehaviour:
   onPuzzleCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
-  destroyOnComplete: 0
   ballType: 0
 --- !u!1 &1982644722
 GameObject:
@@ -1791,6 +1826,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 06a714f771e64e64b8d6079d51fe988f, type: 2}
   activateInstruction: 3
   isObjetive: 0
+  destroyOnComplete: 0
   onPuzzleActivateEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1812,7 +1848,6 @@ MonoBehaviour:
   onPuzzleCompletedEvent:
     m_PersistentCalls:
       m_Calls: []
-  destroyOnComplete: 0
   ballType: 0
 --- !u!136 &8920074086158895481
 CapsuleCollider:

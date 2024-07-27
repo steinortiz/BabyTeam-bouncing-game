@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4308519123600547989}
   - component: {fileID: -8124794726375719402}
   m_Layer: 10
-  m_Name: Button
+  m_Name: ButtonPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -14,17 +14,17 @@ public enum ActivateInstruction
     OnEnable,
     OnNormalCollision,
     OnSuperStrike,
+    OnTriggerEnter,
 }
 
 public abstract class AbstractPuzzle : BounzableObject
 {
     
-    [SerializeField] private ActivateInstruction activateInstruction;
+    [SerializeField] protected ActivateInstruction activateInstruction;
     protected bool isPuzzleActive;
     protected bool isPuzzleBlocked;
     public bool isObjetive;
     public bool destroyOnComplete;
-    //public UnityEvent onPlayerCollitionEvent;
     public UnityEvent onPuzzleActivateEvent;
     public UnityEvent onPuzzleDisactiveEvent;
     public UnityEvent onPuzzleCompletedEvent;
@@ -44,7 +44,6 @@ public abstract class AbstractPuzzle : BounzableObject
 
     private void OnDestroy()
     {
-        //onPlayerCollitionEvent.RemoveAllListeners();
         onPuzzleActivateEvent.RemoveAllListeners();
         onPuzzleDisactiveEvent.RemoveAllListeners();
         onPuzzleCompletedEvent.RemoveAllListeners();
@@ -84,7 +83,7 @@ public abstract class AbstractPuzzle : BounzableObject
     
     public virtual void CompletePuzzle()
     {
-        Disactivate();
+        //Disactivate();
         if(LevelController.Instance!= null)LevelController.Instance?.CompleteObjetive(this.transform.gameObject);
         onPuzzleCompletedEvent?.Invoke();
         if (destroyOnComplete)
@@ -105,6 +104,18 @@ public abstract class AbstractPuzzle : BounzableObject
             ActivateSuper(player);
         }
         base.OnPlayerCollisionHandler(player);
+    }
+
+    public override void OnOtherTriggerHandler(Collider other)
+    {
+        if (other.transform.TryGetComponent(out SuperStrike player))
+        {
+            if (activateInstruction == ActivateInstruction.OnTriggerEnter)
+            {
+                ActivateSuper(player);
+            }
+        }
+        base.OnOtherTriggerHandler(other);
     }
     
     public void SetAsObjetive()

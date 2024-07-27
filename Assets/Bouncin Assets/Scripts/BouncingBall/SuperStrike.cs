@@ -19,7 +19,7 @@ public class SuperStrike : MonoBehaviour
     [SerializeField] private ParticleSystem strikeFx;
     [SerializeField] private AudioClip strikeSFX;
     [SerializeField] private AudioSource audioSource;
-    private RewardScriptableObject ballData;
+    public  RewardScriptableObject ballData;
     
 
 
@@ -61,7 +61,7 @@ public class SuperStrike : MonoBehaviour
         BoostSpeed( boost, dir);
         speedFxPivot.transform.rotation= Quaternion.LookRotation(rb.velocity.normalized);
         speedFx.Play();
-        if(GameController.Instance!=null)GameController.Instance.PlaySFX(speedSFX, true);
+        if(AudioManager.Instance!=null)AudioManager.Instance.PlaySFX(speedSFX, true);
         isSuperStrikeActive = true;
     }
 
@@ -70,11 +70,11 @@ public class SuperStrike : MonoBehaviour
         if (isSuperStrikeActive)
         {
             speedFx.Stop();
-            if(GameController.Instance!=null)GameController.Instance.StopSFX(speedSFX);
+            if(AudioManager.Instance!=null)AudioManager.Instance.StopSFX(speedSFX);
             isSuperStrikeActive = false;
             ParticleSystem strike = Instantiate<ParticleSystem>(strikeFx, this.transform.localPosition,this.transform.rotation);
             strike.Play();
-            if(GameController.Instance!=null)GameController.Instance.PlaySFX(strikeSFX);
+            if(AudioManager.Instance!=null)AudioManager.Instance.PlaySFX(strikeSFX);
             Destroy(strike.gameObject,strike.totalTime+1f);
         }
     }

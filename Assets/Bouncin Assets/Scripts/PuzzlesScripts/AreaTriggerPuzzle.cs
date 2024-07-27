@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class AreaTriggerPuzzle : AbstractPuzzle
 {
-    [SerializeField] private bool blockOnPlayerEntry;
+    [SerializeField] private bool onPlayerEntry;
     
     public void OnTriggerEnter(Collider other)
     {
-        if (!blockOnPlayerEntry || other.transform.tag == "Player")
+        if (!onPlayerEntry || other.transform.tag == "Player")
         {
             Activate();
         }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (!blockOnPlayerEntry || other.transform.tag == "Player")
+        if (!onPlayerEntry || other.transform.tag == "Player")
         {
             Disactivate();
         }

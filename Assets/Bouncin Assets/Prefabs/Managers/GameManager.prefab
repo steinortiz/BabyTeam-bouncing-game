@@ -118,6 +118,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1677501229691609707}
+  is3dObject: 0
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -2218,6 +2219,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4391814480077113094}
+  is3dObject: 0
   onSelected:
     m_PersistentCalls:
       m_Calls:
@@ -2335,6 +2337,7 @@ GameObject:
   - component: {fileID: 9072325253078223409}
   - component: {fileID: 3035906063438937945}
   - component: {fileID: 1577706353586399774}
+  - component: {fileID: 9222142924923880485}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2381,7 +2384,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef9408ec49ac8c43ba32107422af9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSavedData:
+    currentLevel: 
+    currentBall: {fileID: 0}
+    completedLevels: []
+    completedSecretLevels: []
+    rewards: []
   playerKeys: []
+  currentLevel: {fileID: 0}
 --- !u!114 &3035906063438937945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,25 +2404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a1736293f0ad244a68b5f7f18f21c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuSong: {fileID: 0}
-  LevelSong: {fileID: 0}
-  musicPlayer: {fileID: 9061446796955987462}
-  _audioSources:
-  - {fileID: 6276921493436356480}
-  - {fileID: 5404261616785067635}
-  - {fileID: 8742454569131500177}
-  - {fileID: 5941441083975537842}
-  - {fileID: 4161085088014008679}
-  - {fileID: 5669152776824236982}
-  - {fileID: 4279430406517669378}
-  - {fileID: 8772531017150941021}
-  - {fileID: 8014951656223840625}
-  - {fileID: 6903762837157594948}
-  generalVolumen: 1
+  isPlayerOnGame: 1
   generalLanguage: 1
   totalCoins: 0
-  coinPrefab: {fileID: 0}
-  playerPrefab: {fileID: 7694138595139436610, guid: f57129a432737a24894d2e28dfdc27ad, type: 3}
+  coinPrefab: {fileID: 6337233946726045256, guid: f0910b024f61dd04e8535e5a73eef636, type: 3}
+  playerPrefab: {fileID: 4053210862875631791, guid: 908f8bc4b7810094ca6ad6d5fec616f6, type: 3}
+  AllBallsData:
+  - {fileID: 11400000, guid: b2922c0d614d6384ea4246a0c41d8e74, type: 2}
+  - {fileID: 11400000, guid: 2b15bdef1df329543b782c1edecb54ba, type: 2}
+  - {fileID: 11400000, guid: 05b561348adcf40499d69370940d5c25, type: 2}
+  - {fileID: 11400000, guid: d44bc0203397fcd48b14a3d3ae4cf1ad, type: 2}
+  - {fileID: 11400000, guid: 7902d8a6e375b89468823e2b64920df0, type: 2}
+  - {fileID: 11400000, guid: 0950422e2163f7445b4652e40da9dc93, type: 2}
+  currentBallData: {fileID: 11400000, guid: 2b15bdef1df329543b782c1edecb54ba, type: 2}
   isPlaying: 0
 --- !u!114 &1577706353586399774
 MonoBehaviour:
@@ -2428,8 +2432,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPath: PantallaInicio
   mainLevelPath: MainLevel
-  defaulLevelPath: Lvl 1
+  defaulFirstLevel: Lvl 1
   currentLevel: 
+  flujoLevels: []
+  flujoSecretsLevels: []
+--- !u!114 &9222142924923880485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5920546799863078041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136c320af6e66d04d87512f086227aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicPlaylist:
+  - context: 0
+    clip: {fileID: 0}
+  - context: 1
+    clip: {fileID: 0}
+  - context: 2
+    clip: {fileID: 0}
+  musicPlayer: {fileID: 9061446796955987462}
+  sfxPlayer: {fileID: 6903762837157594948}
+  _audioSources:
+  - {fileID: 6276921493436356480}
+  - {fileID: 5404261616785067635}
+  - {fileID: 8742454569131500177}
+  - {fileID: 5941441083975537842}
+  - {fileID: 4161085088014008679}
+  - {fileID: 5669152776824236982}
+  - {fileID: 4279430406517669378}
+  - {fileID: 8772531017150941021}
+  - {fileID: 8014951656223840625}
+  generalVolumen: 1
 --- !u!1 &6163636295652446241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,6 +2586,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3522688425863799134}
+  is3dObject: 0
   onSelected:
     m_PersistentCalls:
       m_Calls:
